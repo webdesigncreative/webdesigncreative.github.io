@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Website design">
+    <meta name="keywords" content="website, deisign, create">
+    <meta name="author" content="Wdesign">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Website design</title>
+    <link rel = "icon" href = "logo.png" 
+      type = "image/x-icon">
+    <style>
+      * {
+      margin: 0;
+      padding: 0;
+      caret-color: transparent;
+      box-sizing: border-box;
+      }
+      @font-face {
+      font-family: Blues;
+      src: url("Blues.woff");
+      font-display: fallback;
+      }
+      html {
+      font-size: calc(60% + 0.8vmin);
+      font-family: "Blues"; 
+      scrollbar-color: #526880 #fff;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      }
+      body {
+      text-rendering: optimizeLegibility;
+      letter-spacing: 0.16em;
+      line-height: 1.5;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      margin: 0;
+      height: auto;
+      }
+      header {
+      height: auto;
+      width: 100%;
+      color: #fff;
+      background-color:#222c3c;
+      box-sizing: border-box;
+      padding: 0.2em;
+      }
+      .header { 
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 100%;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #e2e0d5;
+      grid-gap: 30px;
+      }
+      .pageprina {display:none}
+      .default-tab {display:block}
+      :target ~ .default-tab {display:none}
+      #firstpage:target ~ .firstpage,
+      #secondpage:target ~ .secondpage,
+      #thirdpage:target ~ .thirdpage
+      {
+      display: block;
+      }
+      #menuicon,.pagesprin {
+      display:none;
+      }
+      .pagesprin a {
+      margin: 0 10px 0 10px; 
+      }
+      #menuicon:checked~.pagesprin{display:block;}
+      .menu {
+      transform: scale(1.7, 2);
+      cursor: pointer;
+      }
+      .pagesprin a {text-decoration: none;}
+      .buttona {
+      text-align: center;
+      color: #989da6;
+      background: #222c3c; 
+      border: 1px solid #c0afa7; 
+      border-radius: 3px;
+      font-size: 0.8em;
+      padding: 10px 24px; 
+      display: inline-block; 
+      text-decoration: none;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      margin-top: 14px;
+      padding-top: 14px;
+      transition:.7s ease;
+      }
+      .buttona:hover, .button:active {
+      color: #222;
+      background-color: #989da6;
+      letter-spacing: 0.7em;
+      }
+      .pagesnew {
+      color: #e2e0d5;
+      list-style-type: none;
+      text-decoration: none;
+      cursor: pointer;
+      transition:.7s ease;
+      }
+      .pagesnew:hover {
+      letter-spacing: 0.48em;
+      }
+      .logoa {
+      display: block;
+      transition: .7s ease all;
+      }
+      .logoa:hover {
+      transform: scale(1.2);
+      }
+      .animation {
+      transition:.9s ease;
+      }
+      .animation {
+      -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      }
+      @-webkit-keyframes animation{
+      0% {
+      letter-spacing: -0.1em;
+      opacity: 0;
+      }
+      40% {
+      opacity: 0.6;
+      }
+      100% {
+      opacity: 1;
+      }
+      }
+      @keyframes tracking-in-expand {
+      0% {
+      letter-spacing: -0.1em;
+      opacity: 0;
+      }
+      40% {
+      opacity: 0.6;
+      }
+      100% {
+      opacity: 1;
+      }
+      }
+      .color {
+      width: 100%;
+      height: 100px;
+      margin-bottom: -2px;
+      }
+      .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 100%;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #222;
+      border-radius: 3px;
+      }
+      .new, .new:after, .new:before {	  
+      padding:0;
+      margin:0;
+      }
+      ul {
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      margin:auto;
+      list-style:none;
+      width:100%;
+      height:auto;
+      overflow: hidden;
+      }
+      li {
+      position:relative;
+      width: 12%;
+      height:auto;
+      float:left;
+      border-left:1px solid white;
+      -webkit-transition:all 3s;
+      -moz-transition:all 3s;
+      transition:all 3s;
+      cursor: pointer;
+      }
+      ul li:first-child {
+      border:none;
+      }
+      .new span {
+      display:block;
+      position:absolute;
+      bottom:0;
+      width:100%;
+      color:white;
+      white-space:nowrap;
+      padding:20px;
+      background: linear-gradient(left,  rgba(34,44,60,0.96) 0%, rgba(0,0,0,0) 100%);
+      margin:auto;
+      transition:.7s ease;
+      font-size: 0.8em;
+      }
+      .photocover {
+      width: 300px;
+      height:520px;
+      margin: auto;
+      }
+      .new ul:hover li {
+      width: 16px;
+      margin: auto; 
+      }
+      .new ul li:hover {
+      width: 300px;
+      margin: auto;
+      }
+      footer {
+      background-color:  #636c6e;
+      box-sizing: border-box;
+      bottom: 0;
+      left: 0;
+      font-size: 0.8em!important;
+      height: auto;
+      margin-top: 4em;
+      padding: 2em;
+      clear: both;
+      }
+      .footergrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 100%;
+      margin: auto;
+      justify-content: center;
+      text-align: center;
+      color: #c0afa7;
+      grid-gap: 30px;
+      box-sizing: border-box;
+      }
+      .footergrid a {
+      text-decoration: none;
+      }
+      footergrid ul {
+      list-style-type: none;
+      }
+      footergrid li {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 12px;
+      }
+      .menu {
+      color: #e2e0d5;
+      }
+      .text {
+      padding: 4em;
+      }
+      .design {
+      margin: auto;
+      }
+      .new ul {
+      background: url("gallerya.jpg");
+      background-size: 10%;
+      background-size: cover;
+      }
+      .container {
+      background: rgba(255, 255, 255, 0.98);
+      opacity: 0.97;
+      height: 526px;
+      }
+      .gridgalb {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1400px;
+      margin: auto;
+      justify-content: left;
+      text-align: left;
+      color: #c0afa7;
+      grid-gap: 30px;
+      box-sizing: border-box;
+      }
+      .galleryb .gridgalb:hover .photogalb:not(:hover) {
+      filter: brightness(45%);
+      }
+      .galleryb .photogalb {
+      border-radius: 3px;
+      pointer-events: auto;
+      transition: brightness 300ms;
+      cursor: pointer;
+      color: #222;
+      }
+      .photogalb {
+      max-width: 960px;
+      height: auto;
+      }
+      .photogalb img {
+      max-width: 360px;
+	  border: 1px solid lightgray;
+      }
+      .gallerybpresentation {
+      max-width: 1400px;
+      margin-left: 10vmin;
+      justify-content: left;
+      text-align: left;
+      padding: 1em;
+      margin-top: 4em;
+      margin-bottom: 4em;
+      white-space: pre-wrap;
+      }
+      .presentationa {
+      cursor: pointer;
+      float: right;
+      margin-right: -10px;
+      margin-top: 1em;
+      }
+      .gridgalb input[type=checkbox] {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      }
+      .gridgalb #show {
+      display: block;
+      }
+      .gridgalb #hide {
+      display: none;
+      }
+      .gridgalb #toggle:checked ~ #hide {
+      display: block;
+      }
+      .gridgalb #toggle:checked ~ #show {
+      display: none;
+      }
+      .websitelink {
+      display:block;
+      bottom:0;
+      width:100%;
+      color:white;
+      white-space:nowrap;
+      background: #636c6e;
+      margin:auto;
+      padding: 1em;
+      }
+      .gridgalc {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1400px;
+      margin: auto;
+      justify-content: left;
+      text-align: left;
+      color: #c0afa7;
+      grid-gap: 30px;
+      box-sizing: border-box;
+      }
+      .galleryc .gridgalc:hover .photogalba:not(:hover) {
+      filter: brightness(45%);
+      }
+      .galleryc .photogalba {
+      border-radius: 3px;
+      pointer-events: auto;
+      transition: brightness 300ms;
+      cursor: pointer;
+      color: #222;
+      }
+      .photogalba {
+      max-width: 960px;
+	  height: auto;
+      }
+      .photogalba img {
+      max-width: 294px;
+	  border: 1px solid lightgray;
+      }
+      .presentationb {
+      cursor: pointer;
+      float: left;
+      margin-right: -10px;
+      margin-top: 2em;
+      }
+      .gridgalc input[type=checkbox] {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      }
+      .gridgalc #showa {
+      display: block;
+      }
+      .gridgalc #hidea {
+      display: none;
+      }
+      .gridgalc #togglea:checked ~ #hidea {
+      display: block;
+      }
+      .gridgalc #togglea:checked ~ #showa {
+      display: none;
+      }
+      .websitelinka {
+      display:block;
+      bottom:0;
+      width:100%;
+      color:white;
+      white-space:nowrap;
+      background: #636c6e;
+      margin:auto;
+      padding: 1em;
+      }
+      .galleryc {
+      margin-top: 4em;
+      }
+      .emphasized {
+      text-decoration: underline;
+      text-underline-position: under;
+      transition:.7s ease;
+      }
+      .emphasized:hover {
+      letter-spacing: 0.32em;
+      cursor: pointer;
+      }
+      .effects {
+      max-width: 1400px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      }
+      .designa {
+      box-shadow: 0 0 0 5px #FFFFFF;
+      width: 120px;
+      float: right;
+      margin-left: 2px;
+      margin-right: 1em;
+      }
+      .designc {
+      box-shadow: 0 0 0 5px #FFFFFF;
+      width: 120px;
+      float: right;
+      margin-left: 2px;
+      margin-right: 1em;
+      }
+      .linkf {
+      list-style-type: none;
+      text-decoration: none;
+      color: #e2e0d5;
+      font-size: 1.2em;
+      }
+      .pageslinks {
+      margin-top: 4em;
+      } 
+      .linkf1 {
+      color: #e2e0d5;
+      font-size: 1.2em;
+      }
+      .linkf2 {
+      color: #e2e0d5;
+      font-size: 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <figure>
+          <a class="logoa" href="#firstpage"><img src="logod.png" alt="Website text letter logo" width="70" height="50"></a>
+        </figure>
+        <input id="menuicon" type=checkbox>
+        <label class="menu" for="menuicon">&#9776;</label>
+        <div class="pagesprin">
+          <a class="pagesnew" href="#firstpage">Home</a>
+          <a class="pagesnew" href="#secondpage">Gallery</a>
+          <a class="pagesnew" href="#thirdpage">Creative</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <a id="firstpage"></a>
+      <a id="secondpage"></a>
+      <a id="thirdpage"></a>
+      <div class="pageprina firstpage default-tab">
+        <div class="color"></div>
+        <aside class="gallery">
+          <aside class="new">
+            <ul>
+              <li>
+                <span>Web design layout</span>
+                <img src='gallery8.png' class="photocover" alt="Website design page" width="300">
+              </li>
+              <li>
+                <span>Responsive</span>
+                <img src='gallery7.png' class="photocover"  alt="Website design page">
+              </li>
+              <li>
+                <span>Font</span>
+                <img src='gallery1.png' class="photocover"  alt="Website design page">
+              </li>
+              <li>
+                <span>Animation</span>
+                <img src="gallery6.png" class="photocover"  alt="Website design page">
+              </li>
+              <li>
+                <span>Grid</span>
+                <img src='gallery5.png' class="photocover"  alt="Website design page">
+              </li>
+              <li>
+                <span>Design</span>
+                <img src='gallery3.png' class="photocover"  alt="Website design page">
+              </li>
+              <li>
+                <span>Interactivity</span>
+                <img src='gallery2.png' class="photocover"  alt="Website design page">
+              </li>
+            </ul>
+          </aside>
+          <div class="container">
+            <section class="text">
+              <h2 class="animation"><em>Every design begins with a story.</em></h2>
+              <br>
+              <div class="design"><img src="design4.png" width="156" alt="photo"></div>
+              <a class="buttona" href="#secondpage">GALLERY</a>
+            </section>
+          </div>
+        </aside>
+      </div>
+      <div class="pageprina secondpage">
+        <div class="galleryb">
+          <aside class="gallerybpresentation">
+            <div class="designa"><img src="bird.png" width="120" alt="photo"></div>
+            <h2>Gallery - website design</h2>
+            <h3><em>Visually appealing and user-friendly responsive websites</em></h3>
+            <p>Webpages design that are both aesthetically pleasing, functional, and meet the requirements.</p>
+			  <p class="design">
+              &#9745;&nbsp;&nbsp;Developing website designs and layouts based on specifications
+              &#9745;&nbsp;&nbsp;Ensuring website compatibility with multiple browsers and devices
+              &#9745;&nbsp;&nbsp;Creating and implementing SEO strategies
+              &#9745;&nbsp;&nbsp;Responsive and mobile-first web design - W3C validation
+              &#9745;&nbsp;&nbsp;Developing website content, including text, images, and videos
+              &#9745;&nbsp;&nbsp;Creating dynamic websites in HTML5, CSS3 which leads to increased traffic, conversion rates, and user engagement, without media queries
+              &#9745;&nbsp;&nbsp;Content strategy development
+            </p>
+          </aside>
+          <div class="gridgalb">
+            <div class="cont">
+              <input type="checkbox" id="toggle"> 
+              <label id="show" for="toggle">
+                <span class="websitelink">See website Travel Agency&nbsp;&#10174;<span class="emphasized"><em>here</em></span></span><br>
+                <span class="photogalb">
+                  <img alt="Travel website page" src="gallery12.jpeg">
+                  <img alt="Travel website page" src="gallery13.jpeg">
+                  <span class="presentationa">
+                    <br>
+                    <span>
+                      &#9752;&nbsp;&nbsp;Minimal design with an attention-grabbing layout<br>
+                      &#9752;&nbsp;&nbsp;Fully customizable. Use the colors, fonts, and pictures desired<br>
+                      &#9752;&nbsp;&nbsp;Mobile-responsive. All the pages adapt to the size of any screen<br>
+                      &#9752;&nbsp;&nbsp;Versatile. Expand its features as much as needed<br>
+                      &#9752;&nbsp;&nbsp;Easy to use - change anything in minutes<br>
+                      &#9752;&nbsp;&nbsp;Font design
+                    </span>
+                    <br>
+					<br>
+					<br>
+                    <span>&#9883;&nbsp;&nbsp;8 functional pages<br>
+                      &#9883;&nbsp;&nbsp;Download - Form - Newsletter features<br>
+                      &#9883;&nbsp;&nbsp;Cards animation<br>
+                      &#9883;&nbsp;&nbsp;Amazing snow animation effect - on click<br>
+                      &#9883;&nbsp;&nbsp;Only HTML5, CSS3 website design<br>
+                      &#9883;&nbsp;&nbsp;One page template<br>
+                    </span>
+                  </span>
+                </span>
+              </label>
+              <label id="hide" for="toggle" >
+                <span class="hiddendiv" id="testA">
+                  <span class="websitelink">Back&nbsp;&#10174;<span class="emphasized"><em>here</em></span></span>
+                  <object type="text/html" data="travel.html" style="width:100%; height: 50vw;"></object>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="galleryc">
+          <div class="gridgalc">
+            <div class="conta">
+              <input type="checkbox" id="togglea"> 
+              <label id="showa" for="togglea">
+                <span class="websitelinka">See website Photographer Portfolio&nbsp;&#10174;<span class="emphasized"><em>here</em></span></span><br>
+                <span class="photogalba">
+                  <img alt="Photographer website page" src="gallery9.jpeg" width="300">
+                  <img alt="Photographer website page" src="gallery10.jpeg" width="300">
+                  <img alt="Photographer website page" src="gallery11.jpeg">
+                  <span class="presentationb">
+                    <br>
+                    <br>
+                    <br>
+                    <span>
+                      &#9752;&nbsp;&nbsp;Photographer Portfolio website is a minimal black and white most, design<br>
+                      &#9752;&nbsp;&nbsp;Lets the photographer work speak for itself<br>
+                      &#9752;&nbsp;&nbsp;On the main page it has a large image gallery where the photographer can show the latest and greatest work<br>
+                      &#9752;&nbsp;&nbsp;Includes extra areas to show off more images<br>
+                      &#9752;&nbsp;&nbsp;Well-chosen typography<br>
+                      &#9752;&nbsp;&nbsp;Font design<br>
+                      &#9752;&nbsp;&nbsp;Balanced pages<br>
+                      &#9752;&nbsp;&nbsp;Calm colors<br>
+                      &#9752;&nbsp;&nbsp;Ready-made 4 pages for general presentation, gallery, services, and contact<br>
+                      &#9752;&nbsp;&nbsp;Easy to use - fully customizable<br>
+                    </span>
+                    <br>
+					<br>
+					<br>
+                    <span>&#9883;&nbsp;&nbsp;4 functional pages<br>
+                      &#9883;&nbsp;&nbsp;Contact - Updates feature<br>
+                      &#9883;&nbsp;&nbsp;Lots of options to showcase images, or other work<br>
+                      &#9883;&nbsp;&nbsp;Well-balanced page with lots of flexible content areas<br>
+                      &#9883;&nbsp;&nbsp;Multiple options to showcase images, or other work<br>
+                      &#9883;&nbsp;&nbsp;Engaging colors and typography<br>
+                      &#9883;&nbsp;&nbsp;Only HTML5, CSS3 website design<br>
+                      &#9883;&nbsp;&nbsp;One page template<br>
+                    </span>
+                  </span>
+                </span>
+              </label>
+              <label id="hidea" for="togglea" >
+                <span class="hiddendiva" id="testB">
+                  <span class="websitelinka">Back&nbsp;&#10174;<span class="emphasized"><em>here</em></span></span>
+                  <object type="text/html" data="photographer.html" style="width:100%; height: 50vw;"></object>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pageprina thirdpage">
+        <div class="galleryb">
+          <aside class="gallerybpresentation">
+            <div class="designc">
+			<img src="house.png" width="120" alt="photo"></div>
+            <h2>Creative assets </h2>
+            <h3><em>Reusable block components </em></h3>
+            <p>Web design allows for creative freedom and involves creating unique designs that attract visitors while also distinguishing a website from the competition. <br>Imaginative resources, including logos, web architectures, item pictures, act as the brand's spine. They're not simply plan components; they're representatives of a brand. Can also be made into reusable blocks that are simple to style and use.<br>
+              <br>Creative assests assume a significant part in drawing in, connecting with, and building long term brand value. At any point saw how a very much planned promotion can get your attention and cause you to feel unique? That is the force of a powerful innovative resource.
+            </p>
+          </aside>
+        </div>
+        <div class="effects">
+          <object type="text/html" data="3dmagazine/flipbook5.html" style="width:100%; height: 32vw;"></object>
+          <object type="text/html" data="3dmagazine/longshadow.html" style="width:100%; height: 32vw;"></object>
+          <object type="text/html" data="3dmagazine/revealimage.html" style="width:100%; height: 32vw;"></object>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footergrid">
+        <div class="logofooter">
+          <a class="logoa" href="#firstpage"><img src="logod.png" alt="Website text letter logo" width="70" height="50"></a><br><br>
+          <h3 class="linkf1"><em>Creativity is the art <br> of finding something original<br> in everything.</em> </h3>
+        </div>
+        <div class="pageslinks">
+          <a class="linkf" href="#firstpage">Home</a>&nbsp;
+          <a class="linkf" href="#secondpage">Gallery</a>&nbsp;
+          <a class="linkf" href="#thirdpage">Creative</a>&nbsp;
+          <br>
+          <br>
+          <div class="socialm">
+            <h5 class="linkf2"> &copy; <em>Copywright A.F.</em>&nbsp;2023</h5>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

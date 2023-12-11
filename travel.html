@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Altours Travel agecy">
+    <meta name="keywords" content="travel, trip, vacation, offer, agency, aventure, tours">
+    <meta name="author" content="Altours">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>ALTOURS Perfect Travel</title>
+    <link rel = "icon" href = "logoa.png" 
+      type = "image/x-icon">
+    <style>
+      * {
+      caret-color: transparent;
+      }
+      @font-face {
+      font-family: Blue20;
+      src: url("Blue20.woff");
+      font-display: fallback;
+      }
+      html {
+      font-size: calc(60% + 0.8vmin);
+      font-family: "Blue20"; 
+      scrollbar-color: #526880 #fff;
+      scroll-behavior: smooth;
+      }
+      body {
+      text-rendering: optimizeLegibility;
+      margin: 0;
+      line-height: 1.5;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+	  letter-spacing: 1.2px;
+      }
+      .header {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin: auto;
+      background-color: #526880;
+      box-shadow:0px 15px 10px rgba(0,0,0,0.25);
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0px; 
+      overflow: hidden;
+      z-index: 1;		 
+      -webkit-box-shadow:0px 0px 21px 7px #557395;
+      box-shadow:0px 0px 21px 7px #557395;
+      }
+      .logo {
+      margin-right: auto;
+      max-width: 112px;
+      margin-left: 20px;
+      box-sizing: border-box;
+      padding: 12px;
+      }
+      .logo:hover {
+      transform: scale(1.2) rotate(0.00000000001deg);
+      transition: all 1.2s ease;
+      transform-origin: center;
+      cursor: pointer;
+      }
+      .drop {
+      cursor: pointer;
+      display: block;
+      margin-left: 32px;
+      padding: 10px;
+      }
+      .drop img {
+      margin-top: 12px;
+      height: 22px;
+      cursor: pointer;
+      }
+      .principal input[type="checkbox"]  {
+      display: none;
+      }
+      .principal input +.drop +  .labels {
+      display:none;
+      }
+      .principal input:checked + .drop + .labels{
+      display:block;
+      }
+      .principal .page {
+      display: none;
+      }
+      .principal .pagenew {
+      cursor: pointer;
+      display: inline-block;
+      color: #222;
+      }
+      .principal .page:checked+label {
+      background-color: #f0f0f0;
+      border-bottom: 1px solid #f0f0f0;
+      }
+      .principal .content .page {
+      display: none;
+      }
+      .principal #page1:checked~.content #content1, #page2:checked~.content #content2, #page3:checked~.content #content3, #page4:checked~.content #content4 {
+      display: block;
+      }
+      .slideshow {
+      width: 100%; 
+      height: 86vh; 
+      overflow:hidden; 
+      position:relative; 
+      background-color: #557395;
+      }
+      .slideshow img {
+      position:absolute;  
+      opacity:0; 
+      max-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      animation: slideshow 20s infinite;
+      filter: brightness(70%); 
+      }
+      .slideshow .bottom {
+      bottom: 0px;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      }
+	  .slideshow .bottom1 {
+      bottom: 0px;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(1);
+      }
+      .slideshow::before {
+      content: '';
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      background-image: linear-gradient(180deg, rgba(59,80,104,1) 5%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 100%);
+      overflow: hidden;
+      pointer-events: none;
+      }
+      @keyframes slideshow {25%{opacity:1;} 50%{opacity:0;}}
+      .slideshow img:nth-child(4){animation-delay:0s;}
+      .slideshow img:nth-child(3){animation-delay:5s;}
+      .slideshow img:nth-child(2){animation-delay:10s;}
+      .slideshow img:nth-child(1){animation-delay:15s;}
+      h1 {
+      font-style: normal;
+      font-weight: bolder;
+      font-size: 5.6vmin;
+      text-shadow: 2px 4px 10px #121212;
+      transition: all 1s cubic-bezier(0.17, 0.6699999999999999, 0.83, 0.6699999999999999) 0.1s;
+      color: #fff;
+      margin-top: 0.4rem;
+      }
+      .subtitle {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 2.8vmin;
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+      transition: all 1s cubic-bezier(0.18, 0.6699999999999999, 0.83, 0.6699999999999999) 0.2s;
+      color: #fff;
+      margin-top: -1.6em;
+      } 
+      .subtitle{
+      font-style: italic;
+      }
+      .subtitle:before {
+      content: "Enjoy every moment!";
+      animation: covertext 20s infinite 4.8s;
+      }
+      @keyframes covertext {
+      0% {
+      content: "Enjoy every moment!";
+      }
+      25% {
+      content: "Vacations packages and guided tours.";
+      }
+      50% {
+      content: "Compare hotel deals and travel offers.";
+      }
+      100% {
+      content: "Save and book online today!";
+      }
+      }
+      .button {
+      text-align: center;
+      color: #ffffff;
+      background: transparent; 
+      border: 1px solid #ffffff; 
+      border-radius: 3px;
+      font-size: 16px;
+      padding: 12px 24px; 
+      display: inline-block; 
+      text-decoration: none;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      margin-top: 64px;
+      }
+      .button:hover, .button:active {
+      color: #1b1f1f;
+      background: #ffffff;
+      }
+      .labels {
+      font-size: 0.68em;
+      text-align: center;
+      float: right;
+      position: relative;
+      margin: auto;
+      position: -webkit-sticky;
+      position: sticky;
+      overflow: hidden;
+      top: 0;
+      z-index: 1;
+      margin-right: 16px;
+      margin-top: -44px;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+      top: 16px;
+      letter-spacing: 0.9px;
+      word-spacing: 0.7px;
+      }
+      .labels .pagenew:hover {
+      letter-spacing: 4px;
+      transition: 0.4s;
+      }
+      .herob {
+      position: absolute;
+      margin-left: 2.4em;
+      top: 18em;
+      }
+      .description {
+      max-width: 960px;
+      justify-content: center;
+      text-align: center;
+      margin: auto;
+      padding: 12px;
+      box-sizing: border-box;
+      overflow: hidden;
+      color: #222;
+      font-size: 0.8em;
+      margin-top: 4em;
+      margin-bottom: 4em;
+      }
+      .description h3:first-of-type::first-letter {
+      color: #557395;
+      float:  left;
+      font-size: 2.8rem;
+      line-height: 2vw;
+      padding-right: 8px;
+      box-sizing: border-box;
+      }
+      .offera {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 960px;
+      margin: auto;
+      align-items: center;
+      text-align: center;
+      grid-auto-flow: column;
+      justify-content: center;
+      box-sizing: border-box;
+      overflow: hidden;
+      place-items: center;
+      }
+      .offera .imga {
+      width: 750px;
+      height: auto;
+      margin: auto;
+      }
+      .offertext {
+      background-color: #fff;
+      box-sizing: border-box;
+      padding: 2em;
+      max-width: 500px;
+      box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+      margin: auto;
+      font-size: 0.8em;
+      border-radius: 3px;
+      }
+      .vacationicon {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 960px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      place-items: center;
+      vertical-align: middle;
+      }
+      .vacation {
+      background-color: #e0e3e6;
+      margin-top: 2em;
+      padding: 1em;
+      margin-bottom: 4em;
+      margin-top: 4em;
+      }
+      .vacationicon div {
+      color: #222;
+      box-sizing: border-box;
+      padding: 1em;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      place-items: center;
+      vertical-align: middle;
+      }
+      .vacation label {
+      color: #557395;
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      font-size: 1.2em;
+      font-weight: bolder;
+      }
+      .vacationicon label:hover {
+      letter-spacing: 3px;
+      }
+      .vacation p {
+      letter-spacing: 0.03rem;
+      margin-top: 2em;
+      font-size: 12.8px;
+      line-height: 18px;
+      }
+      #c {
+      background-color: #e5ecf4;
+      color: #222;
+      border-radius: 3px;
+      justify-content: center;
+      text-align: center;
+      padding-top: 2px;
+      padding-left: 2px;
+      padding-right: 2px;
+      }
+      #a {
+      color: #222;
+      margin-top: 20px;
+      }
+      .gallery {
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      place-items: center;
+      vertical-align: middle;
+      }
+      .gallerya {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 960px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      place-items: center;
+      vertical-align: middle;
+      grid-gap: 30px;
+      }
+      .gallery .photo {
+      border-radius: 3px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      filter: blur(0.1px);
+      opacity: 0.98;
+      max-width: 300px;
+      }
+      .photo img {
+      max-width: 300px;
+      box-sizing: border-box;
+      padding: 16px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+      margin: auto;
+      cursor: pointer;
+      }
+      .gallery  
+      img:hover {
+      transform: scale(1.4);
+      transition: all 2.4s ease;
+      transform-origin: bottom center;
+      }
+      .text {
+      color: #222;
+      font: italic smaller sans-serif;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: -90px;
+      box-sizing: border-box;
+      padding: 0.4em;
+      transform-origin: 0 100%;
+      height: 86px;
+      background: #e0e3e6;
+      transition: transform 1s;
+      transform: scaleY(0);
+      }
+      .text .buttona {
+      line-height: 1.25;
+      background: #fff;
+      text-decoration: none;
+      color: white;
+      font-size: 12px;
+      text-transform: uppercase;
+      overflow: hidden;  
+      letter-spacing:0.02em;
+      font-weight:normal;
+      color:#222;
+      display:inline-block;
+      padding:6px 4px 4px 6px;
+      transition:background 200ms;
+      border-radius:3px;
+      cursor: pointer;
+      word-spacing: 0.2em;
+      }
+      .text .buttona:hover {
+      background:#526880;
+      color: #fff;
+      }
+      .text .buttona:active {
+      vertical-align:middle;
+      transition:color 200ms;
+      background-color: #557395;
+      color:#fff;
+      }
+      .gallery figure:hover .text {
+      transform: scaleY(1);
+      }
+      .icon {
+      height: 28px;
+      }
+      .offerb {
+      margin-top: 4em;
+      }
+      .offerb h5 {
+      color: #9CA5B9;
+      letter-spacing: 4px;	
+      }
+      .offerb h4 {
+      font-weight: bolder;
+      color: #526880;
+      letter-spacing: 0.16em;		 
+      }
+      hr {
+      margin: 12px auto;
+      width: 75px;
+      border-top: 2px solid #526880;
+      }
+      .offerb span {
+      text-align: center;
+      color: #222;
+      background: #e0e3e6; 
+      border: 1px solid #9CA5B9; 
+      border-radius: 3px;
+      font-size: 12px;
+      padding: 6px 24px; 
+      display: inline-block; 
+      text-decoration: none;
+      transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+      cursor: pointer;	
+      letter-spacing: 0.06em;		
+      margin-top: -20px;
+      }
+      .offerb p:hover {
+      background:#526880;
+      color: #fff;
+      } 
+      .offerbvideo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 960px;
+      margin: auto;
+      place-items: center;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 2em;
+      margin-bottom: 4em;
+      background-color: 	white;
+      box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+      box-sizing: border-box;
+      padding: 1em;
+      }
+      .video {
+      filter: blur(0.1px);
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      place-items: center;
+      vertical-align: middle;
+	  height: auto;
+      }
+      .videotext {
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      place-items: center;
+      vertical-align: middle;
+      }
+      .videotext h5 {
+      letter-spacing: 0.03rem;
+      font-size: 14px;
+      line-height: 18px;
+      }
+      #contactb {
+      text-decoration: none;
+      color: #222;
+      font-size: 16px;
+      box-sizing: border-box;
+      padding-top: 2em;
+      padding-bottom: 2em;
+      }
+      #contactb span:hover {
+      background-color: #526880;
+      color: white;
+      }
+      .newsletter form {
+      background-image: linear-gradient(180deg, rgba(59,80,104,1) 5%, rgba(255,255,255,0) 80%, rgba(255,255,255,0) 100%), url(cover48.jpg);
+      background-size: cover;
+      background-position: left 10% bottom 70%;
+      text-align: left;
+      min-height: 40vh; 
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      vertical-align: middle;
+      margin: auto;
+      display: flex;
+      flex-flow: column;
+      color: #fff;
+      font-size: 16px;
+      }
+      .newsletter  input {
+      padding:10px;
+      margin:10px 0;
+      width:320px;
+      padding:10px;
+      border:0;
+      border-bottom:1px solid #eee;
+      box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+      border-radius:3px;
+      font-weight:600;
+      box-sizing: border-box;
+      font: bold 0.8em sans-serif; 
+      cursor: pointer;
+      text-align: left;
+      background-color: #fff;
+      }
+      .newsletter input:hover,
+      button:focus {
+      outline: none;
+      background: #526880;
+      color: #fff;
+      }
+      .newsletter h3 {
+      color: #fff;
+      }
+      footer {
+      background-color: #fff;
+      box-sizing: border-box;
+      padding: 4em;
+      bottom: 0;
+      left: 0;
+      }
+      .footergrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 960px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #222;
+      grid-gap: 30px;
+      }
+      footer a {
+      text-decoration: none;
+      list-style-type: none;
+      color: #222;
+      }
+      .snowc {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9999;
+      pointer-events: none;
+      filter: blur(2px);
+      }
+      .snowf {
+      color: #fff;
+      font-size: 1em;
+      font-family: Arial;
+      text-shadow: 0 0 1px #000;
+      flex: 1;
+      position: relative;
+      top: 14%;
+      animation: snowc-fall 5s linear, snowc-shake 3s ease-in-out;
+      animation-delay: var(--d);
+      animation-iteration-count: infinite;
+      filter: blur(1px);
+      opacity: 0;
+      }
+      @keyframes snowc-fall {
+      100% {
+      top: 100%;
+      }
+      }
+      @keyframes snowc-shake {
+      50% {
+      transform: translateX(50px);
+      }
+      }
+      #click {
+      cursor: pointer;
+      margin-top: 90px;
+      position: absolute;
+      margin-left: 80px;
+      }
+      #click:hover {
+      color: #557395;
+      }
+      #check:before {
+      display: none!important;
+      }
+      #check:checked ~ .snowc .snowf{
+      max-height: 100px;
+      opacity: 0.8;
+      }
+      .promo:after{
+      content:'Beautiful experiences';
+      font-size: 0.8em;
+      }
+      .promo:hover:after{
+      content:'Epic snow';
+      font-size: 0.8em;
+      }
+      ul {
+      list-style-type: none;
+      }
+      .socialm ul > li {
+      display: inline-block;
+      }
+      .socialm ul {
+      margin-left: -40px;
+      }
+      .pageslinks label {
+      line-height: 2.4em;
+      cursor: pointer;
+      font-weight: bolder;
+      font-size: 12px;
+      }
+      .pageslinks label:hover {
+      color: #557395;
+      }
+      #shortxt:hover {
+      color: #557395;
+      cursor: pointer;
+      }
+      .contphoto {
+      background-image: linear-gradient(180deg, rgba(59,80,104,1) 5%, rgba(255,255,255,0) 80%, rgba(255,255,255,0) 100%), url(cover48.jpg);
+      background-size: cover;
+      background-position: left 10% bottom 70%;
+      overflow: hidden;
+      width: 100%;
+      height: 48vh;
+      }
+      .coverpage {
+      position: relative;
+      margin-top: -26%;
+      transform: translateY(3%);
+      width: 100%;
+      min-height: 48vh;
+      filter: blur(0.1px);
+      opacity: 0.98;
+      }
+      .tours {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 960px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 16px;
+      margin-top: 2em;
+      }
+      .page2prin {display:none}
+      .default-tab {display:block}
+      :target ~ .default-tab {display:none}
+      #page2a:target ~ .page2a,
+      #page2b:target ~ .page2b,
+      #page2c:target ~ .page2c
+      {
+      display: block
+      }
+      .newtours {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 960px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      grid-gap: 30px;
+      margin-bottom: 4em;
+      }
+      .tourslinks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 960px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 16px;
+      margin-top: 4em;
+      margin-bottom:4em;
+      border: 2px solid #9CA5B9;
+      border-radius: 3px;
+      }
+      .tourslinks a {
+      text-decoration: none;
+      list-style-type: none;
+      cursor: pointer;
+      color: #222;
+      }
+      .tourslinks a:hover {
+      letter-spacing: 4px;
+      transition: 0.4s;
+      }
+      .toursphoto label {
+      background-color: #fff;
+      text-decoration: none;
+      border-radius: 3px;
+      text-align: center;
+      display: inline-block;
+      padding: 10px;
+      margin-top: -28px;
+      font-size: 12px;
+      }
+      .toursphoto label :hover {
+      opacity: .6;
+      }
+      .texta {
+      background-color: #e0e3e6;
+      font-size: 12px;
+      color: #222;
+      margin: auto;
+      text-align: center;
+      filter: blur(0.1px);
+      opacity: 0.98;
+      width: 220px;
+      height: 100px;
+      margin-top: 0;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 10px;
+      }
+      .toursphoto img {
+      border-radius: 3px;
+      filter: blur(0.1px);
+      opacity: 0.98;
+      overflow: hidden;
+      margin-bottom:-10px;
+      max-width: 220px;
+      }
+      .tourst span { 
+      font-size: 12px;
+      width: 140px;
+      }
+      .page2prina {display:none}
+      .default-tab {display:block}
+      :target ~ .default-tab {display:none}
+      #page2aa:target ~ .page2aa,
+      #page2ba:target ~ .page2ba,
+      #page2ca:target ~ .page2ca
+      {
+      display: block;
+      }
+      .coverpagea {
+      position: relative;
+      margin-top: -35%;
+      transform: translateY(24%);
+      width: 100%;
+      min-height: 48vh;
+      filter: blur(0.1px);
+      opacity: 0.98;
+      margin-bottom: 0;
+      object-fit: cover;
+      }
+      .contphotoa {
+      overflow: hidden;
+      width: 100%;
+      }
+      .coverpageb {
+      position: relative;
+      margin-top: -46%;
+      transform: translateY(24%);
+      width: 100%;
+      min-height: 42vh;
+      filter: blur(0.1px);
+      opacity: 0.98;
+      margin-bottom: 0;
+      }
+      .contphotob {
+      overflow: hidden;
+      width: 100%;
+      }
+      .coverpagec {
+      position: relative;
+      margin-top: -46%;
+      transform: translateY(12%);
+      width: 100%;
+      min-height: 42vh;
+      filter: blur(0.1px);
+      opacity: 0.98;
+      margin-bottom: 0;
+      object-fit: cover;
+      }
+      .contphotoc {
+      overflow: hidden;
+      width: 100%;
+      }
+      .newtoursa {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 960px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      grid-gap: 30px;
+      margin-bottom: 4em;
+      overflow: hidden;
+      place-items: center;
+      }
+      toursphotoa {
+      display: inline-block;
+      }
+      .toursphotoa img {
+      border-radius: 3px;
+      filter: blur(0.1px);
+      opacity: 0.98;
+      overflow: hidden;
+      max-width: 260px;
+      box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+      }
+      .toursphotoa label {
+      background-color: #fff;
+      text-decoration: none;
+      border-radius: 3px;
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      width: 40px;
+      margin-top: -14px;
+      position: absolute;
+      margin-left: 30px;
+      }
+      .toursphotoa label :hover {
+      opacity: .6;
+      }
+      .textaa {
+      margin-top: -70px;
+      width: 260px;
+      position: absolute;
+      background: blue;
+      box-sizing: border-box;
+      padding: 6px;
+      background-color: #e0e3e6;
+      font-size: 10px;
+      height: 84px;
+      line-height: 16px!important;
+      }
+      .toursta span { 
+      font-size: 12px;
+      width: 140px;
+      }	 
+      .forma {
+      margin:10px auto;
+      max-width: 960px;
+      padding: 20px 12px 10px 20px;
+      font-size: 12px;
+      box-sizing: border-box;
+      margin-top: 2em;
+      margin-bottom: 4em;
+      }
+      .forma li {
+      padding: 0;
+      display: block;
+      list-style: none;
+      margin: 16px 0 0 0;
+      }
+      .forma label{
+      margin:0 0 3px 0;
+      padding:0px;
+      display:block;
+      font-weight: bold;
+      }
+      .forma input[type=text], 
+      .forma input[type=email],
+      textarea, select {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      border:1px solid #BEBEBE;
+      padding: 7px;
+      margin:0px;
+      -webkit-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;	
+      }
+      .forma input[type=text]:focus, 
+      .forma input[type=email]:focus,
+      .forma textarea:focus, 
+      .forma select:focus{
+      -webkit-box-shadow: 0 0 8px lightgray;
+      box-shadow: 0 0 8px lightgray;
+      border: 1px solid lightgray;
+      }
+      .forma .textspace {
+      width: 49.3%;
+      padding: 20px;
+      }
+      .forma .textspace1 {
+      width: 99.3%;
+      }
+      .forma .textspace2 {
+      width: 99.3%;
+      }
+      .forma.textspace4 {
+      height: 100px;
+      }
+      .forma input[type=submit], .forma input[type=button] {
+      background: #fff;
+      padding: 8px 15px 8px 15px;
+      border: 1px solid #526880;
+      color: #222;
+      }
+      .forma input[type=submit]:hover, .forma input[type=button]:hover{
+      background-color: #526880;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      color: #222;
+      }
+      .forma .textform {
+      color:#526880;
+      }
+      .formatitle {
+      font-weight: bold;
+      font-style: italic;
+      border-bottom: 1px solid #ddd;
+      font-size: 16px;
+      padding-bottom: 2px;
+      text-align: left;
+      }
+      .textcon {
+      margin-left: 0;
+      color: #222;
+      } 
+      .toursphoto {
+      border-radius: 3px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      filter: blur(0.1px);
+      opacity: 0.98;
+      width: 220px;
+      }
+      .toursphoto img {
+      overflow: hidden;
+      height: 140px;
+      width: 220px;
+      cursor: pointer;
+      }
+      .toursphoto
+      img:hover {
+      transform: scale(1.4);
+      transition: all 2.4s ease;
+      transform-origin: bottom center;
+      }
+      .toursphotoa {
+      border-radius: 3px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      filter: blur(0.1px);
+      opacity: 0.98;
+      width: 240px;
+      }
+      .toursphotoa img {
+      overflow: hidden;
+      height: 180px;
+      width: 240px;
+      cursor: pointer;
+      }
+      .toursphotoa
+      img:hover {
+      transform: scale(1.4);
+      transition: all 2.4s ease;
+      transform-origin: bottom center;
+      }
+      .sub input {
+      cursor: pointer;
+      }
+      .address {
+      font-size: 14px;
+      line-height: 12px;
+      margin-bottom: 30px;
+      }
+      .buttona {
+      cursor: pointer;
+      }
+	  .texta .buttona {
+	  margin-top: 2px;
+	  margin-left: 136px;
+	  }
+    </style>
+  </head>
+  <body>
+    <div class="principal">
+      <label id="click" for="check"><span class="promo"></span></label>
+      <input type="checkbox" id="check">
+      <div class="snowc" aria-hidden="true" id="snow">
+        <div class="snowf" style="--d: 0s, 0s;">
+          <svg height="16" width="16">
+            <circle cx="8" cy="8" r="6" stroke-width="3" fill="white" />
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 1s, 1s;">
+          <svg height="20" width="20">
+            <circle cx="10" cy="10" r="8" stroke-width="3" fill="white" />
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 2s, 2s;">
+          <svg height="10" width="24">
+            <circle cx="5" cy="5" r="3" stroke-width="3" fill="white" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 4s, 2s;">
+          <svg height="24" width="8">
+            <circle cx="4" cy="4" r="2" stroke-width="3" fill="white" />
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 1s, 0s;">
+          <svg height="20" width="20">
+            <circle cx="10" cy="10" r="5" stroke-width="3" fill="white"/>
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 5s, 0.3s;">
+          <svg height="16" width="16">
+            <circle cx="8" cy="8" r="6" stroke-width="3" fill="white" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 4s, 1s;">
+          <svg height="12" width="12">
+            <circle cx="6" cy="6" r="4" stroke-width="3" fill="white" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 6s, 1.1s;">
+          <svg height="20" width="20">
+            <circle cx="10" cy="10" r="5" stroke-width="3" fill="white" />
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 4s, 2s;">
+          <svg height="16" width="16">
+            <circle cx="8" cy="8" r="6" stroke-width="3" fill="white" opacity="0.7" />
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 8s, 3s;">
+          <svg height="12" width="12">
+            <circle cx="6" cy="6" r="4" stroke-width="3" fill="white"  />
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 3s, 4s;">
+          <svg height="16" width="16">
+            <circle cx="8" cy="8" r="6" stroke-width="3" fill="white" />
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 2.5s, 1.4s;">
+          <svg height="24" width="24">
+            <circle cx="12" cy="12" r="10" stroke-width="3" fill="white" opacity="0.5" />
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 7s, 3s;">
+          <svg height="20" width="20">
+            <circle cx="10" cy="10" r="5" stroke-width="3" fill="white"  />
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 1s, 0s;">
+          <svg height="16" width="16">
+            <circle cx="8" cy="8" r="6" stroke-width="3" fill="white" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 5s, 1.5s;">
+          <svg height="24" width="24">
+            <circle cx="12" cy="12" r="10" stroke-width="3" fill="white" />
+          </svg>
+        </div>
+        <div class="snowf" style="--d: 3s, 1.3s;">
+          <svg height="20" width="20">
+            <circle cx="10" cy="10" r="5" stroke-width="3" fill="white"  />
+          </svg>
+        </div>
+      </div>
+      <label class="header" for = "page1"><img alt="Two gray leaves as symbol for travel" class="logo" src="logoa.png" loading="lazy"></label>
+      <input checked class="page" id="page1" name="tabs" type="radio">
+      <input class="page" id="page2" name="tabs" type="radio"> 
+      <input class="page" id="page3" name="tabs" type="radio"> 
+      <input class="page" id="page4" name="tabs" type="radio">
+      <input id="menu" type="checkbox" hidden> 
+      <label class="drop" for="menu"><img src="menu2.svg" height="24" alt="Three horizontal black bars representing a menu"></label>
+      <div class="labels" id="menua">
+        <label class="pagenew" for="page1" id="a">HOME</label> 
+        <label class="pagenew" for="page2" id="b">TOURS</label> 
+        <label class="pagenew" for="page3" id="c">OFFERS</label> 
+        <label class="pagenew" for="page4" id="d">CONTACT</label>
+      </div>
+      <main class="content">
+        <div class="page" id="content1">
+          <div class="slideshow">
+            <img src="cover12.jpg" alt="View of Greek city of Santorini with white buildings" >
+            <img src="cover18aa.jpg" alt="A handsome man on a snowy mountain looking towards other mountains" class="bottom">
+		    <img src="cover14.jpg" alt="A woman looking to a field" class="bottom1" >
+            <img src="cover55.jpg" alt="An old castle by the sea" class="bottom">
+          </div>
+          <div class="herob">
+            <h1>AMAZING PLACES TO VISIT </h1>
+            <br>
+            <div class="subtitle"></div>
+            <label class="button" for = "page4">Plan your trip</label>
+          </div>
+          <section class="description">
+            <h3> Embark on a journey to a new world, explore other cultures, meet new people and enjoy unforgettable memories. The sky is the limit in this amazing adventure. Bring to life  the stories of your explorations.<br> You can  plan an adventure or you can travel without planning, to the perfect <br>destination of your choice.
+            </h3>
+          </section>
+          <section class="offera">
+            <figure class="specialoffer">
+              <img class="imga" alt="View from the terrace towards the Greek sea" src="photoa2b.jpg">
+            </figure>
+            <div class="offertext">
+              <h3> Experience beautiful destinations, curated tours, and amazing culturally recognized locations.</h3>
+              <label class="shortxt" for = "page2" id="shortxt"> &#62;&nbsp;&nbsp;&nbsp;&nbsp;Start your journey today</label>
+            </div>
+          </section>
+          <aside class="vacation">
+            <div class="vacationicon">
+              <div>
+                <span class="iconew">&#9969;&nbsp;</span>						
+                <label class="vac" for = "page3" id="vac">Great vacations!</label>
+                <p> Special designed packages,<br> for a perfect vacation,<br> always to remember.</p>
+              </div>
+              <div>
+                <span class="iconew">&#9752;&nbsp;</span>	
+                <label class="offe" for = "page3" id="offe">Best Offers!</label>
+                <p> The biggest deals and discounts<br> you can book now,<br> for your next trip.</p>
+              </div>
+              <div>
+                <span class="iconew">&#9788;&nbsp;</span>
+                <label class="dest" for = "page2" id="dest">100+ Destinations!</label>					 
+                <p>The most desirable destinations<br> in the world,<br> to enjoy.</p>
+              </div>
+            </div>
+          </aside>
+          <div class="gallery">
+            <div class="gallerya">
+              <figure class="photo">
+                <img alt="Man walking towards a pyramid in Cairo, Egypt" src="photoa3aa.jpg">
+                <figcaption class="text">
+                  <strong>Cairo,</strong>&nbsp;Egypt<br>
+                  2 persons - 4 Days/ 3 Nights<br><br>
+                  <label class="buttona" for = "page4"><strong>Request an offer</strong></label>
+                </figcaption>
+              </figure>
+              <figure class="photo">
+                <img alt="Sea view, beach and hotels in Antalya Turkey" src="photoa4.jpg">
+                <figcaption class="text">
+                  <strong>Antalya,</strong>&nbsp;Turkey<br>
+                  2 persons - 4 Days/ 3 Nights<br><br>
+                  <label class="buttona" for = "page4"><strong>Request an offer</strong></label>
+                </figcaption>
+              </figure>
+              <figure class="photo">
+                <img alt="Straw beach umbrellas in Goa, India" src="photoa5.jpg">
+                <figcaption class="text">
+                  <strong>Goa,</strong>&nbsp;India<br>
+                  2 persons - 4 Days/ 3 Nights<br><br>
+                  <label class="buttona" for = "page4"><strong>Request an offer</strong></label>
+                </figcaption>
+              </figure>
+              <figure class="photo">
+                <img alt="Ships on the water and houses along the dock in Nyhavn, Danemark" src="photoa6.jpg">
+                <figcaption class="text">
+                  <strong>Nyhavn,</strong>&nbsp;Dänemark<br>
+                  2 persons - 4 Days/ 3 Nights<br><br>
+                  <label class="buttona" for = "page4" id="buttond"><strong>Request an offer</strong></label>
+                </figcaption>
+              </figure>
+              <figure class="photo">
+                <img alt="Traditional boat on the Venetian waters, Italy" src="photoa7.jpg">
+                <figcaption class="text">
+                  <strong>Venice,</strong>&nbsp;Italy<br>
+                  2 persons - 4 Days/ 3 Nights<br><br>
+                  <label class="buttona" for = "page4" id="buttone"><strong>Request an offer</strong></label>
+                </figcaption>
+              </figure>
+              <figure class="photo">
+                <img alt="Castle on a green field with yellow flowers in Galway, Ireland" src="photoa8.jpg">
+                <figcaption class="text">
+                  <strong>Galway,</strong>&nbsp;Ireland<br>
+                  2 persons - 4 Days/ 3 Nights<br><br>
+                  <label class="buttona" for = "page4" id="buttonf"><strong>Request an offer</strong></label>
+                </figcaption>
+              </figure>
+              <figure class="photo">
+                <img alt="Beach with brown sand and numerous palm trees in Mirissa, Sri Lanka" src="photoa9.jpg">
+                <figcaption class="text">
+                  <strong>Mirissa,</strong>&nbsp;Sri Lanka<br>
+                  2 persons - 4 Days/ 3 Nights<br><br>
+                  <label class="buttona" for = "page4" id="buttong"><strong>Request an offer</strong></label>
+                </figcaption>
+              </figure>
+              <figure class="photo">
+                <img alt="Old-looking paved road leading to a castle in Laon, France" src="photoa10.jpg">
+                <figcaption class="text">
+                  <strong> Laon,</strong>&nbsp;France<br>
+                  2 persons - 4 Days/ 3 Nights<br><br>
+                  <label class="buttona" for = "page4" id="buttonh"><strong>Request an offer</strong></label>
+                </figcaption>
+              </figure>
+              <figure class="photo">
+                <img alt=" Archaeological site looking like a small pyramid in Oaxaca, Mexico" src="photoa11.jpg">
+                <figcaption class="text">
+                  <strong>Oaxaca,</strong>&nbsp;Mexico<br>
+                  2 persons - 4 Days/ 3 Nights<br><br>
+                  <label class="buttona" for = "page4" id="buttoni"><strong>Request an offer</strong></label>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="offerb">
+            <div class="offerbvideo">
+              <div class="video">
+                <video title="Man on the mountain skiing" width="300" height="200" controls>
+                  <source src="travela.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="videotext">
+                <h4><strong>FREE TRAVEL COUPON</strong></h4>
+                <hr>
+                <h5>Ski weekend Austria (Altaussee) <br> Winter holidays - 2 persons</h5>
+                <h4>75% DISCOUNT!</h4>
+                <a id="contactb" href="DiscountCoupon.pdf" download="bestvacationlist"><span>Get it NOW.</span></a>
+              </div>
+            </div>
+          </div>
+          <aside class="newsletter">
+            <section>
+              <form class="sub" action="mailto:your_gmail_address@gmail.com" method="post" enctype="text/plain">
+                <h3 class="formButton"><em>Subscribe to our NEWSLETTER</em></h3>
+                <input type="email" name="email" class="formStyle" placeholder="Email" required >
+                <input type="hidden" name="subject" value="New Subscriber" >
+                <input type="submit" value="Submit" >
+              </form>
+            </section>
+          </aside>
+        </div>
+        <div class="page" id="content2">
+          <div class="contphotoa">
+            <img class="coverpagea" src="photoa88a.jpg" alt="White boats floating on the water near a castle and a settlement with cream houses.jpg" >
+          </div>
+          <div class="tourss">
+            <div class="tours">
+              <aside>
+                <h2>Tours - Destinations - Hotels</h2>
+                <h3> <em>Organised Group Tour </em></h3>
+                <p> Organized tours have many advantages over independent travel. With our guided tours  you won't miss any of the popular attractions in your chosen destination.<br> Our itineraries are designed by experts, so you'll have plenty of time  to enjoy your trip. Then you won't have to waste time on public transport, speak a foreign language or choose traditional food for dinner. Take your  time to enjoy your vacation and let your tour guide show you the best  cultural destinations.
+                </p>
+              </aside>
+            </div>
+          </div>
+          <div class="tourspages">
+            <div class="tourslinks">
+              <a href="#page2a">Tours</a>
+              <a href="#page2b">Destinations</a>
+              <a href="#page2c">Hotels</a>
+            </div>
+            <a id="page2a"></a>
+            <a id="page2b"></a>
+            <a id="page2c"></a>
+            <div class="page2prin page2a default-tab">
+              <div class="newtours">
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="View from a boat towards some mountains in Lago di Braies, Italy" src="1.jpg">
+                    <figcaption class="texta">
+                      <strong>Lago di Braies,</strong>&nbsp;Italy<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>944&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4" id="buttona1"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Man with an orange backpack looking towards the mountains across a water in Plansee, Austria" src="2.jpg">
+                    <figcaption class="texta">
+                      <strong>Plansee,</strong>&nbsp;Austria<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>744&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4" id="buttona2"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Woman looking at some big rocks in Neom, Saudi Arabia" src="3.jpg">
+                    <figcaption class="texta">
+                      <strong>Neom,</strong>&nbsp;Saudi Arabia<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2" id="buttona3"><strong>644&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4" id="buttona4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Colorful houses along the water in Venice, Italy" src="4.jpg">
+                    <figcaption class="texta">
+                      <strong>Venice,</strong>&nbsp;Italy<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2" id="buttona5"><strong>1244&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4" id="buttona6"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Photographer taking a picture of a woman under a sky covered with balloons in Cappadocia, Turkey" src="5.jpg">
+                    <figcaption class="texta">
+                      <strong>Cappadocia,</strong>&nbsp;Turkey<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2" id="buttona7"><strong>1244&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4" id="buttona8"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Woman traveling on a road among rocks in Oljato, USA" src="6.jpg">
+                    <figcaption class="texta">
+                      <strong>Oljato-Monument Valley,</strong>&nbsp;USA<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2" id="buttona9"><strong>1444&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734; 
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4" id="buttona10"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="A bridge over the waters to a small island in Zakynthos, Griekenland" src="7.jpg">
+                    <figcaption class="texta">
+                      <strong>Zakynthos,</strong>&nbsp;Griekenland<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2" id="buttona11"><strong>444&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4" id="buttona12"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Blue lake guarded by trees and mountains in Piburger See, Austria" src="8.jpg">
+                    <figcaption class="texta">
+                      <strong>Piburger See,</strong>&nbsp;Austria<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2" id="buttona13"><strong>844&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4" id="buttona14"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Cottage on the water, between the mountains in Lago di Braies, Italy" src="9.jpg">
+                    <figcaption class="texta">
+                      <strong>Lago di Braies,</strong>&nbsp;Italy<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2" id="buttona15"><strong>444&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4" id="buttona16"><u>Request an offer.</u></label></span>
+                </div>
+              </div>
+              <aside class="newsletter">
+                <div>
+                  <form class="sub" action="mailto:your_gmail_address@gmail.com" method="post" enctype="text/plain">
+                    <h3 class="formButton"><em>Subscribe to our NEWSLETTER</em></h3>
+                    <input type="email" name="email" class="formStyle" placeholder="Email" required >
+                    <input type="hidden" name="subject" value="New Subscriber" >
+                    <input type="submit" value="Submit" >
+                  </form>
+                </div>
+              </aside>
+            </div>
+            <div class="page2prin page2b">
+              <div class="newtours">
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Woman standing on a sand dune looking towards the mountains in Neom, Saudi Arabia" src="10.jpg">
+                    <figcaption class="texta">
+                      <strong>Neom,</strong>&nbsp;Saudi Arabia<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>844E</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Blue lake surrounded by snowy mountains in Moraine Lake, Canada" src="11.jpg">
+                    <figcaption class="texta">
+                      <strong>Moraine Lake,</strong>&nbsp;Canada<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>544&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Young woman looking towards a historic white building in Agra, India" src="12.jpg">
+                    <figcaption class="texta">
+                      <strong>Agra,</strong>&nbsp;India<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2" ><strong>844&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4" ><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Ancient amphitheater, white in Rome, Italy" src="13.jpg">
+                    <figcaption class="texta">
+                      <strong>Rome,</strong>&nbsp;Italy<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2" ><strong>544&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4" ><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Young woman looking out to sea in Monteresso al Mare, Italy" src="14.jpg">
+                    <figcaption class="texta">
+                      <strong>Monterosso al Mare,</strong>&nbsp;Italy<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>1044&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4" ><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="City with many buildings on the edge of the seain Rio de Janeiro, Brazil" src="15.jpg">
+                    <figcaption class="texta">
+                      <strong>Rio de Janeiro,</strong>&nbsp;Brazil<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>844&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Beach umbrellas on the edge of a pool in Ao Nang, Thailand" src="16.jpg">
+                    <figcaption class="texta">
+                      <strong>Ao Nang,</strong>&nbsp;Thailand<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2" ><strong>744&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Woman on rocks looking towards a water and mountains in Paron Lake, Peru" src="17.jpg">
+                    <figcaption class="texta">
+                      <strong>Paron Lake,</strong>&nbsp;Peru<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>844&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Artesian fountain in front of a historical building in Rome, Italy" src="18.jpg">
+                    <figcaption class="texta">
+                      <strong>Roma,</strong>&nbsp;Italy<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>1044&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+              </div>
+              <aside class="newsletter">
+                <div>
+                  <form class="sub" action="mailto:your_gmail_address@gmail.com" method="post" enctype="text/plain">
+                    <h3 class="formButton"><em>Subscribe to our NEWSLETTER</em></h3>
+                    <input type="email" name="email" class="formStyle" placeholder="Email" required >
+                    <input type="hidden" name="subject" value="New Subscriber" >
+                    <input type="submit" value="Submit" >
+                  </form>
+                </div>
+              </aside>
+            </div>
+            <div class="page2prin page2c">
+              <div class="newtours">
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="The lobby of a hotel" src="19.jpg">
+                    <figcaption class="texta">
+                      <strong>Deluxe Hotel</strong>&nbsp;Bafra<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>274&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Green armchairs with white cushions in a hotel lobby" src="20.jpg">
+                    <figcaption class="texta">
+                      <strong>West Java,</strong>&nbsp;Indonesia<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>274&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="View from a hotel towards the mountains" src="21.jpg">
+                    <figcaption class="texta">
+                      <strong>El Porvenir,</strong>&nbsp;Mexico<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>774&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Swimming pool inside a hotel" src="22.jpg">
+                    <figcaption class="texta">
+                      <strong>Ocho Rios,</strong>&nbsp;Jamaica<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>574&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="View of a hotel located on the edge of a lake" src="23.jpg">
+                    <figcaption class="texta">
+                      <strong>Lake Como,</strong>&nbsp;Italy<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>844&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Swimming pool inside a hotel" src="24.jpg">
+                    <figcaption class="texta">
+                      <strong>Kamari</strong>&nbsp;Greece<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>1244&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="White terrace in a hotel" src="25.jpg">
+                    <figcaption class="texta">
+                      <strong>Saint Tropez,</strong>&nbsp;France<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>1544&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733; 
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Bedroom decorated in white in a hotel" src="26.jpg">
+                    <figcaption class="texta">
+                      <strong>Alicante,</strong>&nbsp;Spain<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>1244&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="tourst">
+                  <figure class="toursphoto">
+                    <img alt="Top view of a hotel located on a small island" src="27.jpg">
+                    <figcaption class="texta">
+                      <strong>Ölüdeniz,</strong>&nbsp;Turkey<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttona" for = "page2"><strong>1244&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+              </div>
+              <aside class="newsletter">
+                <div>
+                  <form class="sub" action="mailto:your_gmail_address@gmail.com" method="post" enctype="text/plain">
+                    <h3 class="formButton"><em>Subscribe to our NEWSLETTER</em></h3>
+                    <input type="email" name="email" class="formStyle" placeholder="Email" required >
+                    <input type="hidden" name="subject" value="New Subscriber" >
+                    <input type="submit" value="Submit" >
+                  </form>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+        <div class="page" id="content3">
+          <div class="contphotob">
+            <img class="coverpageb" src="offersaa.jpg" alt="Large houses located on the edge of a lake">
+          </div>
+          <div class="tourss">
+            <div class="tours">
+              <aside>
+                <h2>Offers - Deals - Discounts</h2>
+                <h3><em>Best travel offers for holidays around the world </em></h3>
+                <p>Vacation packages can save you a lot of time, airfare, accommodation, and ground transportation costs. You can travel to every corner of the world, with  minimal effort. <br>Simply select your destination and choose from several offers, as well as package discounts, all-inclusive hotel deals, and last-minute travel deals. We offer maximum flexibility in planning your desired holiday, ensuring you  get the best deals and the biggest discounts.
+                </p>
+              </aside>
+            </div>
+          </div>
+          <div class="tourspages">
+            <div class="tourslinks">
+              <a href="#page2aa">Offers</a>
+              <a href="#page2ba">Today's Deals</a>
+              <a href="#page2ca">Discounts</a>
+            </div>
+            <a id="page2aa"></a>
+            <a id="page2ba"></a>
+            <a id="page2ca"></a>
+            <div class="page2prina page2aa default-tab">
+              <div class="newtoursa">
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="A blue building and a pink one guarded by trees in Sevilla, Spain" src="28.jpg">
+                    <figcaption class="textaa">
+                      <strong>Sevilla,</strong>&nbsp;Spain<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>994&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9734; 
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Traditional white houses with blue windows in Antiparos, Greece" src="29.jpg">
+                    <figcaption class="textaa">
+                      <strong>Antiparos,</strong>&nbsp;Greece<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>1194&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Numerous houses on rocks along a sea in Manarola, Italy" src="30.jpg">
+                    <figcaption class="textaa">
+                      <strong>Manarola,</strong>&nbsp;Italy<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>1844&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Small settlement on the edge of a lake in Hallstatt, Austria" src="31.jpg">
+                    <figcaption class="textaa">
+                      <strong>Hallstatt,</strong>&nbsp;Austria<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>344&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="A large, white castle on a green field in Schwangau, Germany" src="32.jpg">
+                    <figcaption class="textaa">
+                      <strong>Schwangau,</strong>&nbsp;Germany<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>444&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="A long wall that crosses a hill in Huairou, China" src="33.jpg">
+                    <figcaption class="textaa">
+                      <strong>Huairou District,</strong>&nbsp;China<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>744&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Traditional buildings with a Buddhist statue in front of them in Wiang Kum Kam, Thailand" src="34.jpg">
+                    <figcaption class="textaa">
+                      <strong>Wiang Kum Kam,</strong>&nbsp;Thailand<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>944&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Settlement at the foot of a hill in Guanajuato, Mexico" src="35.jpg">
+                    <figcaption class="textaa">
+                      <strong>Guanajuato,</strong>&nbsp;Mexico<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>1144&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Traditional blue building in Fujiyoshida, Japan" src="36.jpg">
+                    <figcaption class="textaa">
+                      <strong>Fujiyoshida,</strong>&nbsp;Japan<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>1244&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+              </div>
+              <aside class="newsletter">
+                <div>
+                  <form class="sub" action="mailto:your_gmail_address@gmail.com" method="post" enctype="text/plain">
+                    <h3 class="formButton"><em>Subscribe to our NEWSLETTER</em></h3>
+                    <input type="email" name="email" class="formStyle" placeholder="Email" required >
+                    <input type="hidden" name="subject" value="New Subscriber" >
+                    <input type="submit" value="Submit" >
+                  </form>
+                </div>
+              </aside>
+            </div>
+            <div class="page2prina page2ba">
+              <div class="newtoursa">
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Lake guarded by snow-covered mountains in Yoho National Park, Canada" src="37.jpg">
+                    <figcaption class="textaa">
+                      <strong>Yoho National Park,</strong>&nbsp;Canada<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>744&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Buildings with traditional colored towers in Moskow, Russia" src="38.jpg">
+                    <figcaption class="textaa">
+                      <strong> Moskow,</strong>&nbsp;Russia<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>544&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Buildings on the edge of the sea in Porto, Portugal" src="39.jpg">
+                    <figcaption class="textaa">
+                      <strong>Porto,</strong>&nbsp;Portugal<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>344&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="White traditional building in Agra, India" src="40.jpg">
+                    <figcaption class="textaa">
+                      <strong>Agra,</strong>&nbsp;India<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>544&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Buildings on the rocks near the sea in Dubrovnik, Croatia" src="41.jpg">
+                    <figcaption class="textaa">
+                      <strong>Dubrovnik,</strong>&nbsp;Croatia<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>744&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Two simple traditional statues in Bali, Indonesia" src="42.jpg">
+                    <figcaption class="textaa">
+                      <strong>Bali,</strong>&nbsp;Indonesia<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>844&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Young people on camels in the desert in Wadi Rum, Jordan" src="43.jpg">
+                    <figcaption class="textaa">
+                      <strong>Wadi Rum,</strong>&nbsp;Jordan<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>1144&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="People on camels near a pyramid in the desert in Al Ahram, Egypt" src="44.jpg">
+                    <figcaption class="textaa">
+                      <strong>Al Ahram,</strong>&nbsp;Egypt<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>1544&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Several small islands in the middle of the sea in Rio de Janeiro, Brazil " src="45.jpg">
+                    <figcaption class="textaa">
+                      <strong>Rio de Janeiro,</strong>&nbsp;Brazil<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>1454&nbsp;&euro;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733; 
+                  <br>
+                  &#62;&nbsp;&nbsp;<label class="buttona" for = "page4"><u>Request an offer.</u></label></span>
+                </div>
+              </div>
+              <aside class="newsletter">
+                <div>
+                  <form class="sub" action="mailto:your_gmail_address@gmail.com" method="post" enctype="text/plain">
+                    <h3 class="formButton"><em>Subscribe to our NEWSLETTER</em></h3>
+                    <input type="email" name="email" class="formStyle" placeholder="Email" required >
+                    <input type="hidden" name="subject" value="New Subscriber" >
+                    <input type="submit" value="Submit" >
+                  </form>
+                </div>
+              </aside>
+            </div>
+            <div class="page2prina page2ca">
+              <div class="newtoursa">
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Colorful houses lined up along a canal in Nyhavn, Denmark" src="46.jpg">
+                    <figcaption class="textaa">
+                      <strong>Nyhavn,</strong>&nbsp;Denmark<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>744&nbsp;&#37;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<u>Request an offer.</u></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Traditional white houses positioned along the sea in Taghazout, Morocco" src="47.jpg">
+                    <figcaption class="textaa">
+                      <strong>Taghazout</strong>&nbsp;Morocco<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>844&nbsp;&#37;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<u>Request an offer.</u></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Tropical mountain forest in Machu Picchu, Peru" src="48.jpg">
+                    <figcaption class="textaa">
+                      <strong>Machu Picchu,</strong>&nbsp;Peru<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>544&nbsp;&#37;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733; 
+                  <br>
+                  &#62;&nbsp;&nbsp;<u>Request an offer.</u></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Big tall buildings in Dubai, United Arab Emirates" src="49.jpg">
+                    <figcaption class="textaa">
+                      <strong>Dubai,</strong>&nbsp;United Arab Emirates<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>774&nbsp;%</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734; 
+                  <br>
+                  &#62;&nbsp;&nbsp;<u>Request an offer.</u></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="High bridge in London, United Kingdom" src="50.jpg">
+                    <figcaption class="textaa">
+                      <strong>London,</strong>&nbsp;United Kingdom<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>1144&nbsp;&#37;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;
+                  <br>
+                  &#62;&nbsp;&nbsp;<u>Request an offer.</u></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Tall tower among the buildings in Paris, France" src="51.jpg">
+                    <figcaption class="textaa">
+                      <strong>Paris,</strong>&nbsp;France<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>1244&nbsp;&#37;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<u>Request an offer.</u></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="White buildings with round towers in Instanbul, Turkey" src="52.jpg">
+                    <figcaption class="textaa">
+                      <strong>İstanbul,</strong>&nbsp;Turkey<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>944&nbsp;&#37;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734; 
+                  <br>
+                  &#62;&nbsp;&nbsp;<u>Request an offer.</u></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Tall buildings among the waters in Hong Kong, China" src="53.jpg">
+                    <figcaption class="textaa">
+                      <strong>Hong Kong,</strong>&nbsp;China<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>1444&nbsp;&#37;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9734;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<u>Request an offer.</u></span>
+                </div>
+                <div class="toursta">
+                  <figure class="toursphotoa">
+                    <img alt="Traditional buildings surrounded by rocks in Athens, Greece" src="54.jpg">
+                    <figcaption class="textaa">
+                      <strong>Athens,</strong>&nbsp;Greece<br>
+                      2 persons - 4 Days/ 3 Nights<br><br>
+                      <label class="buttonaa" for = "page2"><strong>944&nbsp;&#37;</strong></label>
+                    </figcaption>
+                  </figure>
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9734;
+                  <br>
+                  &#62;&nbsp;&nbsp;<u>Request an offer.</u></span>
+                </div>
+              </div>
+              <aside class="newsletter">
+                <div>
+                  <form class="sub" action="mailto:example@gmail.com" method="post" enctype="text/plain">
+                    <h3 class="formButton"><em>Subscribe to our NEWSLETTER</em></h3>
+                    <input type="email" name="email" class="formStyle" placeholder="Email" required >
+                    <input type="hidden" name="subject" value="New Subscriber" >
+                    <input type="submit" value="Submit" >
+                  </form>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+        <div class="page" id="content4">
+          <div class="contphotoc">
+            <img class="coverpagec" src="photoa28.jpg" alt="Antic brown dish placed in front of a white door">
+          </div>
+          <div class="tourss">
+            <div class="tours">
+              <aside>
+                <h2>Start planning your vacation</h2>
+                <h3> <em>Submit your travel request and receive the latest discounts and personalized offers </em></h3>
+                <p>Choose from over 1 million hotels in over 150 countries and book flights to over 3,000 destinations and  thousand of attractions. You can download travel guides from our homepage to learn about the best places for vacation around the world. Select your destination, send a  message with your request, and receive at least three  offers tailored to your preferences.
+                </p>
+              </aside>
+            </div>
+          </div>
+          <div>
+            <form class="sub" action="mailto:example@gmail.com" method="post" enctype="text/plain">
+              <ul class="forma">
+                <li class="contactprim"><span class="formatitle"><span class="textcon">Contact us</span></span></li>
+                <li><label>Full Name <span class="textform">*</span></label>
+                  <input type="text" name="field1" class="textspace" placeholder="First" > 
+                  <input type="text" name="field2" class="textspace" placeholder="Last" >
+                </li>
+                <li>
+                  <label>Email <span class="textform">*</span></label>
+                  <input type="email" name="field3" class="textspace1" >
+                </li>
+                <li>
+                  <label>Subject</label>
+                  <select name="field4" class="textspace2">
+                    <option value="Tours">Tours</option>
+                    <option value="Offers">Offers</option>
+                    <option value="General Question">General</option>
+                  </select>
+                </li>
+                <li>
+                  <label>Your Message <span class="textform">*</span></label>
+                  <textarea name="field5" id="field5" class="textspace1 textspace4"></textarea>
+                </li>
+                <li>
+                  <input type="submit" value="Submit" >
+                </li>
+              </ul>
+            </form>
+          </div>
+          <aside class="newsletter">
+            <div>
+              <form class="sub" action="mailto:your_gmail_address@gmail.com" method="post" enctype="text/plain">
+                <h3 class="formButton"><em>Subscribe to our NEWSLETTER</em></h3>
+                <input type="email" name="email" class="formStyle" placeholder="Email" required >
+                <input type="hidden" name="subject" value="New Subscriber" >
+                <input type="submit" value="Submit" >
+              </form>
+            </div>
+          </aside>
+        </div>
+      </main>
+      <footer>
+        <div class="footergrid">
+          <div class="logofooter">
+            <label class="footerlogo" for = "page1" id="footerlogo"><img alt="Two gray leaves as symbol for travel" class="logo" src="logoa.png"></label>
+            <h4><em> Make the most of your trip. Latest travel deals and special flight offers and packages.</em></h4>
+          </div>
+          <div class="pageslinks">
+            <label class="linkf" for = "page1" id="e">HOME</label><br>
+            <label class="linkf" for = "page2" id="f">TOURS</label><br>
+            <label class="linkf" for = "page3" id="g">OFFERS</label><br>
+            <label class="linkf" for = "page4" id="h">CONTACT</label>
+          </div>
+          <div class="socialm">
+            <div class="address">
+              <h3><em>Address</em></h3>
+              <p class="address1">England, London, 222774</p>
+              <p>+44 70703500117</p>
+              <p><em>contact@altours.com</em></p>
+            </div>
+            <ul>
+              <li>
+                <a href="https://www.linkedin.com/">
+                <img src="lin2.svg" alt="Linkedin icon" width="24" height="24">
+                </a>
+              </li>
+              <li>
+                <a href="https://facebook.com/">
+                <img src="fac2.svg" alt="Facebook icon" width="24" height="24">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/">
+                <img src="ins2.svg" alt="Instagram icon" width="24" height="24">
+                </a>
+              </li>
+            </ul>
+            <h5 id="copyw"> &copy; <em>&nbsp;Copywright</em>&nbsp;2023 ALTOURS</h5>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

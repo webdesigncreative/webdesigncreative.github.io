@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Long shadow text">
+    <meta name="keywords" content="shadow, long-shadow, text">
+    <meta name="author" content="">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Long-shadow</title>
+    <style>
+      @font-face {
+      font-family: MomcakeThin;
+      src: url("MomcakeThin.otf");
+      font-display: fallback;
+      }
+	  body {
+	  background-color: gray;
+	  text-rendering: optimizeLegibility;
+      letter-spacing: 2.25px;
+      line-height: 1.5;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+	  margin: 0;
+			}
+      html {
+      font-size: calc(60% + 0.8vmin);
+      font-family: "MomcakeThin"; 
+      scrollbar-color: #526880 #fff;
+      scroll-behavior: smooth;
+      }
+      .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 960px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #e2e0d5;
+      grid-gap: 30px;
+      vertical-align: middle;
+      place-items: center;
+      height: auto;
+      }
+      h2 {
+      font-size: 5rem;
+      position: relative;
+      text-shadow: 1px 1px #222, 2px 2px #222, 3px 3px #222, 4px 4px #222, 5px 5px #222, 
+      6px 6px #222, 7px 7px #222, 8px 8px #222, 9px 9px #222,  10px 10px #222,  11px 11px #222,  12px 12px #222,  13px 13px #222,  14px 14px #222,  15px 15px #222,  16px 16px #222,  17px 17px #222,  18px 18px #222;
+      color: #fff;
+	  margin-top: 220px;
+      }
+      h3 {
+      color:white;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <div class="text">
+      <h2>Design and create.</h2>
+      <h1>Long shadow text effect</h1>
+    </div>
+	</div>
+  </body>
+</html>

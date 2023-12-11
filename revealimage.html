@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Image effect">
+    <meta name="keywords" content="image, effect, text">
+    <meta name="author" content="">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Image effect</title>
+    <style>
+	body, html {
+    height: 100%;
+    margin: 0;
+}
+      @font-face {
+      font-family: Shadow;
+      src: url("Shadow.woff");
+      font-display: fallback;
+      }
+      html {
+      font-size: calc(60% + 0.8vmin);
+      font-family: "Shadow"; 
+      scrollbar-color: #526880;
+      scroll-behavior: smooth;
+      }
+	  body {
+	     background: #222;
+	     text-rendering: optimizeLegibility;
+         letter-spacing: 0.7px;
+         line-height: 1.5;
+		 overflow-x: hidden;
+		 scroll-behavior: smooth;
+		 margin: 0;
+			 }
+	  .prin {
+	   display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+         max-width: 320px;
+         margin: auto;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         color: #222;
+         grid-gap: 30px;
+		 }
+      .containerprin{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      }
+      .container {
+      position: relative;
+      height: 300px;
+      width: 600px;
+      margin: 50px 0;
+      display: flex;
+      flex-direction: row;
+      transition: all 200ms ease-in-out;
+      cursor: pointer;
+      }
+      .containerimg {
+      height: 300px;
+      width: 450px;
+      overflow: hidden;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      }
+      img {
+      width: 450px;
+      object-fit: cover;
+      object-position: top;
+      transition: all 200ms ease-in-out;
+	  height: auto;
+      }
+      .book-design-image {
+      object-position: center;
+      }
+      .containertext {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      height: 300px;
+      width: 400px;
+      left: 150px;
+      transition: all 200ms ease-in-out;
+      overflow: hidden;
+      }
+      h1 {
+      position: relative;
+      bottom: 0;
+      height: 300px;
+      color: #fff;
+      font-size: 80px;
+      text-transform: uppercase;
+      transition: all 200ms ease-in-out;
+	  	   text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+      }
+      .container:hover img {
+      transform: scale(2);
+      }
+      .container:hover h1 {
+      bottom: 300px;
+      transform: scale(.4);
+      }
+      .container:hover .containerimg {
+      width: 480px;
+      content: url("2img.jpg");
+      transform: scale(1.4);
+	  overflow: hidden;
+	  transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+  <div class="prin">
+  <div class="containerprin">
+    <div class="container">
+      <div class="containerimg">
+        <img src="1img.jpg" alt="">
+      </div>
+      <div class="containertext">
+        <h1>SPRING OUTFIT</h1>
+        <h1  style=" color: gray;">New Collection</h1>
+      </div>
+    </div>
+	</div>
+	</div>
+  </body>
+</html>

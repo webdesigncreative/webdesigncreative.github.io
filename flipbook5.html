@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Magazine - flip page effect">
+    <meta name="keywords" content="flip, flippage">
+    <meta name="author" content="">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Magazine - flip page effect</title>
+    <style>
+	  body {
+	  background-color: #222;
+	  }
+		  html {
+         font-size: calc(60% + 0.8vmin);
+         font-family: "Bespoke"; 
+         scrollbar-color: #526880 #fff;
+		 scroll-behavior: smooth;
+         }
+         body {
+         text-rendering: optimizeLegibility;
+         letter-spacing: 0.7px;
+         line-height: 1.5;
+		 overflow-x: hidden;
+		 scroll-behavior: smooth;
+		 margin: 0;
+         }
+      .container{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1400px;
+      margin-left:-50px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #e2e0d5;
+      grid-gap: 30px;
+      vertical-align: middle;
+      place-items: center;
+      }
+      .magazine {
+      display: flex;
+      }
+      #cover {
+      width: 340px;
+      height: 480px;
+      }
+      .cont-magazine {
+      width: 340px;
+      height: 480px;
+      position: relative;
+      perspective-origin: 10% 90%;
+      -webkit-perspective-origin: 70% 30%;
+      -webkit-transform-style: preserve-3d;
+	  margin: auto;
+      }
+      .cont {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      transform-origin: left;
+      transform-style: preserve-3d;
+      transform: rotateY(0deg);
+      transition: all 2s ease-in-out;
+      color: #000;
+      }
+      .newf {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      color: #fff;
+      box-sizing: border-box;
+      }
+      .new {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      transform: rotateY(180deg);
+      backface-visibility: hidden;
+      background-color: #000;
+      }
+      .forward {
+      position: absolute;
+      bottom: 13px;
+      right: 13px;
+      cursor: pointer;
+      color: #000;
+      }
+      .backward {
+      position: absolute;
+      bottom: 13px;
+      right: 13px;
+      cursor: pointer;
+      color: #222;
+      }
+      #page1 {
+      z-index: 6;
+      }
+      #page2 {
+      z-index: 5;
+      }
+      #page3 {
+      z-index: 4;
+      }
+      #page4 {
+      z-index: 3;
+      }
+      #page5 {
+      z-index: 2;
+      }
+      #page6 {
+      z-index: 1;
+      }
+      #check1:checked ~ .cont-magazine #page1 {
+      transform: rotateY(-180deg);
+      z-index: 1;
+      }
+      #check2:checked ~ .cont-magazine #page2 {
+      transform: rotateY(-180deg);
+      z-index: 2;
+      }
+      #check3:checked ~ .cont-magazine #page3 {
+      transform: rotateY(-180deg);
+      z-index: 3;
+      }
+      #check4:checked ~ .cont-magazine #page4 {
+      transform: rotateY(-180deg);
+      z-index: 4;
+      }
+      #check5:checked ~ .cont-magazine #page5 {
+      transform: rotateY(-180deg);
+      z-index: 5;
+      }
+      #check6:checked ~ .cont-magazine #page6 {
+      transform: rotateY(-180deg);
+      z-index: 6;
+      }
+      input[type=checkbox].hidden{
+      opacity: 0;
+      }
+      img {
+      -webkit-box-shadow: 0 10px 6px -6px #777;
+      -moz-box-shadow: 0 10px 6px -6px #777;
+      box-shadow: 0 10px 6px -6px #777;
+      overflow: hidden;
+      }
+      h2 {
+      font-size: 3em;
+      position: absolute;
+      margin-top: 100px;
+      transform: translate(-50%,-50%);
+      background-image: linear-gradient(#565c5e, #565c5e);
+      background-size: 100% 10px;
+      background-repeat: no-repeat;
+      background-position: 100% 0%;
+      transition: background-size .7s, background-position .5s ease-in-out;
+	  text-align: left;
+      }
+      h2:hover {
+      background-size: 100% 100%;
+      background-position: 0% 100%;
+      transition: background-position .7s, background-size .5s ease-in-out;
+      }
+	  h3 {
+	  margin-top: 180px;
+	  text-align: left;
+	  margin-left: -100px;
+	  }
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <div class="text">
+      <h2>PAINTER <br>MAGAZINE</h2>
+      <h3>Flip page effect</h3>
+    </div>
+    <div class="magazine">
+      <input type="checkbox" id="check1" class="hidden">
+      <input type="checkbox" id="check2" class="hidden">
+      <input type="checkbox" id="check3" class="hidden">
+      <input type="checkbox" id="check4" class="hidden">
+      <input type="checkbox" id="check5" class="hidden">
+      <input type="checkbox" id="check6" class="hidden">
+      <div class="cont-magazine">
+        <div class="cont" id="page1">
+          <div class="new">
+            <img src="img2.png" alt="" width="340" height="480">
+            <label for="check1" class="backward">2</label>
+          </div>
+          <div class="newf">
+            <label for="check1" class="forward">&#9755;</label>
+            <div id="cover1">
+              <img src="img1.png" alt="Cover" width="340" height="480">
+            </div>
+          </div>
+        </div>
+        <div class="cont" id="page2">
+          <div class="new">
+            <img src="img3.png" alt="" width="340" height="480">
+            <label for="check2" class="backward">4</label>
+          </div>
+          <div class="newf">
+            <img src="img4.png" alt="" width="340" height="480">
+            <label for="check2" class="forward">3</label>
+          </div>
+        </div>
+        <div class="cont" id="page3">
+          <div class="new">
+            <img src="img6.png" alt="" width="340" height="480">
+            <label for="check3" class="backward">6</label>
+          </div>
+          <div class="newf">
+            <img src="img5.png" alt="" width="340" height="480">
+            <label for="check3" class="forward">5</label>
+          </div>
+        </div>
+        <div class="cont" id="page4">
+          <div class="new">
+            <img src="img8.png" alt="" width="340" height="480">
+            <label for="check4" class="backward">8</label>
+          </div>
+          <div class="newf">
+            <img src="img7.png" alt="" width="340" height="480">
+            <label for="check4" class="forward">7</label>
+          </div>
+        </div>
+        <div class="cont" id="page5">
+          <div class="new">
+            <img src="img10.png" alt="" width="340" height="480">
+            <label for="check5" class="backward">10</label>
+          </div>
+          <div class="newf">
+            <img src="img9.png" alt="" width="340" height="480">
+            <label for="check5" class="forward">9</label>
+          </div>
+        </div>
+        <div class="cont" id="page6">
+          <div class="new">
+            <img src="img12.png" alt="" width="340" height="480">
+            <label for="check6" class="backward">&#9754;</label>
+          </div>
+          <div class="newf">
+            <img src="img11.png" alt="" width="340" height="480">
+            <label for="check6" class="forward">11</label>
+          </div>
+        </div>
+      </div>
+    </div>
+	</div>
+  </body>
+</html>

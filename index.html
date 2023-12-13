@@ -32,7 +32,7 @@
       body {
       text-rendering: optimizeLegibility;
       letter-spacing: 0.16em;
-      line-height: 1.7;
+      line-height: 1.5;
       overflow-x: hidden;
       scroll-behavior: smooth;
       margin: 0;
@@ -302,14 +302,31 @@
       border: 1px solid lightgray;
       }
       .gallerybpresentation {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       max-width: 1400px;
-      margin-left: 10vmin;
+      margin: auto;
       justify-content: left;
       text-align: left;
-      padding: 1em;
-      margin-top: 4em;
-      margin-bottom: 4em;
+      grid-gap: 30px;
+      box-sizing: border-box;
       white-space: pre-wrap;
+      color:#222;
+      padding: 1em;
+      }
+      .gallerybpresentation2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1400px;
+      margin: auto;
+      justify-content: left;
+      text-align: left;
+      grid-gap: 30px;
+      box-sizing: border-box;
+      white-space: pre-wrap;
+      color:#222;
+      box-sizing: border-box;
+      padding: 1em;
       }
       .presentationa {
       cursor: pointer;
@@ -471,6 +488,11 @@
       width: 100%;
       height: auto;
       }
+      .design1 {
+      display: block;
+      text-align: left;
+      justify-content: left;
+      }
     </style>
   </head>
   <body>
@@ -540,19 +562,21 @@
       <div class="pageprina gallerypage">
         <div class="galleryb">
           <aside class="gallerybpresentation">
-            <div class="designa"><img src="bird.png" width="120" alt="photo"></div>
-            <h2>Gallery - website design</h2>
-            <h3><em>Visually appealing and user-friendly responsive websites</em></h3>
-            <p>Webpages design that are both aesthetically pleasing, functional, and meet the requirements.</p>
-            <p class="design1">
-              &#9745;&nbsp;&nbsp;Developing website designs and layouts based on specifications
-              &#9745;&nbsp;&nbsp;Ensuring website compatibility with multiple browsers and devices
-              &#9745;&nbsp;&nbsp;Creating and implementing SEO strategies
-              &#9745;&nbsp;&nbsp;Responsive and mobile-first web design - W3C validation
-              &#9745;&nbsp;&nbsp;Developing website content, including text, images, and videos
-              &#9745;&nbsp;&nbsp;Creating dynamic websites in HTML5, CSS3 which leads to increased traffic, conversion rates, and user engagement, without media queries
-              &#9745;&nbsp;&nbsp;Content strategy development
-            </p>
+            <div>
+              <div class="designa"><img src="bird.png" width="120" alt="photo"></div>
+              <h2>Gallery - website design</h2>
+              <h3><em>Visually appealing and user-friendly responsive websites</em></h3>
+              <p>Webpages design that are both aesthetically pleasing, functional, and meet the requirements.</p>
+              <div class="design1">
+                <span>&#9745;&nbsp;&nbsp;Developing website designs and layouts based on specifications</span>
+                <span>&#9745;&nbsp;&nbsp;Ensuring website compatibility with multiple browsers and devices</span>
+                <span>&#9745;&nbsp;&nbsp;Creating and implementing SEO strategies</span>
+                <span>&#9745;&nbsp;&nbsp;Responsive and mobile-first web design - W3C validation</span>
+                <span>&#9745;&nbsp;&nbsp;Developing website content, including text, images, and videos</span>
+                <span>&#9745;&nbsp;&nbsp;Creating dynamic websites in HTML5, CSS3 which leads to increased traffic, conversion rates, and user engagement, without media queries</span>
+                <span>&#9745;&nbsp;&nbsp;Content strategy development</span>
+              </div>
+            </div>
           </aside>
           <div class="gridgalb">
             <div class="cont">
@@ -565,21 +589,23 @@
               <span class="presentationa">
               <br>
               <span>
-              &#9752;&nbsp;&nbsp;Minimal design with an attention-grabbing layout<br>
-              &#9752;&nbsp;&nbsp;Fully customizable. Easy change colors, fonts, and pictures.<br>
-              &#9752;&nbsp;&nbsp;Mobile-responsive. All the pages adapt to the size of any screen<br>
-              &#9752;&nbsp;&nbsp;Versatile. Expand its features as much as needed<br>
-              &#9752;&nbsp;&nbsp;Easy to use - change anything in minutes<br>
-              &#9752;&nbsp;&nbsp;Font design
+              <span>&#9752;&nbsp;&nbsp;Minimal design with an attention-grabbing layout</span><br>
+              <span>&#9752;&nbsp;&nbsp;Fully customizable. Easy change colors, fonts, and pictures.</span><br>
+              <span>&#9752;&nbsp;&nbsp;Mobile-responsive. All the pages adapt to the size of any screen</span><br>
+              <span>&#9752;&nbsp;&nbsp;Versatile. Expand its features as much as needed</span><br>
+              <span>&#9752;&nbsp;&nbsp;Easy to use - change anything in minutes</span><br>
+              <span>&#9752;&nbsp;&nbsp;Font design
               </span>
               <br>
               <br>
               <br>
-              <span>&#9883;&nbsp;&nbsp;8 functional pages<br>
-              &#9883;&nbsp;&nbsp;Download - Form - Newsletter features<br>
-              &#9883;&nbsp;&nbsp;Cards animation<br>
-              &#9883;&nbsp;&nbsp;Amazing snow animation effect - on click<br>
-              &#9883;&nbsp;&nbsp;Only HTML5, CSS3 website design<br>
+              <span>
+              <span>&#9883;&nbsp;&nbsp;8 functional pages</span><br>
+              <span>&#9883;&nbsp;&nbsp;Download - Form - Newsletter features</span><br>
+              <span>&#9883;&nbsp;&nbsp;Cards animation</span><br>
+              <span>&#9883;&nbsp;&nbsp;Amazing snow animation effect - on click</span><br>
+              <span>&#9883;&nbsp;&nbsp;Only HTML5, CSS3 website design</span><br>
+              </span>
               </span>
               </span>
               </span>
@@ -608,27 +634,28 @@
               <br>
               <br>
               <span>
-              &#9752;&nbsp;&nbsp;Photographer Portfolio website is a minimal black and white most, design<br>
-              &#9752;&nbsp;&nbsp;Lets the photographer work speak for itself<br>
-              &#9752;&nbsp;&nbsp;On the main page it has a large image gallery where the photographer can show the latest and greatest work<br>
-              &#9752;&nbsp;&nbsp;Includes extra areas to show off more images<br>
-              &#9752;&nbsp;&nbsp;Well-chosen typography<br>
-              &#9752;&nbsp;&nbsp;Font design<br>
-              &#9752;&nbsp;&nbsp;Balanced pages<br>
-              &#9752;&nbsp;&nbsp;Calm colors<br>
-              &#9752;&nbsp;&nbsp;Ready-made 4 pages for general presentation, gallery, services, and contact<br>
-              &#9752;&nbsp;&nbsp;Easy to use - fully customizable<br>
+              <span>&#9752;&nbsp;&nbsp;Photographer Portfolio website is a minimal black and white most, design</span><br>
+              <span>&#9752;&nbsp;&nbsp;Lets the photographer work speak for itself</span><br>
+              <span>&#9752;&nbsp;&nbsp;On the main page it has a large image gallery where the photographer can show the latest and greatest work</span><br>
+              <span>&#9752;&nbsp;&nbsp;Includes extra areas to show off more images</span><br>
+              <span>&#9752;&nbsp;&nbsp;Well-chosen typography</span><br>
+              <span>&#9752;&nbsp;&nbsp;Font design</span><br>
+              <span>&#9752;&nbsp;&nbsp;Balanced pages</span><br>
+              <span>&#9752;&nbsp;&nbsp;Calm colors</span><br>
+              <span>&#9752;&nbsp;&nbsp;Ready-made 4 pages for general presentation, gallery, services, and contact</span><br>
+              <span>&#9752;&nbsp;&nbsp;Easy to use - fully customizable</span><br>
               </span>
               <br>
               <br>
               <br>
-              <span>&#9883;&nbsp;&nbsp;4 functional pages<br>
-              &#9883;&nbsp;&nbsp;Contact - Updates feature<br>
-              &#9883;&nbsp;&nbsp;Lots of options to showcase images, or other work<br>
-              &#9883;&nbsp;&nbsp;Well-balanced page with lots of flexible content areas<br>
-              &#9883;&nbsp;&nbsp;Multiple options to showcase images, or other work<br>
-              &#9883;&nbsp;&nbsp;Engaging colors and typography<br>
-              &#9883;&nbsp;&nbsp;Only HTML5, CSS3 website design<br>
+              <span>
+              <span>&#9883;&nbsp;&nbsp;4 functional pages</span><br>
+              <span>&#9883;&nbsp;&nbsp;Contact - Updates feature</span><br>
+              <span>&#9883;&nbsp;&nbsp;Lots of options to showcase images, or other work</span><br>
+              <span>&#9883;&nbsp;&nbsp;Well-balanced page with lots of flexible content areas</span><br>
+              <span>&#9883;&nbsp;&nbsp;Multiple options to showcase images, or other work</span><br>
+              <span>&#9883;&nbsp;&nbsp;Engaging colors and typography</span><br>
+              <span>&#9883;&nbsp;&nbsp;Only HTML5, CSS3 website design</span>
               </span>
               </span>
               </span>
@@ -645,38 +672,40 @@
       </div>
       <div class="pageprina creativepage">
         <div class="galleryb">
-          <aside class="gallerybpresentation">
-            <div class="designc">
-              <img src="house.png" width="120" alt="photo">
+          <aside class="gallerybpresentation2">
+            <div>
+              <div class="designc">
+                <img src="house.png" width="120" alt="photo">
+              </div>
+              <h2>Creative assets </h2>
+              <h3><em>Layout design and reusable block components </em></h3>
+              <p>Web design allows for creative freedom and involves creating unique designs that attract visitors while also distinguishing a website from the competition. <br>Imaginative resources, including logos, web architectures, item pictures, act as the brand's spine. They're not simply plan components; they're representatives of a brand. Can also be made into reusable blocks that are simple to style and use.<br>
+                <br>Creative assests assume a significant part in drawing in, connecting with, and building long term brand value. At any point saw how a very much planned promotion can get your attention and cause you to feel unique? That is the force of a powerful innovative resource.
+              </p>
             </div>
-            <h2>Creative assets </h2>
-            <h3><em>Layout design and reusable block components </em></h3>
-            <p>Web design allows for creative freedom and involves creating unique designs that attract visitors while also distinguishing a website from the competition. <br>Imaginative resources, including logos, web architectures, item pictures, act as the brand's spine. They're not simply plan components; they're representatives of a brand. Can also be made into reusable blocks that are simple to style and use.<br>
-              <br>Creative assests assume a significant part in drawing in, connecting with, and building long term brand value. At any point saw how a very much planned promotion can get your attention and cause you to feel unique? That is the force of a powerful innovative resource.
-            </p>
           </aside>
-        </div>
-        <div class="effects1">
-          <div>
-            <h3><u>Figma webdesign</u></h3>
-            <br>
-            <h4>Publishing-house website - home page</h4>
-            <br>
-            <img src='WritersHouse.png' class="designnew"  alt="Website design page" width="320">
-            <br>
-            <br>
+          <div class="effects1">
+            <div>
+              <h3><u>Figma webdesign</u></h3>
+              <br>
+              <h4>Publishing-house website - home page</h4>
+              <br>
+              <img src='WritersHouse.png' class="designnew"  alt="Website design page" width="320">
+              <br>
+              <br>
+            </div>
+            <div>
+              <h4>Publishing-house website - mobile</h4>
+              <br>
+              <img src='WritersHouse-Mobile1.png' class="designnew1"  alt="Website design page" width="320">
+            </div>
           </div>
-          <div>
-            <h4>Publishing-house website - mobile</h4>
-            <br>
-            <img src='WritersHouse-Mobile1.png' class="designnew1"  alt="Website design page" width="320">
+          <div class="effects">
+            <h3>Different assets</h3>
+            <object type="text/html" data="flipbook5.html" style="width:100%; height: 50vw;"></object>
+            <object type="text/html" data="longshadow.html" style="width:100%; height: 50vw;"></object>
+            <object type="text/html" data="revealimage.html" style="width:100%; height: 50vw;"></object>
           </div>
-        </div>
-        <div class="effects">
-          <h3>Different assets</h3>
-          <object type="text/html" data="flipbook5.html" style="width:100%; height: 50vw;"></object>
-          <object type="text/html" data="longshadow.html" style="width:100%; height: 50vw;"></object>
-          <object type="text/html" data="revealimage.html" style="width:100%; height: 50vw;"></object>
         </div>
       </div>
     </main>

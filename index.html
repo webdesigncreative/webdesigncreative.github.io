@@ -521,6 +521,61 @@
       margin-top: 0;
       padding: 1rem;
       }
+	    .effects h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+effects. details[open] summary ~ * {
+  animation: open 0.3s ease-in-out;
+}
+
+.effects @keyframes open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary {
+  width: 100%;
+  padding: 0.5rem 0;
+  border-top: 1px solid black;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 300;
+  list-style: none;
+}
+
+details summary:after {
+  content: "+";
+  color: black;
+  position: absolute;
+  font-size: 1.75rem;
+  line-height: 0;
+  margin-top: 0.75rem;
+  right: 0;
+  font-weight: 200;
+  transform-origin: center;
+  transition: 200ms linear;
+}
+details[open] summary:after {
+  transform: rotate(45deg);
+  font-size: 2rem;
+}
+details summary {
+  outline: 0;
+}
+details p {
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+  padding-top: 1rem;
+}
     </style>
   </head>
   <body>
@@ -707,99 +762,65 @@
               </p>
             </div>
           </aside>
-          <div class="effects1">
-            <details>
-              <summary>
-                <h3>Figma webdesign "Scrib"</h3>
-                <br>
-				<br>
-                <h4><em>Publishing house</em> website - home page</h4>
-              </summary>
-              <img src='WritersHouse.png' class="designnew"  alt="Website design page" width="320">
-            </details>
-            <details>
-              <summary>
-                <h3>Figma webdesign "Scrib"</h3>
-                <br>
-                <br>				
-                <h4><em>Publishing house website</em> - mobile</h4>
-              </summary>
-              <img src='WritersHouse-Mobile1.png' class="designnew1"  alt="Website design page" width="320">
-            </details>
-          </div>
-          <br>
-          <br>
-		 <div class="effects1">
-            <details>
-              <summary>
-                <h3>Figma webdesign "Korta"</h3>
-                <br>
-				<br>
-                <h4><em>Fashion clothes store</em> website - landing page</h4>
-              </summary>
-              <img src='TailorTrends.png' class="designnew"  alt="Website design page" width="320">
-            </details>
-          </div>
-          <br>
-          <br>
-		<div class="effects1">
-            <details>
-              <summary>
-                <h3>Figma webdesign "Aya"</h3>
-                <br>
-				<br>
-                <h4><em>Cosmetic products store</em> website - landing page</h4>
-              </summary>
-              <img src='Aya.png' class="designnew"  alt="Website design page" width="320">
-            </details>
-          </div>
-          <br>
-          <br>
-		<div class="effects1">
-            <details>
-              <summary>
-                <h3>Figma webdesign "Tara"</h3>
-                <br>
-				<br>
-                <h4><em>Flower pots store</em> website - landing page</h4>
-              </summary>
-              <img src='Tara.png' class="designnew"  alt="Website design page" width="320">
-            </details>
-          </div>
-          <br>
-          <br>
-		<div class="effects1">
-            <details>
-              <summary>
-                <h3>Figma webdesign "Amunet"</h3>
-                <br>
-				<br>
-                <h4><em>Jewelry shop</em> website - landing page</h4>
-              </summary>
-              <img src='Amunet.png' class="designnew"  alt="Website design page" width="320">
-            </details>
-          </div>
-          <br>
-          <br>
+         <section class="effects1">
+		  <aside>
+  <h1>
+    Figma webdesign and graphics
+  </h1>
+  <br>
+  <details>
+    <summary><h5>"Scrib"</h5><br>
+                <h5><em>Publishing house</em> website - home page</h5></summary>
+				              <img src='WritersHouse.png' class="designnew"  alt="Website design page" width="320">
+  </details>
+  <details>
+    <summary><h5>"Scrib"</h5><br>
+                <h5><em>Publishing house</em> website - mobile</h5></summary>
+				               <img src='TailorTrends.png' class="designnew"  alt="Website design page" width="320">
+  </details>
+  <details>
+    <summary><h5>"Korta"</h5><br>
+                <h5><em>Fashion clothes store</em> website - home page</h5></summary>
+				              <img src='TailorTrends.png' class="designnew"  alt="Website design page" width="320">
+  </details>
+  <details>
+    <summary><h5>"Aya"</h5><br>
+                <h5><em>Cosmetic products store</em> website - home page</h5></summary>
+				              <img src='Aya.png' class="designnew"  alt="Website design page" width="320">
+  </details>
+    <details>
+    <summary><h5>"Tara"</h5><br>
+                <h5><em>Flower pots store</em> website - home page</h5></summary>
+				              <img src='Tara.png' class="designnew"  alt="Website design page" width="320">
+  </details>
+      <details>
+    <summary><h5>"Amunet"</h5><br>
+                <h5><em>Jewelry shop</em> website - home page</h5></summary>
+				              <img src='Amunet.png' class="designnew"  alt="Website design page" width="320">
+  </details>
+  <aside>
+</section>
+<br>
+<br>
           <div class="effects">
             <h3>Different assets</h3>
             <br>
 	    <br>
             <details>
               <summary>
-                <h4><em>Flip book</em></h4>
+                <h5><em>Flip book</em></h5>
               </summary>
               <object type="text/html" data="flipbook5.html" style="width:100%; height: 75vw;"></object>
             </details>
             <details>
               <summary>
-                <h4><em>Long shadow text</em></h4>
+                <h5><em>Long shadow text</em></h5>
               </summary>
               <object type="text/html" data="longshadow.html" style="width:100%; height: 75vw;"></object>
             </details>
             <details>
               <summary>
-                <h4><em>Promotion card</em></h4>
+                <h5><em>Promotion card</em></h5>
               </summary>
               <object type="text/html" data="revealimage.html" style="width:100%; height: 75vw;"></object>
             </details>

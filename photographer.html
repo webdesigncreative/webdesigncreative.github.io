@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Marco M. photography portfolio">
+    <meta name="keywords" content="photography, images, portfolio, photograph">
+    <meta name="author" content="Marco M.">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Imagine - Photography Portfolio</title>
+    <link rel = "icon" href = "logo.png" 
+      type = "image/x-icon">
+    <style>
+      * {
+      margin: 0;
+      padding: 0;
+      caret-color: transparent;
+      }
+      @font-face {
+      font-family: Blue2;
+      src: url("Blue2.woff");
+      font-display: fallback;
+      }
+      html {
+      font-size: calc(60% + 0.8vmin);
+      font-family: "Blue2"; 
+      scrollbar-color: #526880 #fff;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      }
+      body {
+      text-rendering: optimizeLegibility;
+      letter-spacing: 0.16em;
+      line-height: 1.5;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      margin: 0;
+      height: auto;
+      }
+      .headeritems { 
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 100%;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #222;
+      grid-gap: 30px;
+      box-sizing: border-box;
+      padding: 1em;
+      }
+      .photo img {
+      width: 100%;
+      display: block;
+      min-height: 80vh;
+      object-fit: cover;
+      }
+      .headeritems {
+      background-color: #404543;
+      opacity: 0.8;
+      width: 100%;
+      }
+      header {
+      background-image: url(photo1ab.png);
+      background-size: cover;
+      background-position: left 10% bottom 20%;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      position: -webkit-sticky;
+      position: sticky;
+      overflow: hidden;
+      top: 0;
+      z-index: 1;
+      }
+      nav {
+      text-align: center;
+      float: right;
+      position: relative;
+      margin: auto;
+      word-spacing: 1.2px;
+      display: inline-block;
+      list-style-type: none;
+      }
+      .pageprina {display:none}
+      .default-tab {display:block}
+      :target ~ .default-tab {display:none}
+      #home:target ~ .page1a,
+      #gallery:target ~ .page1b,
+      #services:target ~ .page1c,
+      #contact:target ~ .page1d
+      {
+      display: block
+      }
+      #menuicon,.pagesprin{display:none;}
+      #menuicon:checked~.pagesprin{display:block;}
+      .pagesprin a {text-decoration: none;
+      color: #CCBEB7;
+      }
+      #iconcolor {
+      opacity: 0.7;
+      cursor: pointer;
+      }
+      .pagesnew {
+      font-size: 0.78em;
+      top: 1em;
+      margin-right: 12px;
+      }
+      .pagesprin .pagesnew:hover {
+      color: #959fa2;
+      }
+      .text {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #222;
+      grid-gap: 30px;
+      height: auto;
+      box-sizing: border-box;
+      padding: 100px;
+      }
+      .photos{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #222;
+      padding-top: 4em;
+      padding-bottom: 4em;
+      }
+      .photoscont {
+      background-color: #959fa2;
+      }
+      footer {
+      background-color: #404543;
+      box-sizing: border-box;
+      padding: 2em;
+      bottom: 0;
+      left: 0;
+      font-size: 0.8em!important;
+      vertical-align: middle;
+      }
+      .footergrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+      justify-content: left;
+      text-align: left;
+      color: #CCBEB7;
+      grid-gap: 30px;
+      box-sizing: border-box;
+      }
+      footer a {
+      text-decoration: none;
+      }
+      ul {
+      list-style-type: none;
+      }
+      li {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 12px;
+      }
+      .coverpagec {
+      margin: auto;
+      width: 380px;
+      height: 540px;
+      }
+      .coverpagef {
+      margin: auto;
+      width: 380px;
+      height: 580px;
+      }
+      .contphotoc {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #222;
+      padding-top: 4em;
+      padding-bottom: 4em;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      grid-gap: 30px;
+      }
+      .tours {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 16px;
+      margin-top: 2em;
+      }
+      .sub input {
+      cursor: pointer;
+      }
+      .address {
+      font-size: 12px;
+      line-height: 24px;
+      margin-bottom: 30px;
+      display: inline-block;
+      }
+      .forma {
+      margin:10px auto;
+      max-width: 700px;
+      padding: 20px 12px 10px 20px;
+      font-size: 12px;
+      box-sizing: border-box;
+      margin-top: 2em;
+      margin-bottom: 4em;
+      height: 300px;
+      text-align: left;
+      }
+      .forma li {
+      padding: 0;
+      display: block;
+      list-style: none;
+      margin: 10px 0 0 0;
+      }
+      .forma label{
+      margin:0 0 3px 0;
+      padding:0px;
+      display:block;
+      font-weight: bold;
+      }
+      .forma input[type=text], 
+      .forma input[type=email],
+      textarea, select {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      border:1px solid #BEBEBE;
+      padding: 7px;
+      margin:0px;
+      -webkit-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;	
+      }
+      .forma input[type=text]:focus, 
+      .forma input[type=email]:focus,
+      .forma textarea:focus, 
+      .forma select:focus{
+      -webkit-box-shadow: 0 0 8px lightgray;
+      box-shadow: 0 0 8px lightgray;
+      border: 1px solid lightgray;
+      }
+      .forma .textspace {
+      width: 49.3%;
+      padding: 20px;
+      }
+      .forma .textspace1 {
+      width: 99.3%;
+      }
+      .forma .textspace2 {
+      width: 99.3%;
+      }
+      .forma.textspace4 {
+      height: 100px;
+      }
+      .forma input[type=submit], .forma input[type=button] {
+      background: #fff;
+      padding: 8px 15px 8px 15px;
+      border: 1px solid #526880;
+      color: #222;
+      }
+      .forma input[type=submit]:hover, .forma input[type=button]:hover{
+      background-color: #404543;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      color: #959fa2;;
+      }
+      .forma .textform {
+      color:#526880;
+      }
+      .formatitle {
+      font-weight: bold;
+      font-style: italic;
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 20px;
+      font-size: 16px;
+      padding-bottom: 3px;
+      text-align: left;
+      }
+      .button {
+      text-align: center;
+      color: #404543;
+      background-color: #CCBEB7; 
+      border: 1px solid #ffffff; 
+      border-radius: 3px;
+      font-size: 0.8em;
+      padding: 10px 24px; 
+      display: inline-block; 
+      text-decoration: none;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      margin-top: 64px;
+      padding-top: 14px;
+      }
+      .button:hover, .button:active {
+      color: #959fa2;
+      background-color: #404543;
+      }
+      .textprin .titlea {
+      font-weight: bolder!important;
+      }
+      .herob {
+      position: absolute;
+      top: 48%;
+      left: 78%;
+      transform: translate( -50%, -50% );
+      text-align: center;
+      color: #CCBEB7;
+      font-weight: bold;
+      font-size: 2.2vmin;
+      }
+      .herosection {
+      position: relative;
+      display: inline-block;
+      }
+      .buttona {
+      text-align: center;
+      color: #CCBEB7;
+      background: transparent; 
+      border: 1px solid #CCBEB7; 
+      border-radius: 3px;
+      font-size: 0.8em;
+      padding: 10px 24px; 
+      display: inline-block; 
+      text-decoration: none;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      margin-top: 14px;
+      padding-top: 14px;
+      }
+      .buttona:hover, .button:active {
+      color: #959fa2;
+      background-color: #404543;
+      }
+      h2 {
+      font-weight: bolder;
+      }
+      .text1 {
+      text-align: right;
+      }
+      .photoa {
+      margin-top: 2vh;
+      }
+      .photob {
+      margin-top: 7.1vh;
+      }
+      .photoc {
+      margin-top: -17.9vh;
+      }
+      .text1 h2,h4 {
+      padding: 0 2em 2em 2em;
+      }
+      .logo {
+      margin-left: -280px;
+      }
+      .menud {
+      margin-right: -360px;
+      }
+      .pagesprin {
+      margin-right: -120px;
+      margin-top: 8px;
+      }
+      .logoa {
+      padding: 0;
+      margin-left: 0;
+      }
+      .pageslinks .linkf{
+      cursor: pointer;
+      font-size: 0.78em;
+      display: inline-block;
+      margin-right: 2px;
+      }
+      .pageslinks .linkf:hover {
+      color: #959fa2;
+      }
+      img {
+      filter: blur(0.4px);
+      }
+      .icons {
+      margin-top: -1.8em;
+      margin-left: -0.8em;
+      }
+      .scaleicon {
+      transform: scale(2);
+      position: absolute;
+      }
+      .newsletter form {
+      text-align: left;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      vertical-align: middle;
+      margin: auto;
+      display: flex;
+      flex-flow: column;
+      color: #fff;
+      font-size: 14px;
+      }
+      .newsletter  input {
+      padding:10px;
+      margin:10px 0;
+      width:240px;
+      padding:10px;
+      border:0;
+      border-bottom:1px solid #eee;
+      box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+      border-radius:3px;
+      box-sizing: border-box;
+      font: bold 0.8em sans-serif; 
+      cursor: pointer;
+      text-align: left;
+      background-color: #CCBEB7;
+      }
+      .newsletter input:hover,
+      button:focus {
+      outline: none;
+      background: #959fa2;
+      color: #fff;
+      }
+      .newsletter p {
+      color: #fff;
+      font-size: 0.8em;
+      }
+      .socialm {
+      margin: auto;
+      }
+      .pageslinks {
+      margin: auto;
+      }
+      .formbtn {
+      margin-left: -9em;
+      color: #CCBEB7;
+      }
+      .logofooter {
+      margin: auto;
+      }
+      .bottomcontact {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #222;
+      grid-gap: 30px;
+      box-sizing: border-box;
+	  margin-bottom: 4em;
+      }
+      img {
+      object-fit: cover;
+      }
+      .linkf {
+      color: #CCBEB7;
+      font-size: 0.8em;
+      }
+      .photoscont1 {
+      background-color: #CCBEB7;
+      }
+      .photos1 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #222;
+      grid-gap: 30px;
+      box-sizing: border-box;
+      padding: 1em;
+      }
+      .text2 {
+      text-align: right;
+      width: 400px;
+      }
+      .text2 h2,h4 {
+      padding: 0 2em 2em 2em;
+      }
+      .photog {
+      margin-left: -200px;
+      }
+      .text3 {
+      text-align: right;
+      width: 400px;
+      }
+      .text3 h2,h4 {
+      padding: 0 2em 2em 2em;
+      }
+      .text3 {
+      margin-left: 200px;
+      }
+      .text4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #222;
+      grid-gap: 30px;
+      box-sizing: border-box;
+      padding: 1em;
+      padding-top: 4em;
+      }
+      .photos2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #222;
+      grid-gap: 30px;
+      box-sizing: border-box;
+      padding: 1em;
+      padding-top: 4em;
+      }
+      .text5 {
+      text-align: right;
+      width: 400px;
+      }
+      .text5 h2,h4 {
+      padding: 2em;
+      }
+      .photoh {
+      margin-left: -200px;
+      }
+      .photos3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #222;
+      grid-gap: 30px;
+      box-sizing: border-box;
+      padding-top: 4em;
+      }
+      .text6 {
+      width: 400px;
+      text-align: right;
+      margin: auto;
+      }
+      .text6 h2,h4 {
+      padding: 2em;
+      }
+      .gallerya, .galleryb {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #222;
+      grid-gap: 30px;
+      box-sizing: border-box;
+      padding-top: 4em;
+      height: auto;
+	  margin-bottom: 4em;
+      }
+      .gallerya, .galleryb figcaption {
+      height: auto;
+      }
+      .gallerya img {
+      width: 380px;
+      height: 500px;
+      margin: auto;
+      } 
+      .galleryb img {
+      width: 380px;
+      height: 500px;
+      margin: auto;
+      } 
+      .textb {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #222;
+      grid-gap: 30px;
+      height: 200px;
+      box-sizing: border-box;
+      padding: 40px;
+      }
+      .buttonb {
+      text-align: center;
+      color: #404543;
+      background-color: lightgray; 
+      border: 1px solid #ffffff; 
+      border-radius: 3px;
+      font-size: 0.8em;
+      padding: 10px 24px; 
+      display: inline-block; 
+      text-decoration: none;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      padding-top: 14px;
+      }
+      .buttonb:hover, .button:active {
+      color: #959fa2;
+      background-color: #404543;
+      }
+      .coverpagee {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="headeritems">
+        <figure>
+          <a class="logo" href="#home"><img src="photologo.png" alt="Marco M. letters logo with a small transparent card" width="128" height="64"></a>
+        </figure>
+        <div>
+          <input id="menuicon" type=checkbox>
+          <label class="menud" for="menuicon"><img src="photomenua.svg" width="36" id="iconcolor" alt="three black dots as menu icon"></label>
+          <div class="pagesprin">
+            <a class="pagesnew" href="#home">Home</a>
+            <a class="pagesnew" href="#gallery">Gallery</a>
+            <a class="pagesnew" href="#services">Services</a>
+            <a class="pagesnew" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <a id="home"></a>
+      <a id="gallery"></a>
+      <a id="services"></a>
+      <a id="contact"></a>
+      <div class="pageprina page1a default-tab">
+        <div class="herosection">
+          <figure class="photo">
+            <img alt="A man as photographer with a camera in his hand taking a picture" src="photo1a.png">
+          </figure>
+          <div class="herob">
+            <h2><strong>DRAW WITH IMAGES</strong></h2>
+            <br>
+            <div class="subtitle"></div>
+            <a class="buttona" href="#gallery">GALLERY</a>
+            <div>
+            </div>
+          </div>
+        </div>
+        <section class="text">
+          <div class="textprin">
+            <h1 class="titlea">PRESERVE MOMENTS AND MEMORIES</h1>
+            <br>
+            <br>
+            <h4><em>The primary benefit photography, an art form, is the ability to physically reproduce <br> precious memories by capturing one-of-a-kind occurrences in people's lives. The term "photography," which means "to draw with light," first appeared in 1939.<br> <br>
+              In addition to the written word, this art has evolved into the primary means of preserving the past since then.</em>
+            </h4>
+            <a class="button" href="#services">SERVICES</a>
+          </div>
+        </section>
+        <div class="photoscont">
+          <div class="photos">
+            <section class="text1">
+              <h2> EACH PHOTOGRAPHY TELLS A STORY, A MOMENT TO REMEMBER, CAN DOCUMENT AND IT CAN BE ART.</h2>
+              <br>
+              <h4>The possibility of capturing even the tiniest details of everyday life is what makes this art so appealing. History can be presented and comprehended much more easily through images. Photographs, that preserve the present for ever and show it to the world in its smallest details. </h4>
+            </section>
+            <figure class="photod">
+              <img alt="Several paintings in a white setting with a hat hanging on the wall" src="photo.jpg" width="790">
+            </figure>
+            <br>
+            <figure class="photoa">
+              <img alt="White bird flying over a forest" src="photo4a.jpg" width="480">
+            </figure>
+            <figure class="photob">
+              <img alt="Still frame of a man holding a camera" src="photo3a.jpg" height="280" width="440">
+            </figure>
+            <figure class="photoc">
+              <img alt="A girl dressed in a white shirt dancing" src="photo2a.jpg" width="380">
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="pageprina page1b">
+        <section class="text4">
+          <div class="textprin">
+            <h1 class="titlea">PHOTOGRAPHY, A DOCUMENTARY ART </h1>
+            <br>
+            <br>
+            <h4><em>Photos are utilized all over the place, on item bundling, web-based entertainment, and customary promoting to communicate feelings, imitate words, engrave present. It is actually an approach to recounting stories, an approach to seeing new things, given new importance od various parts of life. Structure, shape, strenghts causes an image to separate according to the watcher.
+              </em>
+            </h4>
+          </div>
+        </section>
+        <div class="photos2">
+          <section class="text5">
+            <h2> READ THROUGH IMAGES</h2>
+            <br>
+            <h4>Pictures are a great way to remember things and are sometimes edited to be art. They hold a second in time for the future to be recollected without any problem. Photographs of high quality are an important asset that will help preserve the events that were captured. Additionally, pictures enhance content's visual appeal and facilitate reading.</h4>
+          </section>
+          <figure class="photoh">
+            <img alt="View towards the sea between two rocks" src="photo14.jpg" width="720">
+          </figure>
+        </div>
+        <div class="photos3">
+          <figure class="photoi">
+            <img alt="View of two pyramids" src="photo27.jpg" width="480">
+          </figure>
+          <section class="text6">
+            <h2> ARTISTICALLY COMPOSED PHOTOGRAPHS</h2>
+            <br>
+            <h4>Your visual memory of an experience is enhanced by pictures. A professional portrait is much more enticing than a random picture on a shelf in your home. Your must-minutes merits best pictures, with a customized photograph meeting.</h4>
+          </section>
+        </div>
+        <div class="gallerya">
+          <figure class="photoj">
+            <img alt="Kingfisher flying over the seashore" src="photo28.jpg" width="320">
+          </figure>
+          <figure class="photok">
+            <img alt="A young woman dressed in white with a suitcase in her hand" src="photo40a.jpg" width="320">
+          </figure>
+          <figure class="photok">
+            <img alt="View towards the sea black and white photo" src="photo32.jpg" width="320">
+          </figure>
+          <figure class="photol">
+            <img alt="Woman walking in the field" src="photo18.jpg" width="320">
+          </figure>
+          <figure class="photom">
+            <img alt="Hurried woman walking on the street" src="photo26.jpg" width="320">
+          </figure>
+          <figure class="photom">
+            <img alt="Frame from the interior of a historical building" src="photo25.jpg" width="320">
+          </figure>
+        </div>
+      </div>
+      <div class="pageprina page1c">
+        <section class="text4">
+          <div class="textprin">
+            <h1 class="titlea">CAPTURE YOUR STORY</h1>
+            <br>
+            <br>
+            <h4><em>A representation or a scene, every photography has a specific message joined to it. You become aware of the beauty that would otherwise be hidden from you. An expert picture taker can catch any second, his photographs are the most pertinent components to guarantee you of the nature of the pictures. He has the appropriate gear and is well-versed in lighting, composition, and angles.<br> Can also edit your photos to make sure they look their best.</em></h4>
+          </div>
+        </section>
+        <div class="photos3">
+          <figure class="photoi">
+            <img alt="Beautiful woman writing at the desk" src="photo23.jpg" width="480">
+          </figure>
+          <section class="text6">
+            <h2>CUSTOMIZED PHOTO SESSION</h2>
+            <br>
+            <h4>Your visual memory of an experience is enhanced by pictures. A professional portrait is much more enticing than a random picture on a shelf in your home. With a customized photo session, you can get the best pictures of your most important moments.</h4>
+          </section>
+        </div>
+        <div class="galleryb">
+          <figure class="photoj">
+            <img alt="Man up on a rock looking into the distance" src="photo34.jpg" width="320" height="700">
+            <figcaption class="textb">
+              <strong>Captured moments</strong>&nbsp;<q>Man on mountain</q><br>
+              1 day photo session<br><br>
+              <a class="buttonb" href = "#contact"><strong>Request an offer</strong></a>
+            </figcaption>
+          </figure>
+          <figure class="photok">
+            <img alt="Long shot of a man on a road" src="photo53.jpg" width="320" height="700">
+            <figcaption class="textb">
+              <strong>Visualise</strong>&nbsp;<q>The road</q><br>
+              3 days photo session<br><br>
+              <a class="buttonb" href = "#contact"><strong>Request an offer</strong></a>
+            </figcaption>
+          </figure>
+          <figure class="photok">
+            <img alt="Woman dressed in pale colors on a road" src="photo41.jpg" width="320" height="700">
+            <figcaption class="textb">
+              <strong>Creative</strong>&nbsp;<q>Remember</q><br>
+              1 day photo session<br><br>
+              <a class="buttonb" href = "#contact"><strong>Request an offer</strong></a>
+            </figcaption>
+          </figure>
+          <figure class="photoj">
+            <img alt="View towards the mountains covered in snow" src="photo52.jpg" width="320" height="700">
+            <figcaption class="textb">
+              <strong>Landscape</strong>&nbsp;<q>Eternity view</q><br>
+              1 week photo session<br><br>
+              <a class="buttonb" href = "#contact"><strong>Request an offer</strong></a>
+            </figcaption>
+          </figure>
+          <figure class="photok">
+            <img alt="Blue lake crossing the mountains" src="photo44.jpg" width="320" height="700">
+            <figcaption class="textb">
+              <strong>Visited places</strong>&nbsp;<q>Blue river</q><br>
+              1 day photo session<br><br>
+              <a class="buttonb" href = "#contact"><strong>Request an offer</strong></a>
+            </figcaption>
+          </figure>
+          <figure class="photok">
+            <img alt="Group of men climbing a snowy mountain" src="photo35.jpg" width="320" height="700">
+            <figcaption class="textb">
+              <strong>Group pictures</strong>&nbsp;<q>Old friends"</q><br>
+              5 days photo session<br><br>
+              <a class="buttonb" href = "#contact"><strong>Request an offer</strong></a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="pageprina page1d">
+        <div class="contphotoc">
+          <img class="coverpagec" src="photo48.jpg" alt="Close-up view of a wave crossing the sea">
+          <img class="coverpagef" src="photo11.jpg" alt="An old man on a chair in the street playing the cello">
+          <img class="coverpagec" src="photo7.jpg" alt="View of a high, ancient tower">
+        </div>
+        <div class="tourss">
+          <div class="tours">
+            <aside>
+              <h2>PLAN A PHOTO SESSION</h2>
+              <br>
+              <p>Turn any moment in your life into a masterpiece of art. Sessions for full-service photography.<br> With expert photography services, you can start the process of making memories that will last a lifetime: picture, scene, style, business, item, occasion and numerous mores.<br> Catch wonderful minutes to be recalled until the end of time.     </p>
+            </aside>
+          </div>
+        </div>
+        <div class="bottomcontact">
+          <img class="coverpagee" src="photo54.jpg" alt="Man on a rock looking to the sky" width="480">
+          <form class="sub" action="mailto:example@gmail.com" method="post" enctype="text/plain">
+            <ul class="forma">
+              <li><label>Full Name <span class="textform">*</span></label>
+                <input type="text" name="field1" class="textspace" placeholder="First" > 
+                <input type="text" name="field2" class="textspace" placeholder="Last" >
+              </li>
+              <li>
+                <label>Email <span class="textform">*</span></label>
+                <input type="email" name="field3" class="textspace1" >
+              </li>
+              <li>
+                <label>Your Message <span class="textform">*</span></label>
+                <textarea name="field5" id="field5" class="textspace1 textspace4"></textarea>
+              </li>
+              <li>
+                <input type="submit" value="SUBMIT" >
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+      <footer>
+        <div class="footergrid">
+          <div class="logofooter">
+            <a class="logoa" href="#home"><img src="photologo.png" alt="Marco M. letters logo with a small transparent card" width="128" height="64"></a><br><br>
+            <div class="pageslinks">
+              <a class="linkf" href="#home">Home</a>&nbsp;
+              <a class="linkf" href="#gallery">Gallery</a>&nbsp;
+              <a class="linkf" href="#services">Services</a>&nbsp;
+              <a class="linkf" href="#contact">Contact</a>&nbsp;
+            </div>
+          </div>
+          <aside class="newsletter">
+            <div>
+              <form class="sub" action="mailto:your_gmail_address@gmail.com" method="post" enctype="text/plain">
+                <p class="formbtn"><em>Get updates</em></p>
+                <input type="email" name="email" class="formStyle" placeholder="Email" required >
+                <input type="hidden" name="subject" value="New Subscriber" >
+                <input class="subhover" type="submit" value="Submit" >
+              </form>
+            </div>
+          </aside>
+          <div class="socialm">
+            <div class="address">
+              <p><span class="scaleicon">&#10063;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span><em><u>E-mail address</u></em></span></p>
+              <p><em>marco-photography@gmail.com</em></p>
+            </div>
+            <ul class="icons">
+              <li>
+                <a class="coloricon" href="https://www.linkedin.com/">
+                <img src="photolin.svg" alt="Linkedin icon" width="16" height="16">
+                </a>
+              </li>
+              <li>
+                <a class="coloricon" href="https://facebook.com/">
+                <img src="photofac.svg" alt="Facebook icon" width="16" height="16">
+                </a>
+              </li>
+              <li>
+                <a class="coloricon" href="https://www.instagram.com/">
+                <img src="photoins.svg" alt="Instagram icon" width="16" height="16">
+                </a>
+              </li>
+            </ul>
+            <h5 id="copyw"> &copy; <em>Copywright</em>&nbsp;2023 MARCO M.</h5>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

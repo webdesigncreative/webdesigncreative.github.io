@@ -47,8 +47,8 @@
       outline: none;
       background-color: #fdfdfd;
       box-sizing: border-box;
-      margin-left: 200px;
-      margin-right: 200px;
+      margin-left: var(--space-xxxl);
+      margin-right: var(--space-xxl);
       }
       header {
       height: auto;
@@ -108,6 +108,7 @@
       --space-lg:   calc(2 * var(--space-unit));
       --space-xl:   calc(3.25 * var(--space-unit));
       --space-xxl:  calc(5.25 * var(--space-unit));
+      --space-xxxl:  calc(12.5 * var(--space-unit));
       }
       @include breakpoint(md) {
       :root {

@@ -61,8 +61,8 @@
       justify-content: left;
       align-items: start;
       display: inline-block;
-      padding-left: 32px;
-      padding-right: 32px;
+      padding-left: var(--space-lg);
+      padding-right: var(--space-lg);
       }
       .header { 
       max-width: 100%;
@@ -84,7 +84,7 @@
       }
       .pagesprin a {
       box-sizing: border-box;
-      padding: 10px;
+      padding: var(--space-xs);
       }
       #menuicon:checked~.pagesprin{display:block;}
       .menu{
@@ -93,7 +93,7 @@
       transform: scale(2.2, 1);
       cursor: pointer;
       box-sizing: border-box;
-      padding: 10px;
+      padding: var(--space-xs);
       font-style: normal;
       font-weight: 700;
       line-height: 130%; /* 28.6px */
@@ -167,7 +167,7 @@
       font-style: normal;
       font-weight: 700;
       line-height: 110%; /* 39.6px */
-      padding-top: 64px;
+      padding-top: var(--space-xl);
       box-sizing: border-box;
       letter-spacing: -0.28px;
       }
@@ -176,7 +176,7 @@
       font-style: normal;
       font-weight: 700;
       line-height: 120%; /* 33.6px */
-      padding-top: 42px;
+      padding-top: var(--space-lg);
       box-sizing: border-box;
       letter-spacing: -0.24px; 
       }
@@ -186,14 +186,14 @@
       font-weight: 700;
       line-height: 130%; /* 28.6px */
       text-align: left;
-      padding: 22px;
+      padding: var(--space-md);
       box-sizing: border-box;
       border-radius: var(--radius-radiusSmall, 10px); background: #fdfdfd;
       box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04);
       letter-spacing: -0.22px;
       }
       p, summary, .tipsa {
-      padding-top: 22px;
+      padding-top: var(--space-md);
       box-sizing: border-box;
       font-size: 18px;
       font-style: normal;
@@ -203,7 +203,7 @@
       }
       a, li {
       font-size: 18px;
-      padding-top: 10px;
+      padding-top: var(--space-xs);
       box-sizing: border-box;
       font-size: 18px;
       font-style: normal;
@@ -220,13 +220,13 @@
       background: #777467; 
       border: 1px solid #1A1A1A; 
       border-radius: 10px;
-      padding: 12px 24px; 
+      padding: 8px 16px; 
       display: inline-block; 
       text-decoration: none;
       transition: all 0.3s ease;
       cursor: pointer;
       box-sizing: border-box;
-      margin-top: 10px;
+      margin-top: var(--space-xs);
       transition:.7s ease;
       border-radius: var(--radius-radiusSmall, 10px);
       /* smallShadow1color */
@@ -261,7 +261,7 @@
       display: inline-block;
       transition: .7s ease all;
       box-sizing: border-box;
-      padding-top: 10px;
+      padding-top: var(--space-xs);
       }
       .animation {
       transition:.9s ease;
@@ -299,7 +299,7 @@
       height: 100px;
       margin-bottom: -2px;
       box-sizing: border-box;
-      padding-top: 10px;
+      padding-top: var(--space-xs);
       }
       .gallery {
       display: grid;
@@ -312,7 +312,7 @@
       color: #1A1A1A;
       border-radius: 10px;
       box-sizing: border-box;
-      padding-top: 10px;
+      padding-top: var(--space-xs);
       }
       .new, .new:after, .new:before {	  
       padding:0;
@@ -329,7 +329,7 @@
       height:auto;
       overflow: hidden;
       box-sizing: border-box;
-      padding-top: 10px;
+      padding-top: var(--space-xs);
       }
       .new li {
       position:relative;
@@ -378,7 +378,7 @@
       }
       .menu {
       color: #1A1A1A;
-      margin-left: 10px;
+      margin-left: var(--space-xs);
       }
       .design {
       margin: auto;
@@ -393,7 +393,7 @@
       height: 526px;
       }
       .text {
-      margin-top: 106px;
+      margin-top: var(--space-xxl);
       }
       .text div {
       margin-top: 32px;
@@ -409,7 +409,7 @@
       justify-content: left;
       text-align: left;
       color: #1A1A1A;
-      grid-gap: 32px;
+      grid-gap: var(--space-md);
       box-sizing: border-box;
       }
       .galleryb .gridgalb:hover .photogalb:not(:hover) {
@@ -491,7 +491,7 @@
       /* smallShadow1color */
       box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04); 
       box-sizing: border-box;
-      padding: 32px;
+      padding: var(--space-lg);
       }
       .websitelink {
       font-size: 22px!important;
@@ -534,7 +534,7 @@
       cursor: pointer;
       float: left;
       margin-right: -10px;
-      margin-top: 2em;
+      margin-top: var(--space-xxl);
       box-sizing: border-box;
       }
       .gridgalc input[type=checkbox] {
@@ -567,7 +567,7 @@
       /* smallShadow1color */
       box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04); 
       box-sizing: border-box;
-      padding: 32px;
+      padding: var(--space-lg);
       }
       .websitelinka {
       font-size: 22px!important;
@@ -605,14 +605,14 @@
       list-style-type: none;
       text-decoration: none;
       color: #fdfdfd;
-      margin-left: 10px;
+      margin-left: var(--space-xs);
       }
       .linkf1 {
       color: #fdfdfd;
       }
       .linkf2 {
       color: #fdfdfd;
-      margin-left: 10px;
+      margin-left: var(--space-xs);
       }
       .effects1 {
       display: grid;
@@ -657,7 +657,7 @@
       display: flex;
       flex-direction: column;
       box-sizing: border-box;
-      padding: 10px;
+      padding: var(--space-xs);
       }
       .tipsa li {
       font-size: 15px;
@@ -670,7 +670,7 @@
       background-color: #fdfdfd;
       cursor: pointer;
       box-sizing: border-box;
-      padding: 10px;
+      padding: var(--space-xs);
       color: #1A1A1A;
       text-align: left;
       }
@@ -681,12 +681,12 @@
       border: 2px solid #fdfdfd;
       margin-top: 0;
       box-sizing: border-box;
-      padding-top: 10px;
+      padding-top: var(--space-xs);
       }
       details, summary{
       border-radius: 10px;
       box-sizing: border-box;
-      padding-top: 10px;
+      padding-top: var(--space-xs);
       }
       footer {
       background-color: #5E5B51;
@@ -694,8 +694,8 @@
       bottom: 0;
       left: 0;
       height: auto;
-      margin-top: 106px;
-      padding: 32px;
+      margin-top: var(--space-xxl);
+      padding: var(--space-lg);
       clear: both;
       color: #fdfdfd;
       /* smallShadow1color */
@@ -721,14 +721,14 @@
       box-sizing: border-box;
       }
       .logofooter h5 {
-      margin-left: 10px;
+      margin-left: var(--space-xs);
       }
       .pageslinks {
       float: left;
       box-sizing: border-box;
-      padding-top: 22px;
+      padding-top: var(--space-md);
       transition:.3s ease;
-      margin-top: 52px;
+      margin-top: var(--space-xl);
       }
       .pageslinks a {
       font-size: 15px;

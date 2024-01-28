@@ -24,6 +24,7 @@
       caret-color: transparent;
       box-sizing: border-box;
       -webkit-tap-highlight-color: transparent;
+	  box-sizing: border-box;
       }
       @font-face {
       font-family: GraphikExtralight;
@@ -33,60 +34,39 @@
       html {
       font-size: calc(60% + 0.8vmin);
       font-family: "GraphikExtralight"; 
-      scrollbar-color: #7c7c7e #fff;
+      scrollbar-color: #777467 #A6A6A6;
       scroll-behavior: smooth;
       overflow-x: hidden;
       }
       body {
       text-rendering: optimizeLegibility;
-      letter-spacing: 0.08em;
       font-weight: 400;
-      line-height: 2em;
       overflow-x: hidden;
       scroll-behavior: smooth;
-      margin: 0;
       height: auto;
       outline: none;
-      }
-      h1 {
-      font-size: 2.625em;
-      line-height: 2.2em;
-      }
-      h2 {
-      font-size: 2.125em;
-      }
-      h3, h4 {
-      font-size: 1.125em;
-      }
-      p, summary, .tipsa {
-      font-size: 1em;
-      }
-      a, li {
-      font-size: 1em;
-      }
-      .effects h4 {
-      color: #030508;  
+	  background-color: #fdfdfd;
+	  box-sizing: border-box;
+	  margin: 22px;
       }
       header {
       height: auto;
       width: 100%;
-      color:  #fdfdfd;
-      background-color:#777467;
+      color:  #1A1A1A;
       box-sizing: border-box;
-      padding: 0.2em;
+      background: #fdfdfd;
+      /* mediumShadow1color */
+      box-shadow: 0px 4px 8px 0px rgba(159, 159, 159, 0.14), 0px 2px 4px 0px rgba(159, 159, 159, 0.04);
+	  justify-content: left;
+	  align-items: start;
+	  display: inline-block;
       }
       .header { 
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       max-width: 100%;
       margin: auto;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #fdfdfd;
-      grid-gap: 30px;
+      color: #1A1A1A;
       box-sizing: border-box;
-      padding: 1em;
+      padding: 22px;
       }
       .pageprina {display:none}
       .default-tab {display:block}
@@ -102,53 +82,175 @@
       display:none;
       }
       .pagesprin a {
-      margin: 0 10px 0 10px; 
+      box-sizing: border-box;
+      padding: 10px;
       }
       #menuicon:checked~.pagesprin{display:block;}
-      .menu {
-      transform: scale(1.7, 2);
+      .menu{
+	  display: inline-block;
+      font-size:22px;
+      transform: scale(2.2, 1);
       cursor: pointer;
+	  box-sizing: border-box;
+	  padding: 10px;
       }
       .pagesprin a {
       text-decoration: none;
-      color: #fdfdfd;
+      color: #1A1A1A;
+      }
+      .logoa {
+	  text-decoration: none;
+      display: block;
+      transition: .7s ease all;
+      box-sizing: border-box;
+      padding-top: 10px;
+      }
+      .logoa:hover {
+      transform: scale(1.1);
+      }
+      .animation {
+      transition:.9s ease;
+      }
+      .animation {
+      -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      }
+      @-webkit-keyframes animation{
+      0% {
+      letter-spacing: -0.1em;
+      opacity: 0;
+      }
+      40% {
+      opacity: 0.6;
+      }
+      100% {
+      opacity: 1;
+      }
+      }
+      @keyframes tracking-in-expand {
+      0% {
+      letter-spacing: -0.1em;
+      opacity: 0;
+      }
+      40% {
+      opacity: 0.6;
+      }
+      100% {
+      opacity: 1;
+      }
+      }
+      .animation {
+      font-size: 44px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%; /* 44px */
+      letter-spacing: -0.22px; 
+      padding-top: 106px;
+      box-sizing: border-box;
+      }
+      h2 {
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%; /* 39.6px */
+      letter-spacing: -0.18px;
+      padding-top: 64px;
+      box-sizing: border-box; 
+      }
+      h3 {
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%; /* 33.6px */
+      letter-spacing: -0.14px; 
+      padding-top: 42.66px;
+      box-sizing: border-box;
+      }
+      h4 {
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%; /* 28.6px */
+      letter-spacing: -0.11px; 
+      text-align: left;
+      padding: 22px;
+      box-sizing: border-box;
+      border-radius: var(--radius-radiusSmall, 10px); background: #fdfdfd;
+      /* smallShadow1color */
+      box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04);
+      }
+      p, summary, .tipsa {
+      padding-top: 22px;
+      box-sizing: border-box;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 25.2px */
+      letter-spacing: -0.054px; 
+      }
+      a, li {
+      font-size: 18px;
+      padding-top: 10px;
+      box-sizing: border-box;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 25.2px */
+      letter-spacing: -0.054px; 
+      }
+      .effects h4 {
+      color: #1A1A1A;  
       }
       .buttona {
       text-align: center;
       color: #fdfdfd;
       background: #777467; 
-      border: 1px solid #c0afa7; 
-      border-radius: 3px;
-      padding: 10px 24px; 
+      border: 1px solid #1A1A1A; 
+      border-radius: 10px;
+      padding: 12px 24px; 
       display: inline-block; 
       text-decoration: none;
-      transition: all 0.5s ease;
+      transition: all 0.3s ease;
       cursor: pointer;
       margin-top: 14px;
-      padding-top: 14px;
+      box-sizing: border-box;
+      margin-top: 10px;
       transition:.7s ease;
+      border-radius: var(--radius-radiusSmall, 10px);
+      /* smallShadow1color */
+      box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04); 
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 25.2px */
+      letter-spacing: -0.11px; 
       }
       .buttona:hover, .button:active {
       color: #fdfdfd;
-      background-color: #18273F;
-      letter-spacing: 0.3em;
+      background-color: #4B4942;
+      letter-spacing: 0.11em;
       }
       .pagesnew {
-      color: #fdfdfd;
+      color: #1A1A1A;
       list-style-type: none;
       text-decoration: none;
       cursor: pointer;
-      transition:.7s ease;
+      transition:.3s ease;
+	  font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 25.2px */
+      letter-spacing: -0.054px;
+      display: inline-block;	  
       }
       .pagesnew:hover {
-      letter-spacing: 0.48em;
+       letter-spacing: 0.11em;
       }
       .logoa {
-      display: block;
+      display: inline-block;
       transition: .7s ease all;
-      }
-      .logoa:hover {
-      transform: scale(1.2);
+      box-sizing: border-box;
+      padding-top: 10px;
       }
       .animation {
       transition:.9s ease;
@@ -185,6 +287,8 @@
       width: 100%;
       height: 100px;
       margin-bottom: -2px;
+      box-sizing: border-box;
+      padding-top: 10px;
       }
       .gallery {
       display: grid;
@@ -194,8 +298,10 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      color: #030508;
-      border-radius: 3px;
+      color: #1A1A1A;
+      border-radius: 10px;
+      box-sizing: border-box;
+      padding-top: 10px;
       }
       .new, .new:after, .new:before {	  
       padding:0;
@@ -211,6 +317,8 @@
       width:100%;
       height:auto;
       overflow: hidden;
+      box-sizing: border-box;
+      padding-top: 10px;
       }
       .new li {
       position:relative;
@@ -231,12 +339,18 @@
       position:absolute;
       bottom:0;
       width:100%;
-      color:white;
+      color:#fdfdfd;
       white-space:nowrap;
-      padding:20px;
       background: linear-gradient(to right,  rgba(124,124,126,0.96) 0%, rgba(0,0,0,0) 100%);
       margin:auto;
       transition:.7s ease;
+      }
+      span {
+      font-size: 15px!important;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 24px */
+      letter-spacing: -0.03px; 
       }
       .photocover {
       width: 240px;
@@ -252,10 +366,9 @@
       margin: auto;
       }
       .menu {
-      color: #e2e0d5;
+      color: #1A1A1A;
       }
       .text {
-      padding: 4em;
       }
       .design {
       margin: auto;
@@ -266,7 +379,7 @@
       background-size: cover;
       }
       .container {
-      background: rgba(255, 255, 255, 0.98);
+      background-color: #fdfdfd;
       opacity: 0.97;
       height: 526px;
       }
@@ -277,19 +390,19 @@
       margin: auto;
       justify-content: left;
       text-align: left;
-      color: #c0afa7;
-      grid-gap: 30px;
+      color: #1A1A1A;
+      grid-gap: 32px;
       box-sizing: border-box;
       }
       .galleryb .gridgalb:hover .photogalb:not(:hover) {
       filter: brightness(45%);
       }
       .galleryb .photogalb {
-      border-radius: 3px;
+      border-radius: 10px;
       pointer-events: auto;
       transition: brightness 250ms;
       cursor: pointer;
-      color: #030508;
+      color: #1A1A1A;
       }
       .photogalb {
       max-width: 960px;
@@ -307,11 +420,10 @@
       margin: auto;
       justify-content: left;
       text-align: left;
-      grid-gap: 30px;
+      grid-gap: 32px;
       box-sizing: border-box;
       white-space: pre-wrap;
-      color: #030508;
-      padding: 1em;
+      color: #1A1A1A;
       }
       .gallerybpresentation2 {
       display: grid;
@@ -320,20 +432,16 @@
       margin: auto;
       justify-content: left;
       text-align: left;
-      grid-gap: 30px;
-      box-sizing: border-box;
+      grid-gap: 32px;
       white-space: pre-wrap;
-      color: #030508;
+      color: #1A1A1A;
       box-sizing: border-box;
-      padding: 1em;
       }
       .presentationa {
       cursor: pointer;
       float: right;
       margin-right: -10px;
-      margin-top: 1em;
       box-sizing: border-box;
-      padding: 1em;
       }
       .gridgalb input[type=checkbox] {
       position: absolute;
@@ -354,13 +462,25 @@
       }
       .websitelink {
       display:block;
-      bottom:0;
+      bottom: 0;
       width:100%;
-      color:white;
+      color:#1A1A1A;
       white-space:nowrap;
-      background: #777467;
+      background: #fdfdfd;
       margin:auto;
-      padding: 1em;
+      text-align: left;
+      border-radius: var(--radius-radiusSmall, 10px); background: #fdfdfd;
+      /* smallShadow1color */
+      box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04); 
+      box-sizing: border-box;
+	  padding: 32px;
+      }
+	  .websitelink {
+	  font-size: 22px!important;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%; /* 28.6px */
+      letter-spacing: -0.11px; 
       }
       .gridgalc {
       display: grid;
@@ -369,19 +489,19 @@
       margin: auto;
       justify-content: left;
       text-align: left;
-      color: #c0afa7;
-      grid-gap: 30px;
+      color: #1A1A1A;
+      grid-gap: 32px;
       box-sizing: border-box;
       }
       .galleryc .gridgalc:hover .photogalba:not(:hover) {
       filter: brightness(45%);
       }
       .galleryc .photogalba {
-      border-radius: 3px;
+      border-radius: 10px;
       pointer-events: auto;
       transition: brightness 250ms;
       cursor: pointer;
-      color: #030508;
+      color: #1A1A1A;
       }
       .photogalba {
       max-width: 960px;
@@ -398,7 +518,6 @@
       margin-right: -10px;
       margin-top: 2em;
       box-sizing: border-box;
-      padding: 1em;
       }
       .gridgalc input[type=checkbox] {
       position: absolute;
@@ -421,17 +540,25 @@
       display:block;
       bottom:0;
       width:100%;
-      color:white;
+      color: #1A1A1A;
       white-space:nowrap;
-      background: #777467;
+      background: #fdfdfd;
       margin:auto;
-      padding: 1em;
+      text-align: left;
+      border-radius: var(--radius-radiusSmall, 10px); background: #fdfdfd;
+      /* smallShadow1color */
+      box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04); 
+      box-sizing: border-box;
+	  padding: 32px;
       }
-      .galleryc {
-      margin-top: 4em;
+	  .websitelinka {
+	  font-size: 22px!important;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%; /* 28.6px */
+      letter-spacing: -0.11px; 
       }
       .emphasized {
-      text-decoration: underline;
       text-underline-position: under;
       transition:.7s ease;
       }
@@ -447,32 +574,25 @@
       text-align: center;
       }
       .designa {
-      box-shadow: 0 0 0 5px #FFFFFF;
       width: 120px;
       float: right;
       margin-left: 2px;
-      margin-right: 1em;
       }
       .designc {
-      box-shadow: 0 0 0 5px #FFFFFF;
       width: 120px;
       float: right;
       margin-left: 2px;
-      margin-right: 1em;
       }
       .linkf {
       list-style-type: none;
       text-decoration: none;
-      color: #e2e0d5;
+      color: #fdfdfd;
       }
-      .pageslinks {
-      margin-top: 4em;
-      } 
       .linkf1 {
-      color: #e2e0d5;
+      color: #fdfdfd;
       }
       .linkf2 {
-      color: #e2e0d5;
+      color: #fdfdfd;
       letter-spacing: 0.28em;
       }
       .effects1 {
@@ -483,8 +603,8 @@
       justify-content: start;
       align-items: start;
       text-align: center;
-      color: #030508;
-      grid-gap: 30px;
+      color: #1A1A1A;
+      grid-gap: 32px;
       }
       .effects1 .designnew {
       width: 100%;
@@ -498,50 +618,78 @@
       justify-content: start;
       align-items: start;
       text-align: left;
-      color: #030508;
+      color: #1A1A1A;
       }
       .design1 {
-      margin-top: -2em;
       text-align: left;
       justify-content: left;
-      color: #030508;
+      color: #1A1A1A;
+      }
+      .txt > p {
+	  display: flex;
+	  flex-direction: column;
+	  margin-left: 0!important;
+	  font-size: 18px!important;
+	  font-style: normal;
+      font-weight: 400;
+      letter-spacing: -0.03px; 
+	  }
+      .tipsa {
+      display: flex;
+      flex-direction: column;
       box-sizing: border-box;
-      padding: 1em;
+      padding: 10px;
+      }
+      .tipsa li {
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 24px */
+      letter-spacing: -0.03px; 
       }
       details > summary {
-      background-color: #777467;
+      background-color: #fdfdfd;
       cursor: pointer;
-      padding: .5rem 1rem;
-      color: #fdfdfd;
+      box-sizing: border-box;
+      padding: 10px;
+      color: #1A1A1A;
+      text-align: left;
       }
       details > summary > * {
       display: inline;
       }
       details > div {
-      border: 2px solid #777467;
+      border: 2px solid #fdfdfd;
       margin-top: 0;
-      padding: 1rem;
+      box-sizing: border-box;
+      padding-top: 10px;
+      }
+      details, summary{
+      border-radius: 10px;
+      box-sizing: border-box;
+      padding-top: 10px;
       }
       footer {
-      background-color: #142135;
+      background-color: #5E5B51;
       box-sizing: border-box;
       bottom: 0;
       left: 0;
       height: auto;
-      margin-top: 4em;
-      padding: 2em;
+      margin-top: 106px;
+      padding: 32px;
       clear: both;
+      color: #fdfdfd;
+      /* smallShadow1color */
+      box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04); 
       }
       .footergrid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       max-width: 100%;
+      justify-content: left;
+      text-align: left;
       margin: auto;
-      justify-content: center;
-      text-align: center;
-      color: #c0afa7;
-      grid-gap: 30px;
-      box-sizing: border-box;
+	  grid-gap: 32px;
       }
       .footergrid a {
       text-decoration: none;
@@ -552,13 +700,12 @@
       footergrid li {
       display: inline-block;
       box-sizing: border-box;
-      padding: 12px;
       }
-      .tipsa {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      }
+	  .pageslinks {
+      float: left;
+	  box-sizing: border-box;
+	  padding-top: 22px;
+      } 
     </style>
   </head>
   <body>
@@ -619,7 +766,7 @@
           </aside>
           <div class="container">
             <section class="text">
-              <h1 class="animation"><em>Every design begins with a story.</em></h1>
+              <h2 class="animation"><em>Every design begins with a story.</em></h2>
               <br>
               <div class="design"><img src="design4.png" width="156" alt="Hand drawing, a beautiful flower" title="Hand drawing"></div>
               <a class="buttona" href="#gallery">GALLERY</a>
@@ -636,13 +783,13 @@
               <h3><em>User-friendly and aesthetically pleasing responsive websites</em></h3>
               <p>Websites are both functionally and creatively developed:</p>
               <p class="design1">
-                <span>&#9752;&nbsp;Creating responsive designs, graphics and layouts for websites according to standards</span>
-                <span>&#9752;&nbsp;Making sure websites work on a variety of browsers and devices</span>
-                <span>&#9752;&nbsp;Developing and executing search engine optimization tactics </span>
-                <span>&#9752;&nbsp;Responsive and mobile-first sites with W3C approval</span>
-                <span>&#9752;&nbsp;Creating dynamic websites in HTML5, and CSS3, that result in higher traffic, without media queries</span>
-                <span>&#9752;&nbsp;Developing SEO content for websites, including text, images, and videos</span>
-                <span>&#9752;&nbsp;Developing SEO content strategies</span>
+                <span class="txt">&#9752;&nbsp;&nbsp;Creating responsive designs, graphics and layouts for websites according to standards</span>
+                <span class="txt">&#9752;&nbsp;&nbsp;Making sure websites work on a variety of browsers and devices</span>
+                <span class="txt">&#9752;&nbsp;&nbsp;Developing and executing search engine optimization tactics </span>
+                <span class="txt">&#9752;&nbsp;&nbsp;Responsive and mobile-first sites with W3C approval</span>
+                <span class="txt">&#9752;&nbsp;&nbsp;Creating dynamic websites in HTML5, and CSS3, that result in higher traffic, without media queries</span>
+                <span class="txt">&#9752;&nbsp;&nbsp;Developing SEO content for websites, including text, images, and videos</span>
+                <span class="txt">&#9752;&nbsp;&nbsp;Developing SEO content strategies</span>
               </p>
             </div>
           </aside>
@@ -650,7 +797,7 @@
             <div class="cont">
               <input type="checkbox" id="toggle"> 
               <label id="show" for="toggle">
-              <span class="websitelink">See "Travel Agency" site&nbsp;<span class="emphasized"><em>here</em></span></span><br>
+              <span class="websitelink">"Travel Agency" site&nbsp;<span class="emphasized"><em>&#9755;</em></span></span><br>
               <span class="photogalb">
               <img  src="gallery12.jpeg" alt="Travel agency" title="Travel agency">
               <img  src="gallery13.jpeg" alt="Travel agency mobile view" title="Travel agency mobile">
@@ -679,19 +826,19 @@
               </label>
               <label id="hide" for="toggle" >
               <span class="hiddendiv" id="testA">
-              <span class="websitelink">Back&nbsp;&#10174;<span class="emphasized"><em>here</em></span></span>
+              <span class="websitelink">Back&nbsp;<span class="emphasized">&#9755;</span></span>
               <object type="text/html" data="travel.html" style="width:100%; height: 72vw;"></object>
               </span>
               </label>
             </div>
           </div>
-        </div> 
+        </div>
         <div class="galleryc">
           <div class="gridgalc">
             <div class="conta">
               <input type="checkbox" id="togglea"> 
               <label id="showa" for="togglea">
-              <span class="websitelinka">See "Photographer Portfolio" site&nbsp;<span class="emphasized"><em>here</em></span></span><br>
+              <span class="websitelinka">"Photographer Portfolio" site&nbsp;<span class="emphasized">&#9755;</span></span><br>
               <span class="photogalba">
               <img src="gallery9.jpeg" width="300" alt="Photographer page" title="Site">
               <img  src="gallery10.jpeg" width="300" alt="Photographer page" title="Site">
@@ -720,7 +867,7 @@
               <a class="buttona" href="#creative">MORE DESIGNS</a>
               <label id="hidea" for="togglea" >
               <span class="hiddendiva" id="testB">
-              <span class="websitelinka">Back&nbsp;&#10174;<span class="emphasized"><em>here</em></span></span>
+              <span class="websitelinka">Back&nbsp;<span class="emphasized"><em>&#9755;</em></span></span>
               <object type="text/html" data="photographer.html" style="width:100%; height: 72vw;"></object>
               </span>
               </label>
@@ -773,6 +920,7 @@
             </details>
           </div>
           <br>
+		  <br>
           <div class="effects1">
             <h4>Figma layout</h4>
             <details>
@@ -970,7 +1118,7 @@
           <a class="linkf" href="#home">Home</a>&nbsp;
           <a class="linkf" href="#gallery">Gallery</a>&nbsp;
           <a class="linkf" href="#creative">Creative</a>&nbsp;
-           <a class="linkf" href="#creative">Useful tips</a>&nbsp;
+          <a class="linkf" href="#creative">Useful tips</a>&nbsp;
           <br>
           <br>
           <div class="socialm">

@@ -38,37 +38,35 @@
       scrollbar-color: #777467 #A6A6A6;
       scroll-behavior: smooth;
       overflow-x: hidden;
-      height: auto;
       }
       body {
       text-rendering: optimizeLegibility;
-      font-weight: 400;
       overflow-x: hidden;
       scroll-behavior: smooth;
       height: auto;
       outline: none;
       background-color: #fdfdfd;
       box-sizing: border-box;
-      margin: var(--space-md);
+      margin-left: var(--space-md);
+      margin-right: var(--space-md);
       }
       header {
       height: auto;
       width: 100%;
-      color:  #1A1A1A;
+      color:  #2A2A2A;
       box-sizing: border-box;
       background: #fdfdfd;
-      /* mediumShadow1color */
-      box-shadow: 0px 4px 8px 0px rgba(159, 159, 159, 0.14), 0px 2px 4px 0px rgba(159, 159, 159, 0.04);
+      box-shadow: 0em 0.2em 0.3em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.2em 0em rgba(160, 160, 160, 0.04);
       justify-content: left;
       align-items: start;
       display: inline-block;
-      padding-left: var(--space-lg);
-      padding-right: var(--space-lg);
+      padding-left: var(--space-xl);
+      padding-right: var(--space-xl);
       }
       .header { 
       max-width: 100%;
       margin: auto;
-      color: #1A1A1A;
+      color: #2A2A2A;
       }
       .pageprina {display:none}
       .default-tab {display:block}
@@ -85,56 +83,40 @@
       }
       .pagesprin a {
       box-sizing: border-box;
-      padding: var(--space-xs);
-      margin-left:var(--space-xxs);
+      padding: 1em;
+      margin-left: 0.16em;
       }
       #menuicon:checked~.pagesprin{display:block;}
       .menu{
       display: inline-block;
-      font-size: 22px;
+      font-size: 1.6em;
       transform: scale(2.2, 1);
       cursor: pointer;
-      box-sizing: border-box;
-      padding: var(--space-xs);
-      font-style: normal;
-      font-weight: 700;
-      line-height: 130%; /* 28.6px */
-      letter-spacing: -0.22px; 
       }
       :root {
       --space-unit: 1em;
-      --space-xxs:  calc(0.25 * var(--space-unit));
-      --space-xs:   calc(0.5 * var(--space-unit));
-      --space-sm:   calc(0.75 * var(--space-unit));
-      --space-md:   calc(1.25 * var(--space-unit));
-      --space-lg:   calc(2 * var(--space-unit));
-      --space-xl:   calc(3.25 * var(--space-unit));
-      --space-xxl:  calc(5.25 * var(--space-unit));
+      --space-md:   calc(1.6 * var(--space-unit));
+      --space-xl:   calc(3.2 * var(--space-unit));
       }
       .pagesprin a {
       text-decoration: none;
-      color: #1A1A1A;
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%; /* 24px */
-      letter-spacing: 0.02px; 
+      color: #2A2A2A;
       }
       .logoa {
       text-decoration: none;
       display: block;
-      transition: .7s ease all;
+      transition: .8s ease all;
       box-sizing: border-box;
       }
       .logoa:hover {
       transform: scale(1.1);
       }
       .animation {
-      transition:.9s ease;
+      transition:.8s ease;
       }
       .animation {
-      -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-      animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      -webkit-animation: tracking-in-expand 2s cubic-bezier(0.2, 0.6, 0.4, 1.000) both;
+      animation: tracking-in-expand 2s cubic-bezier(0.2, 0.6, 0.4, 1.000) both;
       }
       @-webkit-keyframes animation{
       0% {
@@ -160,123 +142,105 @@
       opacity: 1;
       }
       }
-      h1, h2 {
-      font-size: 36px;
+      h1 {
+      font-size: 2em;
       font-style: normal;
       font-weight: 700;
-      line-height: 110%; /* 39.6px */
-      padding-top: var(--space-xl);
-      box-sizing: border-box;
-      letter-spacing: -0.28px;
+      line-height:  192%;
+      letter-spacing: -0.01em;
+      }
+      h2 {
+      font-size: 2em;
+      font-style: normal;
+      font-weight: 500;
+      line-height:  192%;
+      letter-spacing: -0.01em;
       }
       h3 {
-      font-size: 28px;
+      font-size: 2em;
       font-style: normal;
-      font-weight: 700;
-      line-height: 120%; /* 33.6px */
-      padding-top: var(--space-lg);
-      box-sizing: border-box;
-      letter-spacing: -0.24px; 
+      font-weight: 500;
+      line-height:  192%;
+      letter-spacing: -0.01em; 
       }
       h4 {
-      font-size: 22px;
+      font-size: 1em;
       font-style: normal;
-      font-weight: 700;
-      line-height: 130%; /* 28.6px */
+      font-weight: 500;
+      line-height: 128%;
       text-align: left;
-      padding: var(--space-md);
-      box-sizing: border-box;
-      border-radius: var(--radius-radiusSmall, 10px); background: #fdfdfd;
-      box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04);
-      letter-spacing: -0.22px;
+      border-radius: var(--radius-radiusSmall, 0.75em); 
+      background: #fdfdfd;
+      letter-spacing: -0.004em;
       }
-      p, summary, .tipsa {
-      padding-top: var(--space-md);
-      box-sizing: border-box;
-      font-size: 18px;
+      p, summary, a, ul, li{
+      font-size: 1em;
       font-style: normal;
       font-weight: 400;
-      line-height: 140%; /* 25.2px */
-      letter-spacing: -0.22px; 
-      }
-      a, li {
-      font-size: 18px;
-      padding-top: var(--space-xs);
-      box-sizing: border-box;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 140%; /* 25.2px */
-      letter-spacing: 0.2px;
+      line-height: 128%; 
+      letter-spacing: -0.004em; 
       }
       .effects h4 {
-      color: #1A1A1A;
+      color: #2A2A2A;
       margin-bottom: var(--space-md);
-      margin-top: var(--space-lg);
+      margin-top: var(--space-xl);
+      box-shadow: 0em 0.2em 0.1em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.1em 0em rgba(160, 160, 160, 0.04);
+      padding: var(--space-md);
       }
       .effects1 h4 {
-      color: #1A1A1A;
+      color: #2A2A2A;
       margin-bottom: var(--space-md);
-      margin-top: var(--space-lg);
+      margin-top: var(--space-xl);
+      box-shadow: 0em 0.2em 0.1em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.1em 0em rgba(160, 160, 160, 0.04);
       }
       .effects1 details {
-      margin-top: var(--space-lg);
+      margin-top: var(--space-xl);
       }
       .buttona {
       text-align: center;
       color: #fdfdfd;
       background: #777467; 
-      border: 1px solid #1A1A1A; 
-      border-radius: 10px;
-      padding: 8px 16px; 
+      border: 1px solid #2A2A2A; 
+      border-radius: 0.25em;
+      padding: 1em 2em; 
       display: inline-block; 
       text-decoration: none;
-      transition: all 0.7s ease;
+      transition: all 0.8s ease;
       cursor: pointer;
       box-sizing: border-box;
-      margin-top: var(--space-xs);
-      transition:.7s ease;
-      border-radius: var(--radius-radiusSmall, 10px);
-      /* smallShadow1color */
-      box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04); 
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 140%; /* 25.2px */
+      margin-top: 1em;
+      transition:.8s ease;
+      border-radius: var(--radius-radiusSmall, 0.75em);
+      box-shadow: 0em 0.2em 0.1em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.1em 0em rgba(160, 160, 160, 0.04);
       }
       .buttona:hover, .button:active {
       color: #fdfdfd;
       background-color: #4B4942;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.16em;
       }
       .pagesnew {
-      color: #1A1A1A;
+      color: #2A2A2A;
       list-style-type: none;
       text-decoration: none;
       cursor: pointer;
-      transition:.7s ease;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 140%; /* 25.2px */
+      transition:.8s ease;
       display: inline-block;
-      letter-spacing: 0.2px;
       }
       .pagesnew:hover {
-       letter-spacing: 0.12em;
+      letter-spacing: 0.16em;
       }
       .logoa {
       display: inline-block;
-      transition: .7s ease all;
+      transition: .8s ease all;
       box-sizing: border-box;
-      padding-top: var(--space-xs);
+      padding-top: 1em;
       }
       .animation {
-      transition:.9s ease;
+      transition:.8s ease;
       }
       .animation {
-      -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-      animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      -webkit-animation: tracking-in-expand 2s cubic-bezier(0.2, 0.6, 0.4, 1.000) both;
+      animation: tracking-in-expand 2s cubic-bezier(0.2, 0.6, 0.4, 1.000) both;
       }
       @-webkit-keyframes animation{
       0% {
@@ -307,7 +271,7 @@
       height: 100px;
       margin-bottom: -2px;
       box-sizing: border-box;
-      padding-top: var(--space-xs);
+      padding-top: 1em;
       }
       .gallery {
       display: grid;
@@ -317,10 +281,10 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      color: #1A1A1A;
-      border-radius: 10px;
+      color: #2A2A2A;
+      border-radius: 1em;
       box-sizing: border-box;
-      padding-top: var(--space-xs);
+      padding-top: 1em;
       }
       .new, .new:after, .new:before {	  
       padding:0;
@@ -337,17 +301,17 @@
       height:auto;
       overflow: hidden;
       box-sizing: border-box;
-      padding-top: var(--space-xs);
+      padding-top: 1em;
       }
       .new li {
       position:relative;
-      width: 12%;
+      width: 16%;
       height:auto;
       float:left;
       border-left:1px solid white;
-      -webkit-transition:all 7s;
-      -moz-transition:all 7s;
-      transition:all 7s;
+      -webkit-transition:all 8s;
+      -moz-transition:all 8s;
+      transition:all 8s;
       cursor: pointer;
       }
       .new ul li:first-child {
@@ -359,37 +323,29 @@
       bottom:0;
       width:100%;
       color:#fdfdfd;
-      white-space:nowrap;
       background: linear-gradient(to right,  rgba(124,124,126,0.96) 0%, rgba(0,0,0,0) 100%);
       margin:auto;
-      transition:.7s ease;
-      }
-      span {
-      font-size: 15px!important;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%; /* 24px */
-      letter-spacing: 0.02px;  
+      transition:.8s ease;
       }
       .photocover {
-      width: 240px;
-      height:420px;
+      width: 256px;
+      height:auto;
       margin: auto;
       }
       .new ul:hover li {
-      width: 15px;
+      width: 1em;
       margin: auto; 
       }
       .new ul li:hover {
-      width: 240px;
+      width: 256px;
       margin: auto;
       }
       .menu {
-      color: #1A1A1A;
-      margin-left: var(--space-xs);
+      color: #2A2A2A;
+      margin-left: 1em;
       }
       .design {
-      width: 80px;
+      width: 4em;
       float: right;
       margin-left: 2px;
       }
@@ -399,76 +355,73 @@
       }
       .container {
       background-color: #fdfdfd;
-      opacity: 0.97;
-      height: 526px;
+      opacity: 0.64;
+      height: 50.75em;
       }
       .text {
-      margin-top: var(--space-xxl);
+      margin-top: var(--space-xl);
       }
       .text div {
-      margin-top: 32px;
+      margin-top: 2em;
       }   
       .text a {
-      margin-top: 106px;
+      margin-top: 96px;
       }   
       .gridgalb {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      max-width: 1400px;
+      max-width: 84em;
       margin: auto;
       justify-content: left;
       text-align: left;
-      color: #1A1A1A;
-      grid-gap: var(--space-md);
+      color: #2A2A2A;
+      grid-gap: 2em;
       box-sizing: border-box;
       }
       .galleryb .gridgalb:hover .photogalb:not(:hover) {
-      filter: brightness(46%);
+      filter: brightness(32%);
       }
       .galleryb .photogalb {
-      border-radius: 10px;
+      border-radius: 1em;
       pointer-events: auto;
       transition: brightness 250ms;
       cursor: pointer;
-      color: #1A1A1A;
+      color: #2A2A2A;
       }
       .photogalb {
       max-width: 960px;
       height: auto;
       }
       .photogalb img {
-      max-width: 360px;
+      max-width: 320px;
       border: 1px solid lightgray;
       margin-left: 1em;
       }
       .gallerybpresentation {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      max-width: 1400px;
+      max-width: 84em;
       margin: auto;
       justify-content: left;
       text-align: left;
-      grid-gap: 32px;
+      grid-gap: 2em;
       box-sizing: border-box;
-      white-space: pre-wrap;
-      color: #1A1A1A;
+      color: #2A2A2A;
       }
       .gallerybpresentation2 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      max-width: 1400px;
+      max-width: 84em;
       margin: auto;
       justify-content: left;
       text-align: left;
-      grid-gap: 32px;
-      white-space: pre-wrap;
-      color: #1A1A1A;
-      box-sizing: border-box;
+      grid-gap: 2em;
+      color: #2A2A2A;
       }
       .presentationa {
       cursor: pointer;
       float: right;
-      margin-right: -10px;
+      margin-right: -0.75em;
       box-sizing: border-box;
       }
       .gridgalb input[type=checkbox] {
@@ -492,61 +445,55 @@
       display:block;
       bottom: 0;
       width:100%;
-      color:#1A1A1A;
-      white-space:nowrap;
+      color:#2A2A2A;
       background: #fdfdfd;
       margin: auto;
       text-align: left;
-      border-radius: var(--radius-radiusSmall, 10px); background: #fdfdfd;
-      /* smallShadow1color */
-      box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04); 
+      border-radius: var(--radius-radiusSmall, 0.75em); background: #fdfdfd;
+      box-shadow: 0em 0.2em 0.1em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.1em 0em rgba(160, 160, 160, 0.04);
       box-sizing: border-box;
       padding: var(--space-md);
-      margin-bottom: var(--space-xl);
-      margin-top: var(--space-lg);
+      margin-top: var(--space-md);
+      margin-bottom: var(--space-md);
       }
-      .websitelink {
-      font-size: 22px!important;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 130%; /* 28.6px */
-      letter-spacing: -0.22px; 
+      .pad {
+      padding: var(--space-md);
       }
       .gridgalc {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      max-width: 1400px;
+      max-width: 84em;
       margin: auto;
       justify-content: left;
       text-align: left;
-      color: #1A1A1A;
-      grid-gap: 32px;
+      color: #2A2A2A;
+      grid-gap: 2em;
       box-sizing: border-box;
       }
       .galleryc .gridgalc:hover .photogalba:not(:hover) {
-      filter: brightness(46%);
+      filter: brightness(32%);
       }
       .galleryc .photogalba {
-      border-radius: 10px;
+      border-radius: 0.75em;
       pointer-events: auto;
       transition: brightness 250ms;
       cursor: pointer;
-      color: #1A1A1A;
+      color: #2A2A2A;
       }
       .photogalba {
       max-width: 960px;
       height: auto;
       }
       .photogalba img {
-      max-width: 294px;
+      max-width: 256px;
       border: 1px solid lightgray;
       margin-left: 1em;
       }
       .presentationb {
       cursor: pointer;
       float: left;
-      margin-right: -10px;
-      margin-top: var(--space-xxl);
+      margin-right: -0.75em;
+      margin-top: var(--space-xl);
       box-sizing: border-box;
       }  
       .gridgalc input[type=checkbox] {
@@ -570,43 +517,36 @@
       display:block;
       bottom: 0;
       width:100%;
-      color:#1A1A1A;
-      white-space:nowrap;
+      color:#2A2A2A;
       background: #fdfdfd;
       margin: auto;
       text-align: left;
-      border-radius: var(--radius-radiusSmall, 10px); background: #fdfdfd;
-      /* smallShadow1color */
-      box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04); 
+      border-radius: var(--radius-radiusSmall, 0.75em); background: #fdfdfd;
+      box-shadow: 0em 0.2em 0.1em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.1em 0em rgba(160, 160, 160, 0.04);
       box-sizing: border-box;
       padding: var(--space-md);
-      margin-bottom: var(--space-xl);
-      margin-top: var(--space-lg);
-      }
-      .websitelinka {
-      font-size: 22px!important;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 130%; /* 28.6px */
-      letter-spacing: -0.22px; 
+      margin-bottom: var(--space-md);
+      margin-top: var(--space-md);
       }
       .emphasized {
       text-underline-position: under;
-      transition:.7s ease;
+      transition:.8s ease;
       }
       .emphasized:hover {
       letter-spacing: 0.32em;
       cursor: pointer;
       }
       .effects {
-      max-width: 1400px;
+      max-width: 84em;
       margin: auto;
       justify-content: center;
       align-items: center;
       text-align: center;
+      margin-top: var(--space-md);
+      margin-bottom: var(--space-md);
       }
       .designa {
-      width: 80px;
+      width: 4em;
       float: right;
       margin-left: 2px;
       }
@@ -618,13 +558,15 @@
       .effects1 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      max-width: 1400px;
+      max-width: 84em;
       margin: auto;
       justify-content: start;
       align-items: start;
       text-align: center;
-      color: #1A1A1A;
-      grid-gap: 32px;
+      color: #2A2A2A;
+      grid-gap: 2em;
+      margin-top: var(--space-md);
+      margin-bottom: var(--space-md);
       }
       .effects1 .designnew {
       width: 100%;
@@ -633,53 +575,40 @@
       .effects3 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      max-width: 1400px;
+      max-width: 84em;
       margin: auto;
       justify-content: start;
       align-items: start;
       text-align: left;
-      color: #1A1A1A;
+      color: #2A2A2A;
       }
       .design1 {
       text-align: left;
       justify-content: left;
-      color: #1A1A1A;
+      color: #2A2A2A;
       padding: 0; 
       }
-     .seo {
-     box-shadow: 0px 4px 8px 0px rgba(159, 159, 159, 0.14), 0px 2px 4px 0px rgba(159, 159, 159, 0.04);  
-     max-width: 100%;
-     width: 420px;
-     height: auto;
-     }
-      .txt > p {
+      .seo {
+      box-shadow: 0em 0.2em 0.1em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.1em 0em rgba(160, 160, 160, 0.04);
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      }
+      .txt {
       display: flex;
       flex-direction: column;
-      margin-left: 0!important;
-      font-size: 18px!important;
-      font-style: normal;
-      font-weight: 400;
-      letter-spacing: -0.04px; 
-	  }
-      .tipsa {
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-      padding: var(--space-xs);
+      margin-left: 0!important; 
       }
       .tipsa li {
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%; /* 24px */
-      letter-spacing: 0.02px;  
+      display: flex;
+      flex-direction: column;
       }
       details > summary {
       background-color: #fdfdfd;
       cursor: pointer;
       box-sizing: border-box;
-      padding: var(--space-xs);
-      color: #1A1A1A;
+      padding: 1em;
+      color: #2A2A2A;
       text-align: left;
       }
       details > summary > * {
@@ -689,12 +618,12 @@
       border: 2px solid #fdfdfd;
       margin-top: 0;
       box-sizing: border-box;
-      padding-top: var(--space-xs);
+      padding-top: 1em;
       }
       details, summary{
-      border-radius: 10px;
+      border-radius: 0.75em;
       box-sizing: border-box;
-      padding-top: var(--space-xs);
+      padding-top: 1em;
       }
       footer {
       background-color: #5E5B51;
@@ -702,12 +631,11 @@
       bottom: 0;
       left: 0;
       height: auto;
-      margin-top: var(--space-xxl);
+      margin-top: var(--space-xl);
       padding: var(--space-xl);
       clear: both;
       color: #fdfdfd;
-      /* smallShadow1color */
-      box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04);
+      box-shadow: 0em 0.2em 0.1em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.1em 0em rgba(160, 160, 160, 0.04);
       }
       .footergrid {
       display: grid;
@@ -716,7 +644,7 @@
       justify-content: left;
       text-align: left;
       margin: auto;
-      grid-gap: 32px;
+      grid-gap: 2em;
       }
       .footergrid a {
       text-decoration: none;
@@ -729,52 +657,38 @@
       box-sizing: border-box;
       }
       .logofooter h5 {
-      margin-left: var(--space-lg);
+      margin-left: 1em;
       margin-top: var(--space-xl); 
       }
       .pageslinks {
       float: left;
       box-sizing: border-box;
       padding-top: var(--space-md);
-      transition: .7s ease all;
+      transition: .8s ease all;
       margin-top: var(--space-xl);
       }
-      .pageslinks a {
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%; /* 24px */
-      letter-spacing: 0.02px;  
-      }
       .pageslinks a:hover {
-      letter-spacing: 0.12em;
+      letter-spacing: 0.16em;
       }
-     .linkf {
+      .linkf {
       list-style-type: none;
       text-decoration: none;
       color: #fdfdfd;
-      margin-left: var(--space-xs);
-      }
-      .linkf1{
-      font-size: 15px!important;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%; /* 24px */
-      letter-spacing: 0.02px; 
+      margin-left: 1em;
       }
       .linkf1 {
       color: #fdfdfd;
       }
-      .linkf2{
-      font-size: 15px!important;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%; /* 24px */
-      letter-spacing: 0.02px; 
-      }
       .linkf2 {
       color: #fdfdfd;
-      margin-left: var(--space-xs);
+      margin-left: 1em;
+      }
+      ul {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      }
+      h1 {
+      margin-top:var(--space-xl);
       }
     </style>
   </head>
@@ -851,6 +765,7 @@
               <h1>Gallery</h1>
               <h3><em>User-friendly and aesthetically pleasing responsive websites</em></h3>
               <p>Websites are both functionally and creatively developed:</p>
+              <br>
               <p class="design1">
                 <span class="txt">&#9752;&nbsp;&nbsp;Creating responsive designs, graphics and layouts for websites according to standards</span>
                 <span class="txt">&#9752;&nbsp;&nbsp;Making sure websites work on a variety of browsers and devices</span>
@@ -860,18 +775,18 @@
                 <span class="txt">&#9752;&nbsp;&nbsp;Developing SEO content for websites, including text, images, and videos</span>
                 <span class="txt">&#9752;&nbsp;&nbsp;Developing SEO content strategies</span>
               </p>
-		 <p class="design1">
+              <p class="design1">
                 <span class="txt">&#9752;&nbsp;&nbsp;100% Desktop performance</span>
-	        <span class="txt">&#9752;&nbsp;&nbsp;More that 91% SEO best practices for desktop and mobile</span>
-	        <span class="txt">&#9752;&nbsp;&nbsp;92% Accesibility</span>
-	        <span class="txt">&#9752;&nbsp;&nbsp;96% Best practices</span>
-		<span class="txt">&#9752;&nbsp;&nbsp;All of the above with content="noindex, nofollow"</span> 
+                <span class="txt">&#9752;&nbsp;&nbsp;More that 91% SEO best practices for desktop and mobile</span>
+                <span class="txt">&#9752;&nbsp;&nbsp;92% Accesibility</span>
+                <span class="txt">&#9752;&nbsp;&nbsp;96% Best practices</span>
+                <span class="txt">&#9752;&nbsp;&nbsp;All of the above with content="noindex, nofollow"</span> 
               </p>
-	    <br>
-	    <img class="seo" src="seo1.webp" width="420" alt="Seo score" title="Seo score">
-	    <br>
-	    <br>
-	    <img class="seo" src="seo2.webp" width="420" alt="Seo score" title="Seo score">
+              <br>
+              <img class="seo" src="seo1.webp" width="420" alt="Seo score" title="Seo score">
+              <br>
+              <br>
+              <img class="seo" src="seo2.webp" width="420" alt="Seo score" title="Seo score">
             </div>
           </aside>
           <div class="gridgalb">
@@ -905,8 +820,8 @@
               </span>
               </span>
               </label>
-	      <br>
-	      <br>
+              <br>
+              <br>
               <label id="hide" for="toggle" >
               <span class="hiddendiv" id="testA">
               <span class="websitelink">Back&nbsp;<span class="emphasized">&#9755;</span></span>
@@ -946,8 +861,8 @@
               </span>
               </span>
               </span>
-	      </label>
-	      <label id="hidea" for="togglea" >
+              </label>
+              <label id="hidea" for="togglea" >
               <span class="hiddendiva" id="testB">
               <span class="websitelinka">Back&nbsp;<span class="emphasized"><em>&#9755;</em></span></span>
               <object type="text/html" data="photographer.html" style="width:100%; height: 72vw;"></object>
@@ -961,18 +876,29 @@
       <div class="pageprina creativepage">
         <div class="galleryb">
           <aside class="gallerybpresentation2">
-            <div>
+            <div class="text3">
               <div class="designc">
                 <img src="design2.svg" width="80" alt="Decorative element" title="Decorative element">
               </div>
               <h1>Creative assets </h1>
               <h3><em>Layout and reusable block elements</em></h3>
-              <p>Web design involves coming up with distinctive layouts, illustrations and graphics<br>that draw users in and set a website apart from others.<br><br>It is important to have creative resources, elements that can also be formed<br>into easily styled and used reusable blocks.<br>The main role for these creative assets is to attract and engage.<br><br>After establishing the website layout, the coding part begins:<br>the main HTML, CSS, so that the site can be shared online.<br>An effective graphic can be a very pleasant experience for a viewer.
+              <br>
+              <p class="web">Web design involves coming up with distinctive layouts, illustrations and graphics that draw users in and set a
+                website apart from others.
+              </p>
+              <p>It is important to have creative resources, elements that can also be formed into easily
+                styled and used reusable blocks.
+              </p>
+              <p>The main role for these creative assets is to attract and engage. After establishing 
+                the website layout, the coding part begin: HTML, CSS, so that the site can be shared online.
+              </p>
+              <p> An effective graphic 
+                can be a very pleasant experience for a viewer.
               </p>
             </div>
           </aside>
           <div class="effects">
-            <h4>Design system</h4>
+            <h4 class="pad">Design system</h4>
             <details>
               <summary>
                 <span>&nbsp;Coming soon - 3 in 1 Design System (Figma)</span>
@@ -982,7 +908,7 @@
             </details>
           </div>
           <div class="effects1">
-            <h4>Email</h4>
+            <h4 class="pad">Email</h4>
             <details>
               <summary>
                 <span>&nbsp;"Myra" cosmetics</span>
@@ -997,7 +923,7 @@
             </details>
           </div>
           <div class="effects1">
-            <h4>Figma layout</h4>
+            <h4 class="pad">Figma layout</h4>
             <details>
               <summary>
                 <span>&nbsp;"Scrib" publishing house</span>
@@ -1041,7 +967,7 @@
             </details>
           </div>
           <div class="effects">
-            <h4>Color palettes/gradients</h4>
+            <h4 class="pad">Color palettes/gradients</h4>
             <details>
               <summary>
                 <span>&nbsp;More than 85% of customers look first at the color of the product. 
@@ -1052,7 +978,7 @@
             </details>
           </div>
           <div class="effects">
-            <h4>Different assets</h4>
+            <h4 class="pad">Different assets</h4>
             <details>
               <summary>
                 <span>&nbsp;Flip book</span>
@@ -1101,7 +1027,7 @@
               &#9752;
               <ul class="tipsa">
                 <li>&nbsp;&nbsp;F pattern-pages with more text, starts reading from the top, concentrating on the content</li>
-                <li>&nbsp;&nbsp;The human eye is all the time looking for patterns, make use of the same blocks or elements,<br>  and create pattern navigation</li>
+                <li>&nbsp;&nbsp;The human eye is all the time looking for patterns, make use of the same blocks or elements, and create pattern navigation</li>
                 <li>&nbsp;&nbsp;SEO check on page</li>
                 <li>&nbsp;&nbsp;W3C validation</li>
                 <li>&nbsp;&nbsp;Use white space as much as possible, to enhance readability</li>
@@ -1118,16 +1044,20 @@
               <ul class="tipsa">
                 <li>&nbsp;&nbsp;Can also use Golden ratio in graphics</li>
                 <li>&nbsp;&nbsp;Can use the circles from Golden ratio in making logos</li>
-                <li>&nbsp;&nbsp;One way of making color palettes RGB, HSB is to use the Fibonacci sequence - RGB for example (40, 80, 120):<br>Step 1 - 40 is the chosen number Red (R), Step 2 - double it (40) , makes 80 for Green (G), Step 3 - assure the last number for Blue (B) <br>is the sum of the prevoius numbers, so 120 is 40+80).<br>Also, one can use HSB hue, saturation, brightness for making beautiful colors in the same way.</li>
+                <li>&nbsp;&nbsp;One way of making color palettes RGB, HSB is to use the Fibonacci sequence - RGB for example (40, 80, 120):Step 1 - 40</li>
+                <li>&nbsp;&nbsp;is the chosen number Red (R), Step 2 - double it (40) , makes 80 for Green (G), Step 3 - assure the last number for Blue (B) is the sum</li>
+                <li>&nbsp;&nbsp;of the prevoius numbers, so 120 is 40+80). Also, one can use HSB hue, saturation, brightness for making beautiful colors in the same way.</li>
                 <li>&nbsp;&nbsp;Same color for all clickable buttons</li>
               </ul>
               &#9752;
               <ul class="tipsa">
-                <li>&nbsp;&nbsp;Multiply the base font size of 15px, for example, by the golden ratio of 1.618 and get multiples for your heading sizes<br> (16 px - base, 15px x 1.618 = 26 px - rounded), for the next font size use the previous font size obtained 26 px,<br> so 26 px - base, 26px x 1.618 = 42 px - rounded and so on...)</li>
+                <li>&nbsp;&nbsp;Multiply the base font size of 1em, for example, by the golden ratio of 1.618 and get multiples for your heading sizes</li>
+                <li>&nbsp;&nbsp;(16 px - base, 1em x 1.618 = 26 px - rounded), for the next font size use the previous font size obtained 26 px, so 26 px - base,</li>
+                <li>&nbsp;&nbsp; 26px x 1.618 =42 px - rounded and so on...)</li>
                 <li>&nbsp;&nbsp;Use soft colors for information and background (like blue) and bold colors for CTA buttons (like orange)</li>
                 <li>&nbsp;&nbsp;Font - line height 1.5, or 150%, the bigger the heading, the smaller the line height</li>
                 <li>&nbsp;&nbsp;Use subtle color change and font weight to indicate hierarchy</li>
-                <li>&nbsp;&nbsp;If the distance between title and text is 15px, the distance on top of them must be 32px, that means x2</li>
+                <li>&nbsp;&nbsp;If the distance between title and text is 1em, the distance on top of them must be 2em, that means x2</li>
               </ul>
               &#9752;
               <ul class="tipsa">
@@ -1139,7 +1069,7 @@
               &#9752;
               <ul class="tipsa">
                 <li>&nbsp;&nbsp;By increasing saturation you create vibrant, more intens colors, by decreasing saturation you reduce the vibrance of a color</li>
-                <li>&nbsp;&nbsp;How to calculate height - golden ration: 960-pixel width layout divided by 1.618. The result is 594px,<br>representing the height of the layout</li>
+                <li>&nbsp;&nbsp;How to calculate height - golden ration: 960-pixel width layout divided by 1.618. The result is 590.25em, representing the height of the layout</li>
                 <li>&nbsp;&nbsp;Check the graphics in grayscale to see how it looks and if it needs improvements</li>
                 <li>&nbsp;&nbsp;Use less saturation for minimalist colors</li>
                 <li>&nbsp;&nbsp;Make use of L (lightness) in HSL for obtaining different shades in UI design. Pick a color and increase or decrease lightness.</li>
@@ -1149,7 +1079,7 @@
               <ul class="tipsa">
                 <li>&nbsp;&nbsp;Any two colors are harmonious when one or both contain some of the other</li>
                 <li>&nbsp;&nbsp;Make use of bullets list to break large amount of text</li>
-                <li>&nbsp;&nbsp;The Fibonacci sequence is a series of numbers where each number is equal to the sum<br>of the previous two numbers in the sequence: 3, 5, 8</li>
+                <li>&nbsp;&nbsp;The Fibonacci sequence is a series of numbers where each number is equal to the sum of the previous two numbers in the sequence: 3, 5, 8</li>
                 <li>&nbsp;&nbsp;Fibonacci rule: add the two previous values so you can get the next one</li>
               </ul>
             </div>

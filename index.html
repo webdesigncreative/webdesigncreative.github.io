@@ -561,7 +561,13 @@
       flex-direction: column;
       max-width: 40em;
       overflow-wrap: break-word;
-      padding-left: var(--space-md);
+      }
+      .tipsa>li::before {
+      padding-right: 10px;
+      position: absolute;
+      left:-15px;
+      top:-10px;
+      content: "";
       }
       details > summary {
       background-color: #fdfdfd;

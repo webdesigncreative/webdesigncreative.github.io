@@ -12,7 +12,7 @@
     <meta property="og:type" content="portfolio">
     <meta property="og:url" content="https://webdesigncreative.github.io/#creative">
     <meta property="og:image" content="gallerya.jpg">
-    <link rel="canonical" href="https://webdesigncreative.github.io/"/>
+    <link rel="canonical" href="https://webdesigncreative.github.io">
     <link
       rel="icon"
       type="image/x-icon"
@@ -38,11 +38,9 @@
       scrollbar-color: #777467 #A6A6A6;
       scroll-behavior: smooth;
       overflow-x: hidden;
-      height: auto;
       }
       body {
       text-rendering: optimizeLegibility;
-      font-weight: 400;
       overflow-x: hidden;
       scroll-behavior: smooth;
       height: auto;
@@ -55,20 +53,21 @@
       header {
       height: auto;
       width: 100%;
-      color:  #1A1A1A;
+      color:  #2A2A2A;
       box-sizing: border-box;
       background: #fdfdfd;
-      box-shadow: 0px 4px 8px 0px rgba(159, 159, 159, 0.14), 0px 2px 4px 0px rgba(159, 159, 159, 0.04);
+      box-shadow: 0em 0.2em 0.3em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.2em 0em rgba(160, 160, 160, 0.04);
       justify-content: left;
       align-items: start;
       display: inline-block;
-      padding-left: var(--space-lg);
-      padding-right: var(--space-lg);
+      padding-left: var(--space-md);
+      padding-right: var(--space-md);
+      padding-bottom: 1em;
       }
       .header { 
       max-width: 100%;
       margin: auto;
-      color: #1A1A1A;
+      color: #2A2A2A;
       }
       .pageprina {display:none}
       .default-tab {display:block}
@@ -85,56 +84,43 @@
       }
       .pagesprin a {
       box-sizing: border-box;
-      padding: var(--space-xs);
-      margin-left:var(--space-xxs);
+      padding-right: 2em;
+      margin-left: -0.6em;
       }
       #menuicon:checked~.pagesprin{display:block;}
       .menu{
       display: inline-block;
-      font-size: 22px;
-      transform: scale(2.2, 1);
+      font-size: 1.4em;
+      transform: scale(2, 1);
       cursor: pointer;
-      box-sizing: border-box;
-      padding: var(--space-xs);
-      font-style: normal;
-      font-weight: 700;
-      line-height: 130%;
-      letter-spacing: -0.22px; 
       }
       :root {
       --space-unit: 1em;
-      --space-xxs:  calc(0.25 * var(--space-unit));
-      --space-xs:   calc(0.5 * var(--space-unit));
-      --space-sm:   calc(0.75 * var(--space-unit));
-      --space-md:   calc(1.25 * var(--space-unit));
-      --space-lg:   calc(2 * var(--space-unit));
-      --space-xl:   calc(3.25 * var(--space-unit));
-      --space-xxl:  calc(5.25 * var(--space-unit));
+      --space-md:   calc(1.6 * var(--space-unit));
+      --space-xl:   calc(2 * var(--space-unit));
       }
       .pagesprin a {
       text-decoration: none;
-      color: #1A1A1A;
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%;
-      letter-spacing: 0.02px; 
+      color: #2A2A2A;
+      }
+      .pagesprin {
+      margin-left: 1em;
       }
       .logoa {
       text-decoration: none;
       display: block;
-      transition: .7s ease all;
+      transition: .8s ease all;
       box-sizing: border-box;
       }
       .logoa:hover {
       transform: scale(1.1);
       }
       .animation {
-      transition:.9s ease;
+      transition:.8s ease;
       }
       .animation {
-      -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-      animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      -webkit-animation: tracking-in-expand 2s cubic-bezier(0.2, 0.8, 1.000, 1.400) both;
+      animation: tracking-in-expand 2s cubic-bezier(0.2, 0.8, 1.000, 1.400) both;
       }
       @-webkit-keyframes animation{
       0% {
@@ -160,151 +146,99 @@
       opacity: 1;
       }
       }
-      h1, h2 {
-      font-size: 36px;
+      h1 {
+      font-size: 2em;
       font-style: normal;
       font-weight: 700;
-      line-height: 110%;
-      padding-top: var(--space-xl);
-      box-sizing: border-box;
-      letter-spacing: -0.28px;
+      letter-spacing: 0.012em;
+      line-height: 3.4em;
+      }
+      h2 {
+      font-size: 1.6em;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      line-height: 2.8em;
       }
       h3 {
-      font-size: 28px;
+      font-size: 1.2em;
       font-style: normal;
       font-weight: 700;
-      line-height: 120%;
-      padding-top: var(--space-lg);
-      box-sizing: border-box;
-      letter-spacing: -0.24px; 
+      letter-spacing: 0.007em; 
+      line-height: 2.2em;
       }
       h4 {
-      font-size: 22px;
+      font-size: 1.1em;
       font-style: normal;
-      font-weight: 700;
-      line-height: 130%;
+      font-weight: 500;
       text-align: left;
-      padding: var(--space-md);
-      box-sizing: border-box;
-      border-radius: var(--radius-radiusSmall, 10px); background: #fdfdfd;
-      box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04);
-      letter-spacing: -0.22px;
+      border-radius: var(--radius-radiusSmall, 0.75em); 
+      background: #fdfdfd;
+      letter-spacing: 0.007em;
+      line-height: 1.8em;
       }
-      p, summary, .tipsa {
-      padding-top: var(--space-md);
-      box-sizing: border-box;
-      font-size: 18px;
+      p, summary, a, ul, li, span {
+      font-size: 1em;
       font-style: normal;
-      font-weight: 400;
-      line-height: 140%; 
-      letter-spacing: -0.22px; 
-      }
-      a, li {
-      font-size: 18px;
-      padding-top: var(--space-xs);
-      box-sizing: border-box;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 140%; 
-      letter-spacing: 0.2px;
+      font-weight: 400; 
+      letter-spacing: 0.006em; 
+      line-height: 1.68em;
       }
       .effects h4 {
-      color: #1A1A1A;
-      margin-bottom: var(--space-md);
-      margin-top: var(--space-lg);
+      color: #2A2A2A;
+      box-shadow: 0em 0.2em 0.1em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.1em 0em rgba(160, 160, 160, 0.04);
+      padding: var(--space-md);
       }
       .effects1 h4 {
-      color: #1A1A1A;
+      color: #2A2A2A;
       margin-bottom: var(--space-md);
-      margin-top: var(--space-lg);
-      }
-      .effects1 details {
-      margin-top: var(--space-lg);
+      margin-top: var(--space-xl);
+      box-shadow: 0em 0.2em 0.1em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.1em 0em rgba(160, 160, 160, 0.04);
       }
       .buttona {
       text-align: center;
       color: #fdfdfd;
       background: #777467; 
-      radius: 10px;
-      padding: 8px 16px; 
+      border-radius: 0.25em;
+      padding: 0.8em 1.6em; 
       display: inline-block; 
       text-decoration: none;
-      transition: all 0.7s ease;
+      transition: all 0.8s ease;
       cursor: pointer;
       box-sizing: border-box;
-      margin-top: var(--space-xs);
-      transition:.7s ease;
-      border-radius: var(--radius-radiusSmall, 10px);
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 140%;
+      transition:.8s ease;
+      border-radius: var(--radius-radiusSmall, 0.75em);
+      box-shadow: 0em 0.2em 0.1em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.1em 0em rgba(160, 160, 160, 0.04);
+      margin-top: var(--space-xl);
       }
       .buttona:hover, .button:active {
       color: #fdfdfd;
       background-color: #4B4942;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.16em;
       }
       .pagesnew {
-      color: #1A1A1A;
+      color: #2A2A2A;
       list-style-type: none;
       text-decoration: none;
       cursor: pointer;
-      transition:.7s ease;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 140%; 
+      transition:.8s ease;
       display: inline-block;
-      letter-spacing: 0.2px;
       }
       .pagesnew:hover {
-      letter-spacing: 0.12em;
+      letter-spacing: 0.16em;
       }
       .logoa {
       display: inline-block;
-      transition: .7s ease all;
+      transition: .8s ease all;
       box-sizing: border-box;
-      padding-top: var(--space-xs);
-      }
-      .animation {
-      transition:.9s ease;
-      }
-      .animation {
-      -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-      animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-      }
-      @-webkit-keyframes animation{
-      0% {
-      letter-spacing: -0.2em;
-      opacity: 0;
-      }
-      40% {
-      opacity: 0.6;
-      }
-      100% {
-      opacity: 1;
-      }
-      }
-      @keyframes tracking-in-expand {
-      0% {
-      letter-spacing: -0.2em;
-      opacity: 0;
-      }
-      40% {
-      opacity: 0.6;
-      }
-      100% {
-      opacity: 1;
-      }
+      padding-top: var(--space-md);
       }
       .color {
       width: 100%;
-      height: 100px;
-      margin-bottom: -2px;
+      height: 6em;
+      margin-bottom: -0.2em;
       box-sizing: border-box;
-      padding-top: var(--space-xs);
+      padding-top: 1em;
       }
       .gallery {
       display: grid;
@@ -314,10 +248,10 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      color: #1A1A1A;
-      border-radius: 10px;
+      color: #2a2a2a;
+      border-radius: 8px;
       box-sizing: border-box;
-      padding-top: var(--space-xs);
+      padding-top: 1em;
       }
       .new, .new:after, .new:before {	  
       padding:0;
@@ -334,7 +268,7 @@
       height:auto;
       overflow: hidden;
       box-sizing: border-box;
-      padding-top: var(--space-xs);
+      padding-top: 1em;
       }
       .new li {
       position:relative;
@@ -361,111 +295,93 @@
       margin:auto;
       transition:.7s ease;
       }
-      span {
-      font-size: 15px!important;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%;
-      letter-spacing: 0.02px;  
-      }
       .photocover {
-      width: 240px;
-      height:420px;
+      width: 14em;
+      height: 24em;
       margin: auto;
       }
       .new ul:hover li {
-      width: 15px;
+      width: 1em;
       margin: auto; 
       }
       .new ul li:hover {
-      width: 240px;
+      width: 14em;
       margin: auto;
       }
       .menu {
-      color: #1A1A1A;
-      margin-left: var(--space-xs);
+      color: #2A2A2A;
+      margin-left: 0.64em;
+      padding-bottom: 0.4em;
       }
       .design {
-      width: 80px;
+      width: 4em;
       float: right;
       margin-left: 2px;
       }
       .new ul {
       background: url("gallerya.jpg");
       background-size: cover;
+      height: auto;
       }
       .container {
       background-color: #fdfdfd;
-      opacity: 0.97;
-      height: 526px;
-      }
-      .text {
-      margin-top: var(--space-xxl);
-      }
-      .text div {
-      margin-top: 32px;
-      }   
-      .text a {
-      margin-top: 106px;
-      }   
+      height: auto;
+      margin: var(--space-xl);
+      }  
       .gridgalb {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      max-width: 1400px;
+      max-width: 84em;
       margin: auto;
       justify-content: left;
       text-align: left;
-      color: #1A1A1A;
-      grid-gap: var(--space-md);
+      color: #2A2A2A;
+      grid-gap: 2em;
       box-sizing: border-box;
       }
       .galleryb .gridgalb:hover .photogalb:not(:hover) {
-      filter: brightness(46%);
+      filter: brightness(32%);
       }
       .galleryb .photogalb {
-      border-radius: 10px;
+      border-radius: 1em;
       pointer-events: auto;
       transition: brightness 250ms;
       cursor: pointer;
-      color: #1A1A1A;
+      color: #2A2A2A;
       }
       .photogalb {
-      max-width: 960px;
+      max-width: 64em;
       height: auto;
       }
       .photogalb img {
-      max-width: 360px;
+      max-width: 32em;
       border: 1px solid lightgray;
       margin-left: 1em;
       }
       .gallerybpresentation {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      max-width: 1400px;
+      max-width: 84em;
       margin: auto;
       justify-content: left;
       text-align: left;
-      grid-gap: 32px;
+      grid-gap: 2em;
       box-sizing: border-box;
-      white-space: pre-wrap;
-      color: #1A1A1A;
+      color: #2A2A2A;
       }
       .gallerybpresentation2 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      max-width: 1400px;
+      max-width: 84em;
       margin: auto;
       justify-content: left;
       text-align: left;
-      grid-gap: 32px;
-      white-space: pre-wrap;
-      color: #1A1A1A;
-      box-sizing: border-box;
+      grid-gap: 2em;
+      color: #2A2A2A;
       }
       .presentationa {
       cursor: pointer;
       float: right;
-      margin-right: -10px;
       box-sizing: border-box;
       }
       .gridgalb input[type=checkbox] {
@@ -489,60 +405,55 @@
       display:block;
       bottom: 0;
       width:100%;
-      color:#1A1A1A;
-      white-space:nowrap;
+      color:#2A2A2A;
       background: #fdfdfd;
       margin: auto;
       text-align: left;
-      border-radius: var(--radius-radiusSmall, 10px); background: #fdfdfd;
-      box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04); 
+      border-radius: var(--radius-radiusSmall, 0.75em); background: #fdfdfd;
+      box-shadow: 0em 0.2em 0.1em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.1em 0em rgba(160, 160, 160, 0.04);
       box-sizing: border-box;
       padding: var(--space-md);
+      margin-top: var(--space-xl);
       margin-bottom: var(--space-xl);
-      margin-top: var(--space-lg);
       }
-      .websitelink {
-      font-size: 22px!important;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 130%; 
-      letter-spacing: -0.22px; 
+      .pad {
+      padding: var(--space-md);
       }
       .gridgalc {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      max-width: 1400px;
+      max-width: 84em;
       margin: auto;
       justify-content: left;
       text-align: left;
-      color: #1A1A1A;
-      grid-gap: 32px;
+      color: #2A2A2A;
+      grid-gap: 2em;
       box-sizing: border-box;
       }
       .galleryc .gridgalc:hover .photogalba:not(:hover) {
-      filter: brightness(46%);
+      filter: brightness(32%);
       }
       .galleryc .photogalba {
-      border-radius: 10px;
+      border-radius: 0.75em;
       pointer-events: auto;
       transition: brightness 250ms;
       cursor: pointer;
-      color: #1A1A1A;
+      color: #2A2A2A;
       }
       .photogalba {
-      max-width: 960px;
+      max-width: 64em;
       height: auto;
       }
       .photogalba img {
-      max-width: 294px;
+      max-width: 16em;
       border: 1px solid lightgray;
       margin-left: 1em;
       }
       .presentationb {
       cursor: pointer;
       float: left;
-      margin-right: -10px;
-      margin-top: var(--space-xxl);
+      margin-right: -0.75em;
+      margin-top: var(--space-xl);
       box-sizing: border-box;
       }  
       .gridgalc input[type=checkbox] {
@@ -566,60 +477,51 @@
       display:block;
       bottom: 0;
       width:100%;
-      color:#1A1A1A;
-      white-space:nowrap;
+      color:#2A2A2A;
       background: #fdfdfd;
       margin: auto;
       text-align: left;
-      border-radius: var(--radius-radiusSmall, 10px); background: #fdfdfd;
-      box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04); 
+      border-radius: var(--radius-radiusSmall, 0.75em); background: #fdfdfd;
+      box-shadow: 0em 0.2em 0.1em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.1em 0em rgba(160, 160, 160, 0.04);
       box-sizing: border-box;
       padding: var(--space-md);
       margin-bottom: var(--space-xl);
-      margin-top: var(--space-lg);
-      }
-      .websitelinka {
-      font-size: 22px!important;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 130%; /* 28.6px */
-      letter-spacing: -0.22px; 
+      margin-top: var(--space-xl);
       }
       .emphasized {
       text-underline-position: under;
-      transition:.7s ease;
+      transition:.8s ease;
       }
       .emphasized:hover {
       letter-spacing: 0.32em;
       cursor: pointer;
       }
       .effects {
-      max-width: 1400px;
+      max-width: 84em;
       margin: auto;
       justify-content: center;
       align-items: center;
       text-align: center;
+      margin-top: var(--space-xl);
+      margin-bottom: var(--space-xl);
       }
       .designa {
-      width: 80px;
       float: right;
-      margin-left: 2px;
+      margin-top: var(--space-md);
       }
       .designc {
-      width: 120px;
       float: right;
-      margin-left: 2px;
+      margin-top: var(--space-md);
       }
       .effects1 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      max-width: 1400px;
+      max-width: 84em;
       margin: auto;
       justify-content: start;
       align-items: start;
       text-align: center;
-      color: #1A1A1A;
-      grid-gap: 32px;
+      color: #2A2A2A;
       }
       .effects1 .designnew {
       width: 100%;
@@ -628,53 +530,41 @@
       .effects3 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      max-width: 1400px;
+      max-width: 84em;
       margin: auto;
       justify-content: start;
       align-items: start;
       text-align: left;
-      color: #1A1A1A;
+      color: #2A2A2A;
       }
       .design1 {
       text-align: left;
       justify-content: left;
-      color: #1A1A1A;
+      color: #2A2A2A;
       padding: 0; 
       }
       .seo {
-      box-shadow: 0px 4px 8px 0px rgba(159, 159, 159, 0.14), 0px 2px 4px 0px rgba(159, 159, 159, 0.04);  
+      box-shadow: 0em 0.2em 0.1em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.1em 0em rgba(160, 160, 160, 0.04);
       max-width: 100%;
-      width: 420px;
+      width: auto;
       height: auto;
+      margin-top: var(--space-md);
       }
-      .txt > p {
+      .txt {
       display: flex;
       flex-direction: column;
-      margin-left: 0!important;
-      font-size: 18px!important;
-      font-style: normal;
-      font-weight: 400;
-      letter-spacing: -0.04px; 
-      }
-      .tipsa {
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-      padding: var(--space-xs);
+      margin-left: 0!important; 
       }
       .tipsa li {
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%;
-      letter-spacing: 0.02px;  
+      display: flex;
+      flex-direction: column;
       }
       details > summary {
       background-color: #fdfdfd;
       cursor: pointer;
       box-sizing: border-box;
-      padding: var(--space-xs);
-      color: #1A1A1A;
+      padding: 1em;
+      color: #2A2A2A;
       text-align: left;
       }
       details > summary > * {
@@ -684,24 +574,23 @@
       border: 2px solid #fdfdfd;
       margin-top: 0;
       box-sizing: border-box;
-      padding-top: var(--space-xs);
+      padding-top: 1em;
       }
       details, summary{
-      border-radius: 10px;
+      border-radius: 0.75em;
       box-sizing: border-box;
-      padding-top: var(--space-xs);
+      padding-top: 1em;
       }
       footer {
       background-color: #5E5B51;
       box-sizing: border-box;
       bottom: 0;
       left: 0;
-      height: auto;
-      margin-top: var(--space-xxl);
+      margin-top: var(--space-xl);
       padding: var(--space-xl);
       clear: both;
       color: #fdfdfd;
-      box-shadow: 0px 2px 4px 0px rgba(159, 159, 159, 0.14), 0px 1px 2px 0px rgba(159, 159, 159, 0.04);
+      box-shadow: 0em 0.2em 0.1em 0em rgba(160, 160, 160, 0.14), 0em 0.1em 0.1em 0em rgba(160, 160, 160, 0.04);
       }
       .footergrid {
       display: grid;
@@ -710,7 +599,7 @@
       justify-content: left;
       text-align: left;
       margin: auto;
-      grid-gap: 32px;
+      grid-gap: 2em;
       }
       .footergrid a {
       text-decoration: none;
@@ -722,53 +611,47 @@
       display: inline-block;
       box-sizing: border-box;
       }
-      .logofooter h5 {
-      margin-left: var(--space-lg);
+      .logofooter {
+      margin-left: 1em;
       margin-top: var(--space-xl); 
       }
       .pageslinks {
       float: left;
       box-sizing: border-box;
-      padding-top: var(--space-md);
-      transition: .7s ease all;
-      margin-top: var(--space-xl);
-      }
-      .pageslinks a {
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%;
-      letter-spacing: 0.02px;  
+      margin-top: 8.4em;
+      transition: .8s ease all;
       }
       .pageslinks a:hover {
-      letter-spacing: 0.12em;
+      letter-spacing: 0.16em;
       }
       .linkf {
       list-style-type: none;
       text-decoration: none;
       color: #fdfdfd;
-      margin-left: var(--space-xs);
+      margin-left: 1em;
       }
-      .linkf1{
-      font-size: 15px!important;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%;
-      letter-spacing: 0.02px; 
+      .socialm {
+      margin-top: var(--space-md);
       }
       .linkf1 {
       color: #fdfdfd;
       }
-      .linkf2{
-      font-size: 15px!important;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%;
-      letter-spacing: 0.02px; 
-      }
       .linkf2 {
       color: #fdfdfd;
-      margin-left: var(--space-xs);
+      margin-left: 1em;
+      }
+      ul {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      }
+      h1 {
+      margin-top: var(--space-xl);
+      }
+      .tipsa li {
+      margin-top: 1em;
+      }
+      ::marker {
+      color: lightblue;
       }
     </style>
   </head>
@@ -776,10 +659,10 @@
     <header>
       <div class="header">
         <figure>
-          <a class="logoa" href="#home"><img src="logod.svg" alt="Website text letter logo" width="70" height="50" title="Logo letter W"></a>
+          <a class="logoa" href="#home"><img src="logod.svg" alt="Website text letter logo" width="50" title="Logo letter W"></a>
         </figure>
         <input id="menuicon" type=checkbox>
-        <label class="menu" for="menuicon">&#9776;</label>
+        <label class="menu" for="menuicon"> &#9868;</label>
         <div class="pagesprin">
           <a class="pagesnew" href="#home">Home</a>
           <a class="pagesnew" href="#gallery">Gallery</a>
@@ -845,25 +728,29 @@
               <h1>Gallery</h1>
               <h3><em>User-friendly and aesthetically pleasing responsive websites</em></h3>
               <p>Websites are both functionally and creatively developed:</p>
+              <br>
               <p class="design1">
-                <span class="txt">&#9752;&nbsp;&nbsp;Creating responsive designs, graphics and layouts for websites according to standards</span>
-                <span class="txt">&#9752;&nbsp;&nbsp;Making sure websites work on a variety of browsers and devices</span>
-                <span class="txt">&#9752;&nbsp;&nbsp;Developing and executing search engine optimization tactics </span>
-                <span class="txt">&#9752;&nbsp;&nbsp;Responsive and mobile-first sites with W3C approval</span>
-                <span class="txt">&#9752;&nbsp;&nbsp;Creating dynamic websites in HTML5, and CSS3, that result in higher traffic, without media queries</span>
-                <span class="txt">&#9752;&nbsp;&nbsp;Developing SEO content for websites, including text, images, and videos</span>
-                <span class="txt">&#9752;&nbsp;&nbsp;Developing SEO content strategies</span>
+                <span class="txt">&#183;&nbsp;&nbsp;Creating responsive designs, graphics and layouts for websites<span></span>according to standards</span>
+                <span class="txt">&#183;&nbsp;&nbsp;Making sure websites work on a variety of browsers and devices</span>
+                <span class="txt">&#183;&nbsp;&nbsp;Developing and executing search engine optimization tactics </span>
+                <br>
+                <br>
+                <span class="txt">&#183;&nbsp;&nbsp;Responsive and mobile-first sites with W3C approval</span>
+                <span class="txt">&#183;&nbsp;&nbsp;Creating dynamic websites in HTML5, and CSS3, without media queries</span>
+                <span class="txt">&#183;&nbsp;&nbsp;Developing SEO content for websites, including text, images, and videos</span>
+                <span class="txt">&#183;&nbsp;&nbsp;Developing SEO content strategies</span>
               </p>
+              <br>
+              <br>
               <p class="design1">
-                <span class="txt">&#9752;&nbsp;&nbsp;100% Desktop performance</span>
-                <span class="txt">&#9752;&nbsp;&nbsp;More that 91% SEO best practices for desktop and mobile</span>
-                <span class="txt">&#9752;&nbsp;&nbsp;92% Accesibility</span>
-                <span class="txt">&#9752;&nbsp;&nbsp;96% Best practices</span>
-                <span class="txt">&#9752;&nbsp;&nbsp;All of the above with content="noindex, nofollow"</span> 
+                <span class="txt">&#9752;100% Desktop performance</span>
+                <span class="txt">&#183;&nbsp;&nbsp;More that 91% SEO best practices for desktop and mobile</span>
+                <span class="txt">&#183;&nbsp;&nbsp;92% Accesibility</span>
+                <span class="txt">&#183;&nbsp;&nbsp;96% Best practices</span>
+                <span class="txt">&#183;&nbsp;&nbsp;All of the above with content="noindex, nofollow"</span> 
               </p>
               <br>
               <img class="seo" src="seo1.webp" width="420" alt="Seo score" title="Seo score">
-              <br>
               <br>
               <img class="seo" src="seo2.webp" width="420" alt="Seo score" title="Seo score">
             </div>
@@ -879,21 +766,19 @@
               <span class="presentationa">
               <br>
               <span>
-              <span> - Simple layout </span><br>
-              <span> - Picture changes are effortless</span><br>
-              <span> - Compatible with mobile devices. Every page adjusts to fit any screen size. </span><br>
-              <span> - Font style </span><br>
-              <span> - Eight useful responsive pages</span><br>
-              <span> - Features of the newsletter
-              </span>
-              <br>
+              <span>&#183;&nbsp;&nbsp;Simple layout </span><br>
+              <span>&#183;&nbsp;&nbsp;Picture changes are effortless</span><br>
+              <span>&#183;&nbsp;&nbsp;Compatible with mobile devices.<br>Every page adjusts to fit any screen size. </span><br>
+              <span>&#183;&nbsp;&nbsp;Font style </span><br>
+              <span>&#183;&nbsp;&nbsp;Eight useful responsive pages</span><br>
+              <span>&#183;&nbsp;&nbsp;Features of the newsletter</span>
               <br>
               <span class="designw">
-              <span> - 8 functional pages</span><br>
-              <span> - Download - Form </span><br>
-              <span> - Amazing snow animation effect </span><br>
-              <span> - Cards animation - On click </span><br>
-              <span> - Responsive website using only HTML5, CSS3</span><br>
+              <span>&#183;&nbsp;&nbsp;8 functional pages</span><br>
+              <span>&#183;&nbsp;&nbsp;Download - Form </span><br>
+              <span>&#183;&nbsp;&nbsp;Amazing snow animation effect </span><br>
+              <span>&#183;&nbsp;&nbsp;Cards animation - On click </span><br>
+              <span>&#183;&nbsp;&nbsp;Responsive website using only<br>HTML5, CSS3</span><br>
               </span>
               </span>
               </span>
@@ -923,20 +808,19 @@
               <span class="presentationb">
               <br>
               <span>
-              <span> - The artist can display his best work on the home page</span><br>
-              <span> - Adds more zones for further images </span><br>
-              <span> - Typeface</span><br>
-              <span> - Plan for text style</span><br>
-              <span> - Calm tones </span><br>
-              <span> - Allows more presentations </span><br>
+              <span>&#183;&nbsp;&nbsp;The artist can display his best work on<br>the home page</span><br>
+              <span>&#183;&nbsp;&nbsp;Adds more zones for further images </span><br>
+              <span>&#183;&nbsp;&nbsp;Typeface</span><br>
+              <span>&#183;&nbsp;&nbsp;Plan for text style</span><br>
+              <span>&#183;&nbsp;&nbsp;Calm tones </span><br>
+              <span>&#183;&nbsp;&nbsp;Allows more presentations</span>
               </span>
               <br>
-              <br>
-              <span>
-              <span> - Four helpful pages</span><br>
-              <span> - Get in touch </span><br>
-              <span> - Offers several options for showcasing images or other content </span><br>
-              <span> - Only HTML5, CSS3 website</span><br>
+			  <span>
+              <span>&#183;&nbsp;&nbsp;Four helpful pages</span><br>
+              <span>&#183;&nbsp;&nbsp;Get in touch </span><br>
+              <span>&#183;&nbsp;&nbsp;Offers several options for showcasing images<br>or other content </span><br>
+              <span>&#183;&nbsp;&nbsp;Only HTML5, CSS3 website</span><br>
               </span>
               </span>
               </span>
@@ -955,28 +839,37 @@
       <div class="pageprina creativepage">
         <div class="galleryb">
           <aside class="gallerybpresentation2">
-            <div>
+            <div class="text3">
               <div class="designc">
                 <img src="design2.svg" width="80" alt="Decorative element" title="Decorative element">
               </div>
               <h1>Creative assets </h1>
               <h3><em>Layout and reusable block elements</em></h3>
-              <p>Web design involves coming up with distinctive layouts, illustrations and graphics<br>that draw users in and set a website apart from others.<br><br>It is important to have creative resources, elements that can also be formed<br>into easily styled and used reusable blocks.<br>The main role for these creative assets is to attract and engage.<br><br>After establishing the website layout, the coding part begins:<br>the main HTML, CSS, so that the site can be shared online.<br>An effective graphic can be a very pleasant experience for a viewer.
+              <br>
+              <p>Web design involves coming up with distinctive layouts,</p>
+              <p>illustrations
+                and graphics that draw users in and set a website apart from others.
               </p>
+              <p>It is important to have creative resources, elements</p>
+              <p>that can also be formed into easily styled and used reusable blocks.</p>
+              <p>The main role for these creative assets is to attract and engage.</p>
+              <p>After establishing the website layout, the coding part begin: HTML, CSS.</p>
+              <p> An effective graphic can be a very pleasant experience for a viewer.</p>
             </div>
           </aside>
           <div class="effects">
-            <h4>Design system</h4>
+            <h4 class="pad">&#10064;&nbsp;Design system</h4>
             <details>
               <summary>
                 <span>&nbsp;Coming soon - 3 in 1 Design System (Figma)</span>
+                <br>
                 <span><em>Minimalism - Neobrutalism - Geometric</em></span>
               </summary>
               <img src='Designsystem3.jpg' class="designnew"  alt="Characters" style="width: 100%;" title="Illustration">
             </details>
           </div>
           <div class="effects1">
-            <h4>Email</h4>
+            <h4 class="pad">&#10064;&nbsp;Email</h4>
             <details>
               <summary>
                 <span>&nbsp;"Myra" cosmetics</span>
@@ -991,7 +884,7 @@
             </details>
           </div>
           <div class="effects1">
-            <h4>Figma layout</h4>
+            <h4 class="pad">&#10064;&nbsp;Figma layout</h4>
             <details>
               <summary>
                 <span>&nbsp;"Scrib" publishing house</span>
@@ -1035,18 +928,18 @@
             </details>
           </div>
           <div class="effects">
-            <h4>Color palettes/gradients</h4>
+            <h4 class="pad">&#10064;&nbsp;Color palettes/gradients</h4>
             <details>
               <summary>
-                <span>&nbsp;More than 85% of customers look first at the color of the product. 
-                Additionally, over 80% clients take their selling choices in light of the item tones.</span>
+                <span>&nbsp;More than 85% of customers look first at<br>the color of the product. 
+                Additionally, over 80% clients<br>take their selling choices in light of the item tones.</span>
               </summary>
               <img src='cp.jpg' class="designnew"  alt="color palette" style="width: 100%;" title="color palette">
               <img src='cp1.jpg' class="designnew"  alt="gradients" style="width: 100%;" title="color gradients">
             </details>
           </div>
           <div class="effects">
-            <h4>Different assets</h4>
+            <h4 class="pad">&#10064;&nbsp;Different assets</h4>
             <details>
               <summary>
                 <span>&nbsp;Flip book</span>
@@ -1077,74 +970,80 @@
               </div>
               <h1>Useful</h1>
               <h3><em>Graphic and web design</em></h3>
-              <p>Some tips and tricks for designing faster and more efficient. Guidelines for beautiful graphics.</p>
+              <p>&#10064;&nbsp;Some tips and tricks for designing faster and more efficient.</p>
+              <p>Guidelines for beautiful graphics.</p>
+              <br>
               <ul class="tipsa">
-                <li>&nbsp;&nbsp;Use an 8 px grid, ideal for website layout</li>
-                <li>&nbsp;&nbsp;For icon, use 1 px grid</li>
-                <li>&nbsp;&nbsp;Short paragraphs 100–200 words (text line is 50 - 75 characters) with white space between paragraphs</li>
-                <li>&nbsp;&nbsp;Use typography, colors, and spacing to guide visitors to information</li>
+                <li>Use an 8 px grid, ideal for website layout</li>
+                <li>For icon, use 1 px grid</li>
+                <li>Short paragraphs 100–200 words (text line is 50 - 75 characters)<br> with white space between paragraphs</li>
+                <li>Use typography, colors, and spacing to guide visitors to information</li>
               </ul>
-              &#9752;
+              &#183;
               <ul class="tipsa">
-                <li>&nbsp;&nbsp;Provide ways to reveal more information gradually (details-HTML), but maintain the website pattern hierarchy</li>
-                <li>&nbsp;&nbsp;Maintain the maximum 2 fonts on your website or graphics; one for big text and one for small text</li>
-                <li>&nbsp;&nbsp;Text hierarchy - from large text to small text (top - bottom page)</li>
-                <li>&nbsp;&nbsp;Colors - from light tones to dark shades (top - bottom page)</li>
-                <li>&nbsp;&nbsp;Z pattern to create visuals (left to right, top to bottom reading), home pages, little content</li>
+                <li>Provide ways to reveal more information gradually <br>(details-HTML), but maintain the website pattern hierarchy</li>
+                <li>Maintain the maximum 2 fonts on your website or graphics;<br>one for big text and one for small text</li>
+                <li>Text hierarchy - from large text to small text (top - bottom page)</li>
+                <li>Colors - from light tones to dark shades (top - bottom page)</li>
+                <li>Z pattern to create visuals (left to right, top to bottom reading),<br>home pages, little content</li>
               </ul>
-              &#9752;
+              &#183;
               <ul class="tipsa">
-                <li>&nbsp;&nbsp;F pattern-pages with more text, starts reading from the top, concentrating on the content</li>
-                <li>&nbsp;&nbsp;The human eye is all the time looking for patterns, make use of the same blocks or elements,<br>  and create pattern navigation</li>
-                <li>&nbsp;&nbsp;SEO check on page</li>
-                <li>&nbsp;&nbsp;W3C validation</li>
-                <li>&nbsp;&nbsp;Use white space as much as possible, to enhance readability</li>
+                <li>F pattern-pages with more text, starts reading from the<br>top, concentrating on the content</li>
+                <li>The human eye is all the time looking for patterns, make<br>use of the same blocks or elements, and create pattern navigation</li>
+                <li>SEO check on page</li>
+                <li>W3C validation</li>
+                <li>Use white space as much as possible, to enhance readability</li>
               </ul>
-              &#9752;
+              &#183;
               <ul class="tipsa">
-                <li>&nbsp;&nbsp;Show, by colors or graphics, the elements that shoud stand up, so that the user can concentrate on them</li>
-                <li>&nbsp;&nbsp;Use variations of white for background and dark colors for text</li>
-                <li>&nbsp;&nbsp;Large space between text and visuals</li>
-                <li>&nbsp;&nbsp;White space around an element</li>
-                <li>&nbsp;&nbsp;Color contrast - AA or AAA</li>
+                <li>Show, by colors or graphics, the elements that shoud stand<br>up, so that the user can concentrate on them</li>
+                <li>Use variations of white for background and dark colors for text</li>
+                <li>Large space between text and visuals</li>
+                <li>White space around an element</li>
+                <li>Color contrast - AA or AAA</li>
               </ul>
-              &#9752;
+              &#183;
               <ul class="tipsa">
-                <li>&nbsp;&nbsp;Can also use Golden ratio in graphics</li>
-                <li>&nbsp;&nbsp;Can use the circles from Golden ratio in making logos</li>
-                <li>&nbsp;&nbsp;One way of making color palettes RGB, HSB is to use the Fibonacci sequence - RGB for example (40, 80, 120):<br>Step 1 - 40 is the chosen number Red (R), Step 2 - double it (40) , makes 80 for Green (G), Step 3 - assure the last number for Blue (B) <br>is the sum of the prevoius numbers, so 120 is 40+80).<br>Also, one can use HSB hue, saturation, brightness for making beautiful colors in the same way.</li>
-                <li>&nbsp;&nbsp;Same color for all clickable buttons</li>
+                <li>Can also use Golden ratio in graphics</li>
+                <li>Can use the circles from Golden ratio in making logos</li>
+                <li>One way of making color palettes RGB, HSB is to use the Fibonacci sequence - RGB<br>for example (40, 80, 120):Step 1 - 40</li>
+                <li>is the chosen number Red (R), Step 2 - double it (40) , makes 80 for Green (G),<br> Step 3 - assure the last number for Blue (B) is the sum</li>
+                <li>of the prevoius numbers, so 120 is 40+80). Also, one can<br>use HSB hue, saturation, brightness for making beautiful colors in the same way.</li>
+                <li>Same color for all clickable buttons</li>
               </ul>
-              &#9752;
+              &#183;
               <ul class="tipsa">
-                <li>&nbsp;&nbsp;Multiply the base font size of 15px, for example, by the golden ratio of 1.618 and get multiples for your heading sizes<br> (16 px - base, 15px x 1.618 = 26 px - rounded), for the next font size use the previous font size obtained 26 px,<br> so 26 px - base, 26px x 1.618 = 42 px - rounded and so on...)</li>
-                <li>&nbsp;&nbsp;Use soft colors for information and background (like blue) and bold colors for CTA buttons (like orange)</li>
-                <li>&nbsp;&nbsp;Font - line height 1.5, or 150%, the bigger the heading, the smaller the line height</li>
-                <li>&nbsp;&nbsp;Use subtle color change and font weight to indicate hierarchy</li>
-                <li>&nbsp;&nbsp;If the distance between title and text is 15px, the distance on top of them must be 32px, that means x2</li>
+                <li>Multiply the base font size of 1em, for example, by the<br>golden ratio of 1.618 and get multiples for your heading sizes</li>
+                <li>(16 px - base, 1em x 1.618 = 26 px - rounded), for the next font size use the<br>previous font size obtained 26 px, so 26 px - base,</li>
+                <li>26px x 1.618 =42 px - rounded and so on...)</li>
+                <li>Use soft colors for information and background (like blue) and bold colors for<br>CTA buttons (like orange)</li>
+                <li>Font - line height 1.5, or 150%, the bigger the heading,<br>the smaller the line height</li>
+                <li>Use subtle color change and font weight to indicate hierarchy</li>
+                <li>If the distance between title and text is 1em, the distance on top of them must be 2em, that means x2</li>
               </ul>
-              &#9752;
+              &#183;
               <ul class="tipsa">
-                <li>&nbsp;&nbsp;Spacing between letters minimum x0.12 times the font size</li>
-                <li>&nbsp;&nbsp;Spacing between words minimum x0.16 times the font size</li>
-                <li>&nbsp;&nbsp;Make use of the 6:3:1 Rule, 60% main color, 30% secondary color, 10% accent</li>
-                <li>&nbsp;&nbsp;Can create dark color variants by increasing saturation and decreasing brightness</li>
+                <li>Spacing between letters minimum x0.12 times the font size</li>
+                <li>Spacing between words minimum x0.16 times the font size</li>
+                <li>Make use of the 6:3:1 Rule, 60% main color, 30% secondary color, 10% accent</li>
+                <li>Can create dark color variants by increasing saturation and decreasing brightness</li>
               </ul>
-              &#9752;
+              &#183;
               <ul class="tipsa">
-                <li>&nbsp;&nbsp;By increasing saturation you create vibrant, more intens colors, by decreasing saturation you reduce the vibrance of a color</li>
-                <li>&nbsp;&nbsp;How to calculate height - golden ration: 960-pixel width layout divided by 1.618. The result is 594px,<br>representing the height of the layout</li>
-                <li>&nbsp;&nbsp;Check the graphics in grayscale to see how it looks and if it needs improvements</li>
-                <li>&nbsp;&nbsp;Use less saturation for minimalist colors</li>
-                <li>&nbsp;&nbsp;Make use of L (lightness) in HSL for obtaining different shades in UI design. Pick a color and increase or decrease lightness.</li>
-                <li>&nbsp;&nbsp;A saturated color is more vibrant when it is used with different, less saturated colors</li>
+                <li>By increasing saturation you create vibrant, more intens colors, by decreasing<br>saturation you reduce the vibrance of a color</li>
+                <li>How to calculate height - golden ration: 960-pixel width layout divided by 1.618.<br>The result is 590.25em, representing the height of the layout</li>
+                <li>Check the graphics in grayscale to see how it looks and if it needs improvements</li>
+                <li>Use less saturation for minimalist colors</li>
+                <li>Make use of L (lightness) in HSL for obtaining different shades in UI design.<br>Pick a color and increase or decrease lightness.</li>
+                <li>A saturated color is more vibrant when it is used with different, less<br>saturated colors</li>
               </ul>
-              &#9752;
+              &#183;
               <ul class="tipsa">
-                <li>&nbsp;&nbsp;Any two colors are harmonious when one or both contain some of the other</li>
-                <li>&nbsp;&nbsp;Make use of bullets list to break large amount of text</li>
-                <li>&nbsp;&nbsp;The Fibonacci sequence is a series of numbers where each number is equal to the sum<br>of the previous two numbers in the sequence: 3, 5, 8</li>
-                <li>&nbsp;&nbsp;Fibonacci rule: add the two previous values so you can get the next one</li>
+                <li>Any two colors are harmonious when one or both contain some of the other</li>
+                <li>Make use of bullets list to break large amount of text</li>
+                <li>The Fibonacci sequence is a series of numbers where each number is equal<br>to the sum of the previous two numbers in the sequence: 3, 5, 8</li>
+                <li>Fibonacci rule: add the two previous values so you can get the next one</li>
               </ul>
             </div>
           </aside>
@@ -1153,6 +1052,7 @@
             <details>
               <summary>
                 <span>&nbsp;Coming soon - 3 in 1 Design System (Figma)</span>
+                <br>
                 <span><em>Minimalism - Neobrutalism - Geometric</em></span>
               </summary>
               <img src='Designsystem3.jpg' class="designnew"  alt="Characters" style="width: 100%;" title="Illustration">
@@ -1164,16 +1064,16 @@
     <footer>
       <div class="footergrid">
         <div class="logofooter">
-          <a class="logoa" href="#home"><img src="logod.svg" alt="Website text letter logo" width="70" height="50" title="Logo letter W"></a><br><br>
-          <p class="linkf1"><em>Creativity is the art <br> of finding something original<br> in everything.</em></p>
+          <a class="logoa" href="#home"><img src="logod.svg" alt="Website text letter logo" width="50" title="Logo letter W"></a><br><br>
+          <p class="linkf1"><em>Creativity is the art <br>of finding something original<br>in everything.</em></p>
         </div>
         <div class="pageslinks">
-          <a class="linkf" href="#home">Home</a>&nbsp;
+          <a class="linkf" href="#home">&#8962;&nbsp;Home</a>&nbsp;
           <a class="linkf" href="#gallery">Gallery</a>&nbsp;
           <a class="linkf" href="#creative">Creative</a>&nbsp;
           <a class="linkf" href="#tips">Useful</a>&nbsp;
           <div class="socialm">
-            <p class="linkf2"> &copy;<em>Copyright A.F.</em>&nbsp;2023</p>
+            <p class="linkf2"> &copy;&nbsp;<em>Copyright A.F.</em>&nbsp;2023</p>
           </div>
         </div>
       </div>

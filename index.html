@@ -463,13 +463,23 @@
       border: 1px solid lightgray;
       margin-left: 1em;
       }
-      .presentationb {
+      .presetc {
       cursor: pointer;
       float: left;
       margin-right: -0.75em;
       margin-top: var(--space-xl);
       box-sizing: border-box;
       }  
+      .presentationb {          
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 84em;
+      margin: auto;
+      justify-content: left;
+      text-align: left;
+      color: #3f3d3f;
+      grid-gap: 2em;
+      box-sizing: border-box;
       .gridgalc input[type=checkbox] {
       position: absolute;
       top: -9999px;
@@ -872,7 +882,7 @@
               </span>
               </span>
               </label>
-              <label id="hidea" for="togglea" >
+              <label class="presetc" id="hidea" for="togglea" >
               <span class="hiddendiva" id="testB">
               <span class="websitelinka">Back&nbsp;<span class="emphasized"><em><span>&#11167;</span></em></span></span>
               <object type="text/html" data="photographer.html" style="width:100%; height: 72vw;" title="Photograph website"></object>

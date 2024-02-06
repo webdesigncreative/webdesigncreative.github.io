@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Ade</h1>
+<h1 align="center">Hi 👋</h1>
 <h3 align="center">A passionate web designer</h3>
 
 - 🔭 I’m currently working on [Portfolio](https://webdesigncreative.github.io/)
@@ -6,8 +6,6 @@
 - 🌱 I’m currently learning **JavaScript, TypeScript**
 
 - 👨‍💻 All of my projects are available at [https://webdesigncreative.github.io/](https://webdesigncreative.github.io/)
-
-- 📫 How to reach me **newcreativewdesign@gmail.com**
 
 - 📄 Know about my experiences [web design, graphics, content writing](web design, graphics, content writing)
 

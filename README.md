@@ -1,9 +1,8 @@
 <h1 align="center">Hi 👋</h1>
 <h3 align="center">A passionate web designer</h3>
 
-- 🔭 I’m currently working on [Portfolio](https://webdesigncreative.github.io/)
+- 🔭 I’m currently working on [Portfolio projects](https://webdesigncreative.github.io/)
 
-- 🌱 I’m currently learning **web development**
 
 - 👨‍💻 All of my projects are available at [https://webdesigncreative.github.io/](https://webdesigncreative.github.io/)
 

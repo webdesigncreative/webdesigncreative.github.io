@@ -3,7 +3,7 @@
 
 - 🔭 I’m currently working on [Portfolio](https://webdesigncreative.github.io/)
 
-- 🌱 I’m currently learning **JavaScript, TypeScript**
+- 🌱 I’m currently learning **web development**
 
 - 👨‍💻 All of my projects are available at [https://webdesigncreative.github.io/](https://webdesigncreative.github.io/)
 
